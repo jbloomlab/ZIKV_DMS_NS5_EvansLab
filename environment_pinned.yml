@@ -17,13 +17,15 @@ dependencies:
   - bleach=3.2.1=pyh9f0ad1d_0
   - brotlipy=0.7.0=py38h8df0ef7_1001
   - bzip2=1.0.8=h516909a_3
+  - c-ares=1.11.0=h470a237_1
   - ca-certificates=2020.11.8=ha878542_0
-  - cairo=1.16.0=h9f066cc_1006
+  - cairo=1.16.0=h488836b_1006
   - certifi=2020.11.8=py38h578d9bd_0
   - cffi=1.14.3=py38h1bdcb99_1
   - chardet=3.0.4=py38h924ce5b_1008
   - colorama=0.4.4=pyh9f0ad1d_0
   - cryptography=3.2.1=py38h7699a38_0
+  - curl=7.71.1=he644dc0_8
   - decorator=4.4.2=py_0
   - defusedxml=0.6.0=py_0
   - entrypoints=0.3=pyhd8ed1ab_1003
@@ -44,6 +46,7 @@ dependencies:
   - gitdb=4.0.5=py_0
   - gitpython=3.1.11=py_0
   - glib=2.66.3=h58526e2_0
+  - gmp=6.2.1=h58526e2_0
   - graphite2=1.3.13=h58526e2_1001
   - graphviz=2.42.3=h0511662_0
   - harfbuzz=2.7.2=ha5b49bf_1
@@ -66,7 +69,11 @@ dependencies:
   - jupyterlab=2.2.9=py_0
   - jupyterlab_pygments=0.1.2=pyh9f0ad1d_0
   - jupyterlab_server=1.2.0=py_0
+  - krb5=1.17.2=h926e7f8_0
   - ld_impl_linux-64=2.35.1=hed1e6ac_0
+  - libcurl=7.71.1=hcdd3856_8
+  - libedit=3.1.20191231=he28a2e2_2
+  - libev=4.33=h516909a_1
   - libffi=3.2.1=he1b5a44_1007
   - libgcc=7.2.0=h69d50b8_2
   - libgcc-ng=9.3.0=h5dbcf3e_17
@@ -75,9 +82,11 @@ dependencies:
   - libglib=2.66.3=hbe7bbb4_0
   - libgomp=9.3.0=h5dbcf3e_17
   - libiconv=1.16=h516909a_0
+  - libnghttp2=1.41.0=hab1572f_1
   - libpng=1.6.37=h21135ba_2
   - librsvg=2.50.2=h1f8de02_0
   - libsodium=1.0.18=h36c2ea0_1
+  - libssh2=1.9.0=hab1572f_5
   - libstdcxx-ng=9.3.0=h2ae2ef3_17
   - libtiff=4.1.0=h4f3a223_6
   - libtool=2.4.6=h58526e2_1007
@@ -89,6 +98,7 @@ dependencies:
   - lz4-c=1.9.2=he1b5a44_3
   - markupsafe=1.1.1=py38h8df0ef7_2
   - mistune=0.8.4=py38h25fe258_1002
+  - mpfr=4.0.2=he80fd80_1
   - nbclient=0.5.1=py_0
   - nbconvert=6.0.7=py38h578d9bd_3
   - nbdime=2.1.0=py_0
@@ -108,8 +118,10 @@ dependencies:
   - pexpect=4.8.0=pyh9f0ad1d_2
   - pickleshare=0.7.5=py_1003
   - pip=20.2.4=py_0
-  - pixman=0.40.0=h36c2ea0_0
+  - pixman=0.38.0=h516909a_1003
   - pkg-config=0.29.2=h36c2ea0_1008
+  - poppler=0.65.0=h14e79db_0
+  - poppler-data=0.4.10=0
   - prometheus_client=0.9.0=pyhd3deb0d_0
   - prompt-toolkit=3.0.8=pyha770c72_0
   - pthread-stubs=0.4=h14c3975_1001
@@ -133,6 +145,7 @@ dependencies:
   - sqlite=3.33.0=h4cf870e_1
   - terminado=0.9.1=py38h32f6830_1
   - testpath=0.4.4=py_0
+  - texlive-core=20180414=pl526hc0a3334_3
   - tk=8.6.10=hed695b0_1
   - tornado=6.1=py38h25fe258_0
   - traitlets=5.0.5=py_0

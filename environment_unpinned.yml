@@ -9,9 +9,9 @@ dependencies:
   - imagemagick
   - jupyterlab
   - nbdime
+  - nodejs
   - pip
   - python=3.8
-  - texlive-core
   - pip:
     - dms_tools2
     - dmslogo

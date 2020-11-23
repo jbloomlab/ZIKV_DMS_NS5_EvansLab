@@ -28,7 +28,7 @@ dependencies:
   - defusedxml=0.6.0=py_0
   - entrypoints=0.3=pyhd8ed1ab_1003
   - expat=2.2.9=he1b5a44_2
-  - fftw=3.3.8=nompi_h77c792f_1113
+  - fftw=3.3.8=nompi_h8cb7ab2_1114
   - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
   - font-ttf-inconsolata=2.001=hab24e00_0
   - font-ttf-source-code-pro=2.030=hab24e00_0
@@ -50,8 +50,8 @@ dependencies:
   - icu=67.1=he1b5a44_0
   - idna=2.10=pyh9f0ad1d_0
   - imagemagick=7.0.10_28=pl526h201ca68_0
-  - importlib-metadata=2.0.0=py_1
-  - importlib_metadata=2.0.0=1
+  - importlib-metadata=3.0.0=pyhd8ed1ab_0
+  - importlib_metadata=3.0.0=hd8ed1ab_0
   - ipykernel=5.3.4=py38h81c977d_1
   - ipython=7.19.0=py38h81c977d_0
   - ipython_genutils=0.2.0=py_1
@@ -76,12 +76,13 @@ dependencies:
   - libgomp=9.3.0=h5dbcf3e_17
   - libiconv=1.16=h516909a_0
   - libpng=1.6.37=h21135ba_2
-  - librsvg=2.50.2=h1f8de02_0
+  - librsvg=2.50.2=h3442318_1
   - libsodium=1.0.18=h36c2ea0_1
   - libstdcxx-ng=9.3.0=h2ae2ef3_17
   - libtiff=4.1.0=h4f3a223_6
   - libtool=2.4.6=h58526e2_1007
   - libuuid=2.32.1=h14c3975_1000
+  - libuv=1.40.0=hd18ef5c_0
   - libwebp=1.1.0=h76fa15c_4
   - libwebp-base=1.1.0=h36c2ea0_3
   - libxcb=1.13=h14c3975_1002
@@ -95,6 +96,7 @@ dependencies:
   - nbformat=5.0.8=py_0
   - ncurses=6.2=h58526e2_4
   - nest-asyncio=1.4.3=pyhd8ed1ab_0
+  - nodejs=15.2.1=h914e61d_0
   - notebook=6.1.5=py38h578d9bd_0
   - openjpeg=2.3.1=h981e76c_3
   - openssl=1.1.1h=h516909a_0
@@ -178,7 +180,7 @@ dependencies:
     - palettable==3.3.0
     - pandas==0.25.3
     - patsy==0.5.1
-    - phydms==2.3.8
+    - phydms==2.4.0
     - plotnine==0.6.0
     - pybktree==1.1
     - pypdf2==1.26.0

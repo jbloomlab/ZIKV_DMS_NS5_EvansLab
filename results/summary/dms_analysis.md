@@ -13,6 +13,7 @@ Import Python packages and modules:
 ```python
 import glob
 import os
+import shutil
 
 import Bio.SeqIO
 
@@ -345,3 +346,570 @@ showPDF(bcsubamp_plot_prefix + 'cumulmutcounts.pdf')
 ![png](dms_analysis_files/dms_analysis_31_0.png)
     
 
+
+## Functional effects of mutations of viral growth
+Compute the functional effects of mutations on viral growth by comparing the passaged virus to the original plasmid, for both the +IFN and -IFN conditions.
+
+To do this, we compute the [amino-acid preferences](https://jbloomlab.github.io/dms_tools2/prefs.html#prefs) under selection for viral growth.
+We do this using [dms2_batch_prefs](https://jbloomlab.github.io/dms_tools2/dms2_batch_prefs.html).
+
+First, make a data frame with the batch file:
+
+
+```python
+prefs_batch = (
+    samples
+    .query('library != "wt"')
+    .query('selection != "plasmid"')
+    .assign(post=lambda x: x['name'])
+    .merge(samples.query('selection == "plasmid"')
+                  .assign(pre=lambda x: x['name'])
+                  [['library', 'pre']],
+           on='library', how='left', validate='many_to_one',
+           )
+    [['name', 'selection', 'library', 'pre', 'post']]
+    .assign(errpre='wt-plasmid')
+    .merge(samples.query('library == "wt"')
+                  .assign(errpost=lambda x: x['name'])
+                  [['selection', 'errpost']],
+           on='selection', how='left', validate='many_to_one',
+           )
+    )
+assert prefs_batch.notnull().all().all()
+
+prefs_batch
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>selection</th>
+      <th>library</th>
+      <th>pre</th>
+      <th>post</th>
+      <th>errpre</th>
+      <th>errpost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>lib1-no-IFN</td>
+      <td>no-IFN</td>
+      <td>lib1</td>
+      <td>lib1-plasmid</td>
+      <td>lib1-no-IFN</td>
+      <td>wt-plasmid</td>
+      <td>wt-no-IFN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>lib2-no-IFN</td>
+      <td>no-IFN</td>
+      <td>lib2</td>
+      <td>lib2-plasmid</td>
+      <td>lib2-no-IFN</td>
+      <td>wt-plasmid</td>
+      <td>wt-no-IFN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>lib3-no-IFN</td>
+      <td>no-IFN</td>
+      <td>lib3</td>
+      <td>lib3-plasmid</td>
+      <td>lib3-no-IFN</td>
+      <td>wt-plasmid</td>
+      <td>wt-no-IFN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>lib1-IFN-20-U-ml</td>
+      <td>IFN-20-U-ml</td>
+      <td>lib1</td>
+      <td>lib1-plasmid</td>
+      <td>lib1-IFN-20-U-ml</td>
+      <td>wt-plasmid</td>
+      <td>wt-IFN-20-U-ml</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>lib2-IFN-20-U-ml</td>
+      <td>IFN-20-U-ml</td>
+      <td>lib2</td>
+      <td>lib2-plasmid</td>
+      <td>lib2-IFN-20-U-ml</td>
+      <td>wt-plasmid</td>
+      <td>wt-IFN-20-U-ml</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>lib3-IFN-20-U-ml</td>
+      <td>IFN-20-U-ml</td>
+      <td>lib3</td>
+      <td>lib3-plasmid</td>
+      <td>lib3-IFN-20-U-ml</td>
+      <td>wt-plasmid</td>
+      <td>wt-IFN-20-U-ml</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Now run [dms2_batch_prefs](https://jbloomlab.github.io/dms_tools2/dms2_batch_prefs.html):
+
+
+```python
+prefsdir = os.path.join(resultsdir, 'prefs')
+os.makedirs(prefsdir, exist_ok=True)
+
+prefs_batchfile = os.path.join(prefsdir, 'batch.csv')
+prefs_batch.to_csv(prefs_batchfile, index=False)
+
+log = ! dms2_batch_prefs \
+        --indir {countsdir} \
+        --batchfile {prefs_batchfile} \
+        --outdir {prefsdir} \
+        --summaryprefix summary \
+        --use_existing {use_existing} \
+        --ncpus {ncpus}
+
+assert all(map(os.path.isfile, [os.path.join(prefsdir, name + '_prefs.csv') 
+                                for name in prefs_batch.name])), '\n'.join(log)
+
+print("Amino-acid preferences calculated for all samples.")
+```
+
+    Amino-acid preferences calculated for all samples.
+
+
+Look at correlation among the amino-acid preferences for the individual libraries:
+
+
+```python
+showPDF(os.path.join(prefsdir, 'summary_prefscorr.pdf'))
+```
+
+
+    
+![png](dms_analysis_files/dms_analysis_37_0.png)
+    
+
+
+Now let's get the amino-acid preferences for **all** samples (with and without IFN), and for the IFN+ and IFN- ones separately:
+
+
+```python
+# file with preferences for all samples
+prefs_files = {'all': os.path.join(prefsdir, 'prefs_all.csv')}
+pd.read_csv(os.path.join(prefsdir, 'summary_avgprefs.csv')).to_csv(prefs_files['all'],
+                                                                   index=False,
+                                                                   float_format='%.5f')
+
+# file with preferences for each condition
+for selection, df in prefs_batch.groupby('selection'):
+    selection_prefsfiles = [os.path.join(prefsdir, f"{name}_prefs.csv") for name in df['name']]
+    assert all(map(os.path.isfile, selection_prefsfiles)), selection_prefsfiles
+    prefs_files[selection] = os.path.join(prefsdir, f"prefs_{selection}.csv")
+    dms_tools2.prefs.avgPrefs(selection_prefsfiles).to_csv(prefs_files[selection],
+                                                           index=False,
+                                                           float_format='%.5f')
+    
+print('Average preferences across conditions are in the following files:')
+display(HTML(pd.Series(prefs_files).rename('file').to_frame().to_html()))
+```
+
+    Average preferences across conditions are in the following files:
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>file</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>all</th>
+      <td>./results/prefs/prefs_all.csv</td>
+    </tr>
+    <tr>
+      <th>IFN-20-U-ml</th>
+      <td>./results/prefs/prefs_IFN-20-U-ml.csv</td>
+    </tr>
+    <tr>
+      <th>no-IFN</th>
+      <td>./results/prefs/prefs_no-IFN.csv</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Now we will make a logo plot of the average of the amino-acid preferences across all samples, for IFN+ samples, and for IFN- samples.
+We do this using [dms2_logoplot](https://jbloomlab.github.io/dms_tools2/dms2_logoplot.html).
+Note that this logo plot shows the raw unscaled (not re-scaled) preferences.
+In this plot, the height of each letter is proportional to the "preference" for that amino acid at that site, so taller letters are more preferred at a site.
+If the site tolerates everything, there will just be lots of small letters as all amino acids equally tolerated:
+
+
+```python
+logodir = os.path.join(resultsdir, 'logoplots')
+os.makedirs(logodir, exist_ok=True)
+
+# get wildtype amino acids to use as overlay
+wt_aas = pd.DataFrame.from_records(
+            [(r + 1, a) for r, a in enumerate(refprot)],
+            columns=['site', 'wildtype'])
+wtoverlayfile = os.path.join(logodir, 'wt_overlay.csv')
+wt_aas.to_csv(wtoverlayfile, index=False)
+
+for selection, prefs_csv in prefs_files.items():
+
+    logoplot = os.path.join(logodir, f"{selection}_prefs.pdf")
+
+    log = ! dms2_logoplot \
+            --prefs {prefs_csv} \
+            --name {selection} \
+            --outdir {logodir} \
+            --nperline 56 \
+            --overlay1 {wtoverlayfile} wildtype wildtype \
+            --letterheight 1.2 \
+            --use_existing {use_existing}
+
+    assert os.path.isfile(logoplot), '\n'.join(log)
+
+    print(f"\n\nPreferences for {selection} samples:")
+    showPDF(logoplot)
+```
+
+    
+    
+    Preferences for all samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_1.png)
+    
+
+
+    
+    
+    Preferences for IFN-20-U-ml samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_3.png)
+    
+
+
+    
+    
+    Preferences for no-IFN samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_5.png)
+    
+
+
+We can also represent the effects of mutations in a different way than the amino acid preferences.
+Specifically, the ratio of the preference for the mutant amino-acid to the wildtype amino-acid is a measure of its enrichment (this is just the ratio of letter heights in the plot above).
+If we take the log of this mutational effect, negative values indicate deleterious mutations and positive values indicate favorable mutations
+The potential advantage of this representation is that it better shows the detailed differences between mutations to amino acids with small preferences, which can be useful for figuring out if we think a mutation is just very mildly deleterious or highly deleterious.
+
+Here we calculate the mutational effects and then plot their log2 values on a logo plot.
+
+First, create a subdirectory for these analyses:
+
+
+```python
+muteffectsdir = os.path.join(resultsdir, 'muteffects/')
+os.makedirs(muteffectsdir, exist_ok=True)
+```
+
+Convert the amino-acid preferences into mutational effects:
+
+
+```python
+muteffects_files = {}
+for selection, prefs_csv in prefs_files.items():
+    muteffects = dms_tools2.prefs.prefsToMutFromWtEffects(
+                    prefs=pd.read_csv(prefs_csv),
+                    charlist=AAS,
+                    wts=wt_aas)
+    muteffects_files[selection] = os.path.join(muteffectsdir, f"{selection}_muteffects.csv")
+    print(f"Writing mutational effects for {selection} to {muteffects_files[selection]}")
+    muteffects.to_csv(muteffects_files[selection], index=False, float_format='%.5g')
+```
+
+    Writing mutational effects for all to ./results/muteffects/all_muteffects.csv
+    Writing mutational effects for IFN-20-U-ml to ./results/muteffects/IFN-20-U-ml_muteffects.csv
+    Writing mutational effects for no-IFN to ./results/muteffects/no-IFN_muteffects.csv
+
+
+Now make a logo plots showing the mutational effects for all samples, the IFN+ ones, and the IFN- ones.
+Letters below the line indicate deleterious mutations, and letters above the line indicate beneficial ones.
+We include a scale bar indicating the fold-enrichment implied by each letter height:
+
+
+```python
+for selection, muteffects_csv in muteffects_files.items():
+
+    logoplot = os.path.join(logodir, f"{selection}_muteffects.pdf")
+
+    log = ! dms2_logoplot \
+            --muteffects {muteffects_csv} \
+            --name {selection} \
+            --outdir {logodir} \
+            --nperline 56 \
+            --overlay1 {wtoverlayfile} wildtype wildtype \
+            --scalebar 6.64 "100-fold change (log scale)" \
+            --use_existing {use_existing}
+
+    assert os.path.isfile(logoplot), '\n'.join(log)
+
+    print(f"\n\nMutational effects for {selection} samples:")
+    showPDF(logoplot)
+```
+
+    
+    
+    Mutational effects for all samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_1.png)
+    
+
+
+    
+    
+    Mutational effects for IFN-20-U-ml samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_3.png)
+    
+
+
+    
+    
+    Mutational effects for no-IFN samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_5.png)
+    
+
+
+## Differential selection between IFN+ and IFN- conditions
+We now compute the [differential selection](https://jbloomlab.github.io/dms_tools2/diffsel.html) from each antibody selection.
+We do this using [dms2_batch_diffsel](https://jbloomlab.github.io/dms_tools2/dms2_batch_diffsel.html).
+
+
+```python
+diffseldir = os.path.join(resultsdir, 'diffsel')
+os.makedirs(diffseldir, exist_ok=True)
+```
+
+Now we create a batch file for running [dms2_batch_diffsel](https://jbloomlab.github.io/dms_tools2/dms2_batch_diffsel.html).
+Note that we use the IFN- condition as our mock selection and the wildtype virus with no IFN as the error control:
+
+
+```python
+diffsel_batch = (
+    samples
+    .assign(sel=lambda x: x['name'],
+            mock=lambda x: x['library'] + '-no-IFN',
+            err='wt-no-IFN',
+            )
+    .query('selection not in ["plasmid", "no-IFN"]')
+    .query('library != "wt"')
+    .drop(columns=['name'])
+    .rename(columns={'selection':'group', 'library':'name'})
+    [['group', 'name', 'sel', 'mock', 'err']]
+    .reset_index(drop=True)
+    )
+
+display(HTML(diffsel_batch.to_html(index=False)))
+```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>group</th>
+      <th>name</th>
+      <th>sel</th>
+      <th>mock</th>
+      <th>err</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IFN-20-U-ml</td>
+      <td>lib1</td>
+      <td>lib1-IFN-20-U-ml</td>
+      <td>lib1-no-IFN</td>
+      <td>wt-no-IFN</td>
+    </tr>
+    <tr>
+      <td>IFN-20-U-ml</td>
+      <td>lib2</td>
+      <td>lib2-IFN-20-U-ml</td>
+      <td>lib2-no-IFN</td>
+      <td>wt-no-IFN</td>
+    </tr>
+    <tr>
+      <td>IFN-20-U-ml</td>
+      <td>lib3</td>
+      <td>lib3-IFN-20-U-ml</td>
+      <td>lib3-no-IFN</td>
+      <td>wt-no-IFN</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Write the batch file and run [dms2_batch_diffsel](https://jbloomlab.github.io/dms_tools2/dms2_batch_diffsel.html):
+
+
+```python
+diffsel_batchfile = os.path.join(diffseldir, 'batch.csv')
+diffsel_batch.to_csv(diffsel_batchfile, index=False)
+
+log = ! dms2_batch_diffsel \
+        --batchfile {diffsel_batchfile} \
+        --summaryprefix summary \
+        --indir {countsdir} \
+        --outdir {diffseldir} \
+        --ncpus {ncpus} \
+        --use_existing {use_existing}
+```
+
+Now look at the correlation among the replicates.
+In each case, we are looking at the differential selection of mutations in +IFN versus -IFN condition.
+We look at:
+ - total positive selection at a site
+ - absolute selection at a site (positive or negative)
+ - selection at individual mutation level
+
+
+```python
+diffsel_groups = diffsel_batch['group'].unique().tolist()
+
+for plot_type, desc in [('positivesite', 'positive site'),
+                        ('absolutesite', 'absolute site'),
+                        ('mut', 'mutation-level')]:
+    print(f"\n\nCorrelations of {desc} selection among replicates:")
+    showPDF([os.path.join(diffseldir, f"summary_{group}-{plot_type}diffselcorr.pdf")
+             for group in diffsel_groups], width=350 * len(diffsel_groups))
+```
+
+    
+    
+    Correlations of positive site selection among replicates:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_55_1.png)
+    
+
+
+    
+    
+    Correlations of absolute site selection among replicates:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_55_3.png)
+    
+
+
+    
+    
+    Correlations of mutation-level selection among replicates:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_55_5.png)
+    
+
+
+Now make logo plots showing differential selection for each mutation.
+Letters above the line indicate mutations differentially selected (favored)in the +IFN condition, and letters below the line indicates mutations differentially selected in the -IFN condition.
+We plot the **medians** of the replicates:
+
+
+```python
+for group in diffsel_groups:
+    
+    diffsel_csv = os.path.join(diffseldir, f"summary_{group}-medianmutdiffsel.csv")
+    print(f"\n\nPlotting differential selection for {group} in {diffsel_csv}")
+
+    logoplot = os.path.join(logodir, f"{group}_diffsel.pdf")
+
+    log = ! dms2_logoplot \
+            --diffsel {diffsel_csv} \
+            --name {group} \
+            --outdir {logodir} \
+            --nperline 56 \
+            --overlay1 {wtoverlayfile} wildtype wildtype \
+            --use_existing {use_existing}
+
+    assert os.path.isfile(logoplot), '\n'.join(log)
+
+    print(f"\n\nDifferential selection for {group}:")
+    showPDF(logoplot)
+```
+
+    
+    
+    Plotting differential selection for IFN-20-U-ml in ./results/diffsel/summary_IFN-20-U-ml-medianmutdiffsel.csv
+    
+    
+    Differential selection for IFN-20-U-ml:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_57_1.png)
+    
+
+
+
+```python
+
+```

@@ -5,3 +5,19 @@ _*
 
 results/*
 !results/summary
+
+!results/prefs
+results/prefs/*
+!results/prefs/prefs_all.csv
+!results/prefs/prefs_IFN-20-U-ml.csv
+!results/prefs/prefs_no-IFN.csv
+
+!results/muteffects
+results/muteffects/*
+!results/muteffects/all_muteffects.csv
+!results/muteffects/IFN-20-U-ml_muteffects.csv
+!results/muteffects/no-IFN_muteffects.csv
+
+!results/diffsel
+results/diffsel/*
+!results/diffsel/summary_IFN-20-U-ml-mediansitediffsel.csv

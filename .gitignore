@@ -21,3 +21,7 @@ results/muteffects/*
 !results/diffsel
 results/diffsel/*
 !results/diffsel/summary_IFN-20-U-ml-mediansitediffsel.csv
+
+!results/dms_view
+results/dms_view/*
+!results/dms_view/data.csv

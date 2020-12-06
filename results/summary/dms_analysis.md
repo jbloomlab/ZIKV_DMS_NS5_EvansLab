@@ -909,7 +909,168 @@ for group in diffsel_groups:
     
 
 
+## Create `dms-view` input files
+Now we create a file to visualize the results of the deep mutational scanning using [dms-view], setting up the mapping for the [6WCZ](https://www.rcsb.org/structure/6wcz) PDB file.
+In this PDB file, chain A is human STAT2 and chain B is ZIKV NS5.
+The number is shifted such that sequential numbering of the sequence used in the deep mutational scanning is one greater than PDB numbering.
+In other words, residue 6 in the PDB is residue 7 in the sequence used for the DMS.
+
 
 ```python
-
+offset_to_pdb = -1
+pdb_chain = 'B'
 ```
+
+
+```python
+dms_view_data = pd.DataFrame()
+
+# preferences for all conditions
+for condition, csvfile in prefs_files.items():
+    prefs = pd.read_csv(csvfile)
+    dms_view_data = dms_view_data.append(
+        prefs
+        .melt(id_vars='site',
+              var_name='mutation',
+              value_name='mut_preference',
+              )
+        .merge(dms_tools2.prefs.prefsEntropy(prefs, prefs.columns[1:].tolist())
+               [['site', 'entropy', 'neffective']],
+               on='site', validate='many_to_one')
+        .assign(condition=condition)
+        )
+    
+# diffsel for IFN+ versus IFN-
+dms_view_data = (
+    dms_view_data
+    .merge(pd.read_csv(diffsel_csv).fillna(0),
+           on=['site', 'mutation'], validate='many_to_one')
+    .rename(columns={'mutdiffsel': 'mut_diffsel',
+                     'entropy': 'site_entropy',
+                     'neffective': 'site_neffective'})
+    .assign(site_max_diffsel=lambda x: x.groupby('site')['mut_diffsel'].transform('max'),
+            site_positive_diffsel=lambda x: x.groupby('site')['mut_diffsel'].transform(lambda s: s.clip(lower=0).sum())
+            )
+    )
+
+# add PDB information
+dms_view_data = dms_view_data.assign(label_site=lambda x: x['site'] + offset_to_pdb,
+                                     protein_site=lambda x: x['label_site'],
+                                     protein_chain=pdb_chain)
+
+# display and print
+dms_view_dir = './results/dms_view/'
+os.makedirs(dms_view_dir, exist_ok=True)
+dms_view_csv = os.path.join(dms_view_dir, 'data.csv')
+print(f"Writing CSV to {dms_view_csv}; here are first few lines:")
+dms_view_data.to_csv(dms_view_csv)
+display(HTML(dms_view_data.head().to_html()))
+```
+
+    Writing CSV to ./results/dms_view/data.csv; here are first few lines:
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>site</th>
+      <th>mutation</th>
+      <th>mut_preference</th>
+      <th>site_entropy</th>
+      <th>site_neffective</th>
+      <th>condition</th>
+      <th>wildtype</th>
+      <th>mut_diffsel</th>
+      <th>site_max_diffsel</th>
+      <th>site_positive_diffsel</th>
+      <th>label_site</th>
+      <th>protein_site</th>
+      <th>protein_chain</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>A</td>
+      <td>0.00969</td>
+      <td>1.940396</td>
+      <td>6.961509</td>
+      <td>all</td>
+      <td>R</td>
+      <td>0.000104</td>
+      <td>1.466124</td>
+      <td>9.346682</td>
+      <td>0</td>
+      <td>0</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>A</td>
+      <td>0.00954</td>
+      <td>1.979059</td>
+      <td>7.235932</td>
+      <td>IFN-20-U-ml</td>
+      <td>R</td>
+      <td>0.000104</td>
+      <td>1.466124</td>
+      <td>9.346682</td>
+      <td>0</td>
+      <td>0</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>A</td>
+      <td>0.00985</td>
+      <td>1.895627</td>
+      <td>6.656718</td>
+      <td>no-IFN</td>
+      <td>R</td>
+      <td>0.000104</td>
+      <td>1.466124</td>
+      <td>9.346682</td>
+      <td>0</td>
+      <td>0</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>C</td>
+      <td>0.04736</td>
+      <td>1.940396</td>
+      <td>6.961509</td>
+      <td>all</td>
+      <td>R</td>
+      <td>0.000399</td>
+      <td>1.466124</td>
+      <td>9.346682</td>
+      <td>0</td>
+      <td>0</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>C</td>
+      <td>0.04674</td>
+      <td>1.979059</td>
+      <td>7.235932</td>
+      <td>IFN-20-U-ml</td>
+      <td>R</td>
+      <td>0.000399</td>
+      <td>1.466124</td>
+      <td>9.346682</td>
+      <td>0</td>
+      <td>0</td>
+      <td>B</td>
+    </tr>
+  </tbody>
+</table>
+

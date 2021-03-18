@@ -2,6 +2,9 @@
 
 set -e
 
+. "/fh/fast/bloom_j/software/miniconda3/etc/profile.d/conda.sh"
+conda activate ZIKV_DMS
+
 RESULTSDIR="results/summary"
 
 mkdir -p $RESULTSDIR

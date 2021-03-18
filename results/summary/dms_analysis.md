@@ -38,7 +38,7 @@ Specify configuration for analysis:
 ```python
 use_existing = 'yes' # use existing output
 
-ncpus = 8  # max CPUs to use
+ncpus = 16  # max CPUs to use
 
 # directories
 resultsdir = './results/'
@@ -77,7 +77,7 @@ First, we read in the samples:
 
 ```python
 samples = (pd.read_csv(samplelist)
-           .assign(name=lambda x: x.library + '-' + x.selection)
+           .assign(name=lambda x: x.library + '-' + x.selection + '-' + x.date.astype(str))
            )
 
 display(HTML(samples.to_html(index=False)))
@@ -89,6 +89,7 @@ display(HTML(samples.to_html(index=False)))
     <tr style="text-align: right;">
       <th>library</th>
       <th>selection</th>
+      <th>date</th>
       <th>R1</th>
       <th>SRA_accession</th>
       <th>name</th>
@@ -98,86 +99,290 @@ display(HTML(samples.to_html(index=False)))
     <tr>
       <td>wt</td>
       <td>plasmid</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-WT-plasmid_S5_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>wt-plasmid</td>
+      <td>wt-plasmid-201112</td>
     </tr>
     <tr>
       <td>lib1</td>
       <td>plasmid</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib1-plasmid_S6_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib1-plasmid</td>
+      <td>lib1-plasmid-201112</td>
     </tr>
     <tr>
       <td>lib2</td>
       <td>plasmid</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib2-plasmid_S7_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib2-plasmid</td>
+      <td>lib2-plasmid-201112</td>
     </tr>
     <tr>
       <td>lib3</td>
       <td>plasmid</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib3-plasmid_S8_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib3-plasmid</td>
+      <td>lib3-plasmid-201112</td>
     </tr>
     <tr>
       <td>wt</td>
       <td>no-IFN</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-WT-No-IFN_S9_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>wt-no-IFN</td>
+      <td>wt-no-IFN-201112</td>
     </tr>
     <tr>
       <td>lib1</td>
       <td>no-IFN</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib1-No-IFN_S10_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib1-no-IFN</td>
+      <td>lib1-no-IFN-201112</td>
     </tr>
     <tr>
       <td>lib2</td>
       <td>no-IFN</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib2-No-IFN_S11_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib2-no-IFN</td>
+      <td>lib2-no-IFN-201112</td>
     </tr>
     <tr>
       <td>lib3</td>
       <td>no-IFN</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib3-No-IFN_S12_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib3-no-IFN</td>
+      <td>lib3-no-IFN-201112</td>
     </tr>
     <tr>
       <td>wt</td>
       <td>IFN-20-U-ml</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-WT-Yes-IFN_S13_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>wt-IFN-20-U-ml</td>
+      <td>wt-IFN-20-U-ml-201112</td>
     </tr>
     <tr>
       <td>lib1</td>
       <td>IFN-20-U-ml</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib1-Yes-IFN_S14_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib1-IFN-20-U-ml</td>
+      <td>lib1-IFN-20-U-ml-201112</td>
     </tr>
     <tr>
       <td>lib2</td>
       <td>IFN-20-U-ml</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib2-Yes-IFN_S15_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib2-IFN-20-U-ml</td>
+      <td>lib2-IFN-20-U-ml-201112</td>
     </tr>
     <tr>
       <td>lib3</td>
       <td>IFN-20-U-ml</td>
+      <td>201112</td>
       <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib3-Yes-IFN_S16_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib3-IFN-20-U-ml</td>
+      <td>lib3-IFN-20-U-ml-201112</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_500_Lib1_S18_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>no-IFN</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_Lib1_S2_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_12_WT_S5_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_42_Lib3_S16_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>no-IFN</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_Lib2_S3_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>no-IFN</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_Lib3_S4_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_42_Lib2_S15_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_12_Lib3_S8_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_18h_145_Lib1_S22_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-IFN-145-U-ml-18hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_12_Lib1_S6_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_145_Lib2_S11_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_145_Lib1_S10_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_500_Lib2_S19_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_18h_145_Lib3_S24_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-IFN-145-U-ml-18hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_42_Lib1_S14_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_145_WT_S9_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_500_WT_S17_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_18h_145_WT_S21_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-IFN-145-U-ml-18hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_145_Lib3_S12_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_42_WT_S13_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_12h_500_Lib3_S20_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>no-IFN</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_WT_S1_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_6h_12_Lib2_S7_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>210313</td>
+      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_18h_145_Lib2_S23_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-IFN-145-U-ml-18hr-210313</td>
     </tr>
   </tbody>
 </table>
@@ -241,13 +446,19 @@ This indicates we need more sequencing depth given the number of unique molecule
 
 
 ```python
-showPDF([bcsubamp_plot_prefix + 'readstats.pdf',
-         bcsubamp_plot_prefix + 'bcstats.pdf'])
+showPDF(bcsubamp_plot_prefix + 'readstats.pdf')
+showPDF(bcsubamp_plot_prefix + 'bcstats.pdf')
 ```
 
 
     
 ![png](dms_analysis_files/dms_analysis_17_0.png)
+    
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_17_1.png)
     
 
 
@@ -365,14 +576,14 @@ prefs_batch = (
     .merge(samples.query('selection == "plasmid"')
                   .assign(pre=lambda x: x['name'])
                   [['library', 'pre']],
-           on='library', how='left', validate='many_to_one',
+           on=['library'], how='left', validate='many_to_one',
            )
-    [['name', 'selection', 'library', 'pre', 'post']]
-    .assign(errpre='wt-plasmid')
+    [['name', 'selection', 'library', 'pre', 'post', 'date']]
+    .assign(errpre='wt-plasmid-201112')
     .merge(samples.query('library == "wt"')
                   .assign(errpost=lambda x: x['name'])
-                  [['selection', 'errpost']],
-           on='selection', how='left', validate='many_to_one',
+                  [['selection', 'errpost', 'date']],
+           on=['selection', 'date'], how='left'
            )
     )
 assert prefs_batch.notnull().all().all()
@@ -406,6 +617,7 @@ prefs_batch
       <th>library</th>
       <th>pre</th>
       <th>post</th>
+      <th>date</th>
       <th>errpre</th>
       <th>errpost</th>
     </tr>
@@ -413,63 +625,267 @@ prefs_batch
   <tbody>
     <tr>
       <th>0</th>
-      <td>lib1-no-IFN</td>
+      <td>lib1-no-IFN-201112</td>
       <td>no-IFN</td>
       <td>lib1</td>
-      <td>lib1-plasmid</td>
-      <td>lib1-no-IFN</td>
-      <td>wt-plasmid</td>
-      <td>wt-no-IFN</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-no-IFN-201112</td>
+      <td>201112</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-no-IFN-201112</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>lib2-no-IFN</td>
+      <td>lib2-no-IFN-201112</td>
       <td>no-IFN</td>
       <td>lib2</td>
-      <td>lib2-plasmid</td>
-      <td>lib2-no-IFN</td>
-      <td>wt-plasmid</td>
-      <td>wt-no-IFN</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-no-IFN-201112</td>
+      <td>201112</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-no-IFN-201112</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>lib3-no-IFN</td>
+      <td>lib3-no-IFN-201112</td>
       <td>no-IFN</td>
       <td>lib3</td>
-      <td>lib3-plasmid</td>
-      <td>lib3-no-IFN</td>
-      <td>wt-plasmid</td>
-      <td>wt-no-IFN</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-no-IFN-201112</td>
+      <td>201112</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-no-IFN-201112</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>lib1-IFN-20-U-ml</td>
+      <td>lib1-IFN-20-U-ml-201112</td>
       <td>IFN-20-U-ml</td>
       <td>lib1</td>
-      <td>lib1-plasmid</td>
-      <td>lib1-IFN-20-U-ml</td>
-      <td>wt-plasmid</td>
-      <td>wt-IFN-20-U-ml</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-IFN-20-U-ml-201112</td>
+      <td>201112</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-20-U-ml-201112</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>lib2-IFN-20-U-ml</td>
+      <td>lib2-IFN-20-U-ml-201112</td>
       <td>IFN-20-U-ml</td>
       <td>lib2</td>
-      <td>lib2-plasmid</td>
-      <td>lib2-IFN-20-U-ml</td>
-      <td>wt-plasmid</td>
-      <td>wt-IFN-20-U-ml</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-IFN-20-U-ml-201112</td>
+      <td>201112</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-20-U-ml-201112</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>lib3-IFN-20-U-ml</td>
+      <td>lib3-IFN-20-U-ml-201112</td>
       <td>IFN-20-U-ml</td>
       <td>lib3</td>
-      <td>lib3-plasmid</td>
-      <td>lib3-IFN-20-U-ml</td>
-      <td>wt-plasmid</td>
-      <td>wt-IFN-20-U-ml</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-IFN-20-U-ml-201112</td>
+      <td>201112</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-20-U-ml-201112</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>lib1-IFN-500-U-ml-12hr-210313</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-IFN-500-U-ml-12hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>lib1-no-IFN-210313</td>
+      <td>no-IFN</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-no-IFN-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>lib3-IFN-42-U-ml-12hr-210313</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-IFN-42-U-ml-12hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>lib2-no-IFN-210313</td>
+      <td>no-IFN</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-no-IFN-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>lib3-no-IFN-210313</td>
+      <td>no-IFN</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-no-IFN-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>lib2-IFN-42-U-ml-12hr-210313</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-IFN-42-U-ml-12hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>lib3-IFN-12-U-ml-6hr-210313</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-IFN-12-U-ml-6hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>lib1-IFN-145-U-ml-18hr-210313</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-IFN-145-U-ml-18hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-145-U-ml-18hr-210313</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>lib1-IFN-12-U-ml-6hr-210313</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-IFN-12-U-ml-6hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>lib2-IFN-145-U-ml-6hr-210313</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-IFN-145-U-ml-6hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>lib1-IFN-145-U-ml-6hr-210313</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-IFN-145-U-ml-6hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>lib2-IFN-500-U-ml-12hr-210313</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-IFN-500-U-ml-12hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>lib3-IFN-145-U-ml-18hr-210313</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-IFN-145-U-ml-18hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-145-U-ml-18hr-210313</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>lib1-IFN-42-U-ml-12hr-210313</td>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-201112</td>
+      <td>lib1-IFN-42-U-ml-12hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-42-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>lib3-IFN-145-U-ml-6hr-210313</td>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-IFN-145-U-ml-6hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-145-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>lib3-IFN-500-U-ml-12hr-210313</td>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-201112</td>
+      <td>lib3-IFN-500-U-ml-12hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-500-U-ml-12hr-210313</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>lib2-IFN-12-U-ml-6hr-210313</td>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-IFN-12-U-ml-6hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-12-U-ml-6hr-210313</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>lib2-IFN-145-U-ml-18hr-210313</td>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-201112</td>
+      <td>lib2-IFN-145-U-ml-18hr-210313</td>
+      <td>210313</td>
+      <td>wt-plasmid-201112</td>
+      <td>wt-IFN-145-U-ml-18hr-210313</td>
     </tr>
   </tbody>
 </table>
@@ -557,8 +973,28 @@ display(HTML(pd.Series(prefs_files).rename('file').to_frame().to_html()))
       <td>./results/prefs/prefs_all.csv</td>
     </tr>
     <tr>
+      <th>IFN-12-U-ml-6hr</th>
+      <td>./results/prefs/prefs_IFN-12-U-ml-6hr.csv</td>
+    </tr>
+    <tr>
+      <th>IFN-145-U-ml-18hr</th>
+      <td>./results/prefs/prefs_IFN-145-U-ml-18hr.csv</td>
+    </tr>
+    <tr>
+      <th>IFN-145-U-ml-6hr</th>
+      <td>./results/prefs/prefs_IFN-145-U-ml-6hr.csv</td>
+    </tr>
+    <tr>
       <th>IFN-20-U-ml</th>
       <td>./results/prefs/prefs_IFN-20-U-ml.csv</td>
+    </tr>
+    <tr>
+      <th>IFN-42-U-ml-12hr</th>
+      <td>./results/prefs/prefs_IFN-42-U-ml-12hr.csv</td>
+    </tr>
+    <tr>
+      <th>IFN-500-U-ml-12hr</th>
+      <td>./results/prefs/prefs_IFN-500-U-ml-12hr.csv</td>
     </tr>
     <tr>
       <th>no-IFN</th>
@@ -618,7 +1054,7 @@ for selection, prefs_csv in prefs_files.items():
 
     
     
-    Preferences for IFN-20-U-ml samples:
+    Preferences for IFN-12-U-ml-6hr samples:
 
 
 
@@ -629,12 +1065,67 @@ for selection, prefs_csv in prefs_files.items():
 
     
     
-    Preferences for no-IFN samples:
+    Preferences for IFN-145-U-ml-18hr samples:
 
 
 
     
 ![png](dms_analysis_files/dms_analysis_41_5.png)
+    
+
+
+    
+    
+    Preferences for IFN-145-U-ml-6hr samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_7.png)
+    
+
+
+    
+    
+    Preferences for IFN-20-U-ml samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_9.png)
+    
+
+
+    
+    
+    Preferences for IFN-42-U-ml-12hr samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_11.png)
+    
+
+
+    
+    
+    Preferences for IFN-500-U-ml-12hr samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_13.png)
+    
+
+
+    
+    
+    Preferences for no-IFN samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_41_15.png)
     
 
 
@@ -669,7 +1160,12 @@ for selection, prefs_csv in prefs_files.items():
 ```
 
     Writing mutational effects for all to ./results/muteffects/all_muteffects.csv
+    Writing mutational effects for IFN-12-U-ml-6hr to ./results/muteffects/IFN-12-U-ml-6hr_muteffects.csv
+    Writing mutational effects for IFN-145-U-ml-18hr to ./results/muteffects/IFN-145-U-ml-18hr_muteffects.csv
+    Writing mutational effects for IFN-145-U-ml-6hr to ./results/muteffects/IFN-145-U-ml-6hr_muteffects.csv
     Writing mutational effects for IFN-20-U-ml to ./results/muteffects/IFN-20-U-ml_muteffects.csv
+    Writing mutational effects for IFN-42-U-ml-12hr to ./results/muteffects/IFN-42-U-ml-12hr_muteffects.csv
+    Writing mutational effects for IFN-500-U-ml-12hr to ./results/muteffects/IFN-500-U-ml-12hr_muteffects.csv
     Writing mutational effects for no-IFN to ./results/muteffects/no-IFN_muteffects.csv
 
 
@@ -711,7 +1207,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
     
     
-    Mutational effects for IFN-20-U-ml samples:
+    Mutational effects for IFN-12-U-ml-6hr samples:
 
 
 
@@ -722,12 +1218,67 @@ for selection, muteffects_csv in muteffects_files.items():
 
     
     
-    Mutational effects for no-IFN samples:
+    Mutational effects for IFN-145-U-ml-18hr samples:
 
 
 
     
 ![png](dms_analysis_files/dms_analysis_47_5.png)
+    
+
+
+    
+    
+    Mutational effects for IFN-145-U-ml-6hr samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_7.png)
+    
+
+
+    
+    
+    Mutational effects for IFN-20-U-ml samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_9.png)
+    
+
+
+    
+    
+    Mutational effects for IFN-42-U-ml-12hr samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_11.png)
+    
+
+
+    
+    
+    Mutational effects for IFN-500-U-ml-12hr samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_13.png)
+    
+
+
+    
+    
+    Mutational effects for no-IFN samples:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_47_15.png)
     
 
 
@@ -749,8 +1300,8 @@ Note that we use the IFN- condition as our mock selection and the wildtype virus
 diffsel_batch = (
     samples
     .assign(sel=lambda x: x['name'],
-            mock=lambda x: x['library'] + '-no-IFN',
-            err='wt-no-IFN',
+            mock=lambda x: x['library'] + '-no-IFN' + '-' + x['date'].astype(str),
+            err=lambda x: 'wt-no-IFN-' + x['date'].astype(str),
             )
     .query('selection not in ["plasmid", "no-IFN"]')
     .query('library != "wt"')
@@ -778,23 +1329,128 @@ display(HTML(diffsel_batch.to_html(index=False)))
     <tr>
       <td>IFN-20-U-ml</td>
       <td>lib1</td>
-      <td>lib1-IFN-20-U-ml</td>
-      <td>lib1-no-IFN</td>
-      <td>wt-no-IFN</td>
+      <td>lib1-IFN-20-U-ml-201112</td>
+      <td>lib1-no-IFN-201112</td>
+      <td>wt-no-IFN-201112</td>
     </tr>
     <tr>
       <td>IFN-20-U-ml</td>
       <td>lib2</td>
-      <td>lib2-IFN-20-U-ml</td>
-      <td>lib2-no-IFN</td>
-      <td>wt-no-IFN</td>
+      <td>lib2-IFN-20-U-ml-201112</td>
+      <td>lib2-no-IFN-201112</td>
+      <td>wt-no-IFN-201112</td>
     </tr>
     <tr>
       <td>IFN-20-U-ml</td>
       <td>lib3</td>
-      <td>lib3-IFN-20-U-ml</td>
-      <td>lib3-no-IFN</td>
-      <td>wt-no-IFN</td>
+      <td>lib3-IFN-20-U-ml-201112</td>
+      <td>lib3-no-IFN-201112</td>
+      <td>wt-no-IFN-201112</td>
+    </tr>
+    <tr>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>lib1</td>
+      <td>lib1-IFN-500-U-ml-12hr-210313</td>
+      <td>lib1-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>lib3</td>
+      <td>lib3-IFN-42-U-ml-12hr-210313</td>
+      <td>lib3-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>lib2</td>
+      <td>lib2-IFN-42-U-ml-12hr-210313</td>
+      <td>lib2-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>lib3</td>
+      <td>lib3-IFN-12-U-ml-6hr-210313</td>
+      <td>lib3-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>lib1</td>
+      <td>lib1-IFN-145-U-ml-18hr-210313</td>
+      <td>lib1-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>lib1</td>
+      <td>lib1-IFN-12-U-ml-6hr-210313</td>
+      <td>lib1-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>lib2</td>
+      <td>lib2-IFN-145-U-ml-6hr-210313</td>
+      <td>lib2-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>lib1</td>
+      <td>lib1-IFN-145-U-ml-6hr-210313</td>
+      <td>lib1-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>lib2</td>
+      <td>lib2-IFN-500-U-ml-12hr-210313</td>
+      <td>lib2-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>lib3</td>
+      <td>lib3-IFN-145-U-ml-18hr-210313</td>
+      <td>lib3-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-42-U-ml-12hr</td>
+      <td>lib1</td>
+      <td>lib1-IFN-42-U-ml-12hr-210313</td>
+      <td>lib1-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-145-U-ml-6hr</td>
+      <td>lib3</td>
+      <td>lib3-IFN-145-U-ml-6hr-210313</td>
+      <td>lib3-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-500-U-ml-12hr</td>
+      <td>lib3</td>
+      <td>lib3-IFN-500-U-ml-12hr-210313</td>
+      <td>lib3-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-12-U-ml-6hr</td>
+      <td>lib2</td>
+      <td>lib2-IFN-12-U-ml-6hr-210313</td>
+      <td>lib2-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
+    </tr>
+    <tr>
+      <td>IFN-145-U-ml-18hr</td>
+      <td>lib2</td>
+      <td>lib2-IFN-145-U-ml-18hr-210313</td>
+      <td>lib2-no-IFN-210313</td>
+      <td>wt-no-IFN-210313</td>
     </tr>
   </tbody>
 </table>
@@ -909,6 +1565,76 @@ for group in diffsel_groups:
     
 
 
+    
+    
+    Plotting differential selection for IFN-500-U-ml-12hr in ./results/diffsel/summary_IFN-500-U-ml-12hr-medianmutdiffsel.csv
+    
+    
+    Differential selection for IFN-500-U-ml-12hr:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_57_3.png)
+    
+
+
+    
+    
+    Plotting differential selection for IFN-42-U-ml-12hr in ./results/diffsel/summary_IFN-42-U-ml-12hr-medianmutdiffsel.csv
+    
+    
+    Differential selection for IFN-42-U-ml-12hr:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_57_5.png)
+    
+
+
+    
+    
+    Plotting differential selection for IFN-12-U-ml-6hr in ./results/diffsel/summary_IFN-12-U-ml-6hr-medianmutdiffsel.csv
+    
+    
+    Differential selection for IFN-12-U-ml-6hr:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_57_7.png)
+    
+
+
+    
+    
+    Plotting differential selection for IFN-145-U-ml-18hr in ./results/diffsel/summary_IFN-145-U-ml-18hr-medianmutdiffsel.csv
+    
+    
+    Differential selection for IFN-145-U-ml-18hr:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_57_9.png)
+    
+
+
+    
+    
+    Plotting differential selection for IFN-145-U-ml-6hr in ./results/diffsel/summary_IFN-145-U-ml-6hr-medianmutdiffsel.csv
+    
+    
+    Differential selection for IFN-145-U-ml-6hr:
+
+
+
+    
+![png](dms_analysis_files/dms_analysis_57_11.png)
+    
+
+
 ## Create `dms-view` input files
 Now we create a file to visualize the results of the deep mutational scanning using [dms-view], setting up the mapping for the [6WCZ](https://www.rcsb.org/structure/6wcz) PDB file.
 In this PDB file, chain A is human STAT2 and chain B is ZIKV NS5.
@@ -995,14 +1721,14 @@ display(HTML(dms_view_data.head().to_html()))
       <th>0</th>
       <td>1</td>
       <td>A</td>
-      <td>0.00969</td>
-      <td>1.940396</td>
-      <td>6.961509</td>
+      <td>0.01506</td>
+      <td>2.163344</td>
+      <td>8.700179</td>
       <td>all</td>
       <td>R</td>
-      <td>0.000104</td>
-      <td>1.466124</td>
-      <td>9.346682</td>
+      <td>-0.000004</td>
+      <td>0.140516</td>
+      <td>1.124125</td>
       <td>0</td>
       <td>0</td>
       <td>B</td>
@@ -1011,14 +1737,14 @@ display(HTML(dms_view_data.head().to_html()))
       <th>1</th>
       <td>1</td>
       <td>A</td>
-      <td>0.00954</td>
-      <td>1.979059</td>
-      <td>7.235932</td>
-      <td>IFN-20-U-ml</td>
+      <td>0.01736</td>
+      <td>2.260977</td>
+      <td>9.592452</td>
+      <td>IFN-12-U-ml-6hr</td>
       <td>R</td>
-      <td>0.000104</td>
-      <td>1.466124</td>
-      <td>9.346682</td>
+      <td>-0.000004</td>
+      <td>0.140516</td>
+      <td>1.124125</td>
       <td>0</td>
       <td>0</td>
       <td>B</td>
@@ -1027,14 +1753,14 @@ display(HTML(dms_view_data.head().to_html()))
       <th>2</th>
       <td>1</td>
       <td>A</td>
-      <td>0.00985</td>
-      <td>1.895627</td>
-      <td>6.656718</td>
-      <td>no-IFN</td>
+      <td>0.01937</td>
+      <td>2.336533</td>
+      <td>10.345304</td>
+      <td>IFN-145-U-ml-18hr</td>
       <td>R</td>
-      <td>0.000104</td>
-      <td>1.466124</td>
-      <td>9.346682</td>
+      <td>-0.000004</td>
+      <td>0.140516</td>
+      <td>1.124125</td>
       <td>0</td>
       <td>0</td>
       <td>B</td>
@@ -1042,15 +1768,15 @@ display(HTML(dms_view_data.head().to_html()))
     <tr>
       <th>3</th>
       <td>1</td>
-      <td>C</td>
-      <td>0.04736</td>
-      <td>1.940396</td>
-      <td>6.961509</td>
-      <td>all</td>
+      <td>A</td>
+      <td>0.01688</td>
+      <td>2.095551</td>
+      <td>8.129922</td>
+      <td>IFN-145-U-ml-6hr</td>
       <td>R</td>
-      <td>0.000399</td>
-      <td>1.466124</td>
-      <td>9.346682</td>
+      <td>-0.000004</td>
+      <td>0.140516</td>
+      <td>1.124125</td>
       <td>0</td>
       <td>0</td>
       <td>B</td>
@@ -1058,15 +1784,15 @@ display(HTML(dms_view_data.head().to_html()))
     <tr>
       <th>4</th>
       <td>1</td>
-      <td>C</td>
-      <td>0.04674</td>
+      <td>A</td>
+      <td>0.00954</td>
       <td>1.979059</td>
       <td>7.235932</td>
       <td>IFN-20-U-ml</td>
       <td>R</td>
-      <td>0.000399</td>
-      <td>1.466124</td>
-      <td>9.346682</td>
+      <td>-0.000004</td>
+      <td>0.140516</td>
+      <td>1.124125</td>
       <td>0</td>
       <td>0</td>
       <td>B</td>
@@ -1074,3 +1800,8 @@ display(HTML(dms_view_data.head().to_html()))
   </tbody>
 </table>
 
+
+
+```python
+
+```

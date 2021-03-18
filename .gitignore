@@ -8,7 +8,7 @@ results/*
 
 !results/prefs
 results/prefs/*
-!results/prefs/*_prefs_*.csv
+!results/prefs/*prefs*.csv
 
 !results/muteffects
 results/muteffects/*

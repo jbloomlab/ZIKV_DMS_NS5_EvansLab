@@ -14,6 +14,6 @@ dependencies:
   - pip
   - python=3.8
   - pip:
-    - dms_tools2==2.6.8
+    - dms_tools2==2.6.9
     - dmslogo==0.6.2
     - snakemake==6.5.2

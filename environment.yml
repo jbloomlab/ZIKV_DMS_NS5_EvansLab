@@ -1,4 +1,4 @@
-name: ZIKV_DMS
+name: ZIKV_DMS_NS5_EvansLab
 channels:
   - bioconda
   - r
@@ -8,11 +8,12 @@ channels:
 dependencies:
   - imagemagick
   - jupyterlab
+  - mamba
   - nbdime
   - nodejs
   - pip
   - python=3.8
   - pip:
-    - dms_tools2
-    - dmslogo
-    - snakemake
+    - dms_tools2==2.6.8
+    - dmslogo==0.6.2
+    - snakemake==6.5.2

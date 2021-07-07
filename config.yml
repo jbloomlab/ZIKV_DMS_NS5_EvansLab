@@ -1,0 +1,6 @@
+max_cpus: 36  # max CPUs to use for any job
+
+# specify information for each tile
+tiles:
+  tile_1:
+    errpre: wt-plasmid-201112  # pre-selection error control

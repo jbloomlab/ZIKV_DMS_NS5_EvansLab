@@ -1,13 +1,31 @@
 """``snakemake`` pipeline that runs analysis."""
 
+
+import os
+
+
 configfile: 'config.yml'
 
 rule all:
     input:
         expand("results/{tile}",
                tile=config['tiles']),
-        expand("results/notebooks/dms_{tile}_analysis.ipynb",
+        expand("results/summary/dms_{tile}_analysis.md",
                tile=config['tiles'])
+
+rule jupnb_to_md:
+    """Convert Jupyter notebook to Markdown format."""
+    input: notebook="results/notebooks/{notebook}.ipynb"
+    output: markdown="results/summary/{notebook}.md"
+    params: outdir=lambda wildcards, output: os.path.dirname(output.markdown)
+    conda: 'environment.yml'
+    shell: 
+        """
+        jupyter nbconvert \
+            --output-dir {params.outdir} \
+            --to markdown \
+            {input.notebook}
+        """
 
 rule dms_tile_analysis:
     """Analyze DMS data for a tile."""

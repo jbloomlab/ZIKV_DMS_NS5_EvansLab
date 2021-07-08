@@ -6,22 +6,25 @@ _*
 results/*
 !results/summary
 
-!results/prefs
-results/prefs/*
-!results/prefs/*prefs*.csv
+!results/tile_*
+results/tile_*/*
 
-!results/muteffects
-results/muteffects/*
-!results/muteffects/*_muteffects.csv
+!results/tile_*/prefs
+results/tile_*/prefs/*
+!results/tile_*/prefs/*prefs*.csv
 
-!results/diffsel
-results/diffsel/*
-!results/diffsel/*diffsel.csv
+!results/tile_*/muteffects
+results/tile_*/muteffects/*
+!results/tile_*/muteffects/*_muteffects.csv
 
-!results/dms_view
-results/dms_view/*
-!results/dms_view/data.csv
+!results/tile_*/diffsel
+results/tile_*/diffsel/*
+!results/tile_*/diffsel/*diffsel.csv
 
-!results/logoplots
-results/logoplots/*
-!results/logoplots/*.pdf
+!results/tile_*/dms_view
+results/tile_*/dms_view/*
+!results/tile_*/dms_view/data.csv
+
+!results/tile_*/logoplots
+results/tile_*/logoplots/*
+!results/tile_*/logoplots/*.pdf

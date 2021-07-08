@@ -4,3 +4,4 @@ max_cpus: 36  # max CPUs to use for any job
 tiles:
   tile_1:
     errpre: wt-plasmid-201112  # pre-selection error control
+    site_number_offset: -1  # add to 1, 2, ... site numbers when re-numbering

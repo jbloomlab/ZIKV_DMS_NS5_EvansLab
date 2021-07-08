@@ -26,7 +26,7 @@ To run the pipeline using 36 jobs, use the command:
 Add the `--keep-incomplete` flag if you don't want to delete results on an error.
 To run on the Hutch cluster using `slurm`, do:
 
-    sbatch -c 16 run_Snakemake.bash
+    sbatch -c 36 run_Snakemake.bash
 
 
 ## Input data

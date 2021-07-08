@@ -34,7 +34,9 @@ rule dms_tile_analysis:
         alignspecs="data/{tile}_subamplicon_alignspecs.txt",
         samplelist="data/{tile}_samplelist.csv",
     output: resultsdir=directory("results/{tile}")
-    params: errpre=lambda wc: config['tiles'][wc.tile]['errpre']
+    params:
+        errpre=lambda wc: config['tiles'][wc.tile]['errpre'],
+        site_number_offset=lambda wc: config['tiles'][wc.tile]['site_number_offset']
     threads: config['max_cpus']
     conda: 'environment.yml'
     log: notebook='results/notebooks/dms_{tile}_analysis.ipynb'

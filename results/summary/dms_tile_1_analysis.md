@@ -1,7 +1,7 @@
 ```python
 
 ######## snakemake preamble start (automatically inserted, do not edit) ########
-import sys; sys.path.extend(['/fh/fast/bloom_j/software/miniconda3/envs/ZIKV_DMS_NS5_EvansLab/lib/python3.8/site-packages', '/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab']); import pickle; snakemake = pickle.loads(b'\x80\x04\x95Y\x05\x00\x00\x00\x00\x00\x00\x8c\x10snakemake.script\x94\x8c\tSnakemake\x94\x93\x94)\x81\x94}\x94(\x8c\x05input\x94\x8c\x0csnakemake.io\x94\x8c\nInputFiles\x94\x93\x94)\x81\x94(\x8c\x1adata/tile_1_amplicon.fasta\x94\x8c&data/tile_1_subamplicon_alignspecs.txt\x94\x8c\x1adata/tile_1_samplelist.csv\x94e}\x94(\x8c\x06_names\x94}\x94(\x8c\x08amplicon\x94K\x00N\x86\x94\x8c\nalignspecs\x94K\x01N\x86\x94\x8c\nsamplelist\x94K\x02N\x86\x94u\x8c\x12_allowed_overrides\x94]\x94(\x8c\x05index\x94\x8c\x04sort\x94eh\x18\x8c\tfunctools\x94\x8c\x07partial\x94\x93\x94h\x06\x8c\x19Namedlist._used_attribute\x94\x93\x94\x85\x94R\x94(h\x1e)}\x94\x8c\x05_name\x94h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x10h\nh\x12h\x0bh\x14h\x0cub\x8c\x06output\x94h\x06\x8c\x0bOutputFiles\x94\x93\x94)\x81\x94\x8c\x0eresults/tile_1\x94a}\x94(h\x0e}\x94\x8c\nresultsdir\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh/h,ub\x8c\x06params\x94h\x06\x8c\x06Params\x94\x93\x94)\x81\x94\x8c\x11wt-plasmid-201112\x94a}\x94(h\x0e}\x94\x8c\x06errpre\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhAh>ub\x8c\twildcards\x94h\x06\x8c\tWildcards\x94\x93\x94)\x81\x94\x8c\x06tile_1\x94a}\x94(h\x0e}\x94\x8c\x04tile\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94b\x8c\x04tile\x94hPub\x8c\x07threads\x94K$\x8c\tresources\x94h\x06\x8c\tResources\x94\x93\x94)\x81\x94(K$K\x01\x8c\x15/loc/scratch/32364393\x94e}\x94(h\x0e}\x94(\x8c\x06_cores\x94K\x00N\x86\x94\x8c\x06_nodes\x94K\x01N\x86\x94\x8c\x06tmpdir\x94K\x02N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhgK$hiK\x01hkhdub\x8c\x03log\x94h\x06\x8c\x03Log\x94\x93\x94)\x81\x94\x8c+results/notebooks/dms_tile_1_analysis.ipynb\x94a}\x94(h\x0e}\x94\x8c\x08notebook\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh}hzub\x8c\x06config\x94}\x94(\x8c\x08max_cpus\x94K$\x8c\x05tiles\x94}\x94\x8c\x06tile_1\x94}\x94\x8c\x06errpre\x94h>ssu\x8c\x04rule\x94\x8c\x11dms_tile_analysis\x94\x8c\x0fbench_iteration\x94N\x8c\tscriptdir\x94\x8cJ/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab\x94ub.'); from snakemake.logging import logger; logger.printshellcmds = False; import os; os.chdir(r'/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab');
+import sys; sys.path.extend(['/fh/fast/bloom_j/software/miniconda3/envs/ZIKV_DMS_NS5_EvansLab/lib/python3.8/site-packages', '/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab']); import pickle; snakemake = pickle.loads(b'\x80\x04\x95\x9c\x05\x00\x00\x00\x00\x00\x00\x8c\x10snakemake.script\x94\x8c\tSnakemake\x94\x93\x94)\x81\x94}\x94(\x8c\x05input\x94\x8c\x0csnakemake.io\x94\x8c\nInputFiles\x94\x93\x94)\x81\x94(\x8c\x1adata/tile_1_amplicon.fasta\x94\x8c&data/tile_1_subamplicon_alignspecs.txt\x94\x8c\x1adata/tile_1_samplelist.csv\x94e}\x94(\x8c\x06_names\x94}\x94(\x8c\x08amplicon\x94K\x00N\x86\x94\x8c\nalignspecs\x94K\x01N\x86\x94\x8c\nsamplelist\x94K\x02N\x86\x94u\x8c\x12_allowed_overrides\x94]\x94(\x8c\x05index\x94\x8c\x04sort\x94eh\x18\x8c\tfunctools\x94\x8c\x07partial\x94\x93\x94h\x06\x8c\x19Namedlist._used_attribute\x94\x93\x94\x85\x94R\x94(h\x1e)}\x94\x8c\x05_name\x94h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x10h\nh\x12h\x0bh\x14h\x0cub\x8c\x06output\x94h\x06\x8c\x0bOutputFiles\x94\x93\x94)\x81\x94\x8c\x0eresults/tile_1\x94a}\x94(h\x0e}\x94\x8c\nresultsdir\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh/h,ub\x8c\x06params\x94h\x06\x8c\x06Params\x94\x93\x94)\x81\x94(\x8c\x11wt-plasmid-201112\x94J\xff\xff\xff\xffe}\x94(h\x0e}\x94(\x8c\x06errpre\x94K\x00N\x86\x94\x8c\x12site_number_offset\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhAh>hCJ\xff\xff\xff\xffub\x8c\twildcards\x94h\x06\x8c\tWildcards\x94\x93\x94)\x81\x94\x8c\x06tile_1\x94a}\x94(h\x0e}\x94\x8c\x04tile\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94b\x8c\x04tile\x94hRub\x8c\x07threads\x94K$\x8c\tresources\x94h\x06\x8c\tResources\x94\x93\x94)\x81\x94(K$K\x01\x8c\x15/loc/scratch/32525407\x94e}\x94(h\x0e}\x94(\x8c\x06_cores\x94K\x00N\x86\x94\x8c\x06_nodes\x94K\x01N\x86\x94\x8c\x06tmpdir\x94K\x02N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhiK$hkK\x01hmhfub\x8c\x03log\x94h\x06\x8c\x03Log\x94\x93\x94)\x81\x94\x8c+results/notebooks/dms_tile_1_analysis.ipynb\x94a}\x94(h\x0e}\x94\x8c\x08notebook\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x7fh|ub\x8c\x06config\x94}\x94(\x8c\x08max_cpus\x94K$\x8c\x05tiles\x94}\x94\x8c\x06tile_1\x94}\x94(\x8c\x06errpre\x94h>\x8c\x12site_number_offset\x94J\xff\xff\xff\xffusu\x8c\x04rule\x94\x8c\x11dms_tile_analysis\x94\x8c\x0fbench_iteration\x94N\x8c\tscriptdir\x94\x8cJ/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab\x94ub.'); from snakemake.logging import logger; logger.printshellcmds = False; import os; os.chdir(r'/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab');
 ######## snakemake preamble end #########
 
 ```
@@ -30,6 +30,7 @@ from dms_tools2 import AAS
 from dms_tools2.ipython_utils import showPDF
 from dms_tools2.plot import COLOR_BLIND_PALETTE_GRAY as CBPALETTE
 import dms_tools2.prefs
+import dms_tools2.utils
 print(f"Using dms_tools2 {dms_tools2.__version__}")
 
 from IPython.display import display, HTML
@@ -50,6 +51,7 @@ samplelist = snakemake.input.samplelist
 alignspecsfile = snakemake.input.alignspecs
 resultsdir = snakemake.output.resultsdir
 errpre = snakemake.params.errpre
+site_number_offset = snakemake.params.site_number_offset
 ```
 
 Some additional configuration for analysis:
@@ -69,11 +71,11 @@ refseqrecord = Bio.SeqIO.read(refseqfile, 'fasta')
 refprot = str(refseqrecord.seq.translate())
 refseq = str(refseqrecord.seq)
 
-print(f"Read wildtype (reference) sequence of {len(refseq)} nucleotides "
+print(f"Read reference sequence of {len(refseq)} nucleotides from {refseqfile} "
       f"that translates to protein of {len(refprot)} amino acids.")
 ```
 
-    Read wildtype (reference) sequence of 333 nucleotides that translates to protein of 111 amino acids.
+    Read reference sequence of 333 nucleotides from data/tile_1_amplicon.fasta that translates to protein of 111 amino acids.
 
 
 ## Process deep sequencing data
@@ -445,7 +447,11 @@ They will all have the following prefix:
 
 ```python
 bcsubamp_plot_prefix = os.path.join(countsdir, 'summary_')
+print(f"Plots prefix is {bcsubamp_plot_prefix}")
 ```
+
+    Plots prefix is results/tile_1/codoncounts/summary_
+
 
 First, we look at the number of reads and barcodes per sample.
 Most reads align with high quality, but many of the barcodes don't have too few reads.
@@ -484,6 +490,7 @@ showPDF(bcsubamp_plot_prefix + 'readsperbc.pdf')
 
 
 Now we look at the depth across the gene.
+Note that this is still 1, 2, ... numbering of the reference sequence for this tile alone.
 The depth is not uniform, suggesting that some subamplicons (particularly the second and third ones) were under-loaded relative to the other subamplicons:
 
 
@@ -565,6 +572,57 @@ showPDF(bcsubamp_plot_prefix + 'cumulmutcounts.pdf')
     
 
 
+## Now re-number the sites
+Above everything is numbered 1, 2, ... for that tile.
+We want to renumber for the whole gene:
+
+
+```python
+print(f"Renumbering by adding an offset of {site_number_offset}")
+```
+
+    Renumbering by adding an offset of -1
+
+
+Create a directory for the re-numbered codon counts:
+
+
+```python
+renumb_countsdir = os.path.join(resultsdir, 'renumbered_codoncounts')
+os.makedirs(renumb_countsdir, exist_ok=True)
+print(f"Putting renumbered codon counts in {renumb_countsdir}")
+```
+
+    Putting renumbered codon counts in results/tile_1/renumbered_codoncounts
+
+
+Create a renumbering file:
+
+
+```python
+ncodons = len(refseq)
+assert 0 == ncodons % 3, f"invalid {ncodons=}"
+
+renumbfile = os.path.join(renumb_countsdir, 'renumbering.csv')
+with open(renumbfile, 'w') as f:
+    f.write('original,new\n')
+    for orig in range(1, ncodons + 1):
+        f.write(f"{orig},{orig + site_number_offset}\n")
+```
+
+Renumber all CSVs:
+
+
+```python
+counts_files = glob.glob(f"{countsdir}/*_codoncounts.csv")
+print(f"Renumbering {len(counts_files)} files")
+
+dms_tools2.utils.renumberSites(renumbfile, counts_files, outdir=renumb_countsdir)
+```
+
+    Renumbering 36 files
+
+
 ## Functional effects of mutations of viral growth
 Compute the functional effects of mutations on viral growth by comparing the passaged virus to the original plasmid, for both the +IFN and -IFN conditions.
 
@@ -595,10 +653,8 @@ prefs_batch = (
     )
 assert prefs_batch.notnull().all().all()
 
-prefs_batch
+display(prefs_batch)
 ```
-
-
 
 
 <div>
@@ -899,7 +955,6 @@ prefs_batch
 </div>
 
 
-
 Now run [dms2_batch_prefs](https://jbloomlab.github.io/dms_tools2/dms2_batch_prefs.html):
 
 
@@ -911,7 +966,7 @@ prefs_batchfile = os.path.join(prefsdir, 'batch.csv')
 prefs_batch.to_csv(prefs_batchfile, index=False)
 
 log = ! dms2_batch_prefs \
-        --indir {countsdir} \
+        --indir {renumb_countsdir} \
         --batchfile {prefs_batchfile} \
         --outdir {prefsdir} \
         --summaryprefix summary \
@@ -936,7 +991,7 @@ showPDF(os.path.join(prefsdir, 'summary_prefscorr.pdf'))
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_38_0.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_46_0.png)
     
 
 
@@ -1024,7 +1079,7 @@ os.makedirs(logodir, exist_ok=True)
 
 # get wildtype amino acids to use as overlay
 wt_aas = pd.DataFrame.from_records(
-            [(r + 1, a) for r, a in enumerate(refprot)],
+            [(r + 1 + site_number_offset, a) for r, a in enumerate(refprot)],
             columns=['site', 'wildtype'])
 wtoverlayfile = os.path.join(logodir, 'wt_overlay.csv')
 wt_aas.to_csv(wtoverlayfile, index=False)
@@ -1055,7 +1110,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_1.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_1.png)
     
 
 
@@ -1066,7 +1121,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_3.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_3.png)
     
 
 
@@ -1077,7 +1132,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_5.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_5.png)
     
 
 
@@ -1088,7 +1143,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_7.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_7.png)
     
 
 
@@ -1099,7 +1154,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_9.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_9.png)
     
 
 
@@ -1110,7 +1165,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_11.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_11.png)
     
 
 
@@ -1121,7 +1176,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_13.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_13.png)
     
 
 
@@ -1132,7 +1187,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_42_15.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_15.png)
     
 
 
@@ -1208,7 +1263,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_1.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_1.png)
     
 
 
@@ -1219,7 +1274,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_3.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_3.png)
     
 
 
@@ -1230,7 +1285,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_5.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_5.png)
     
 
 
@@ -1241,7 +1296,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_7.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_7.png)
     
 
 
@@ -1252,7 +1307,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_9.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_9.png)
     
 
 
@@ -1263,7 +1318,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_11.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_11.png)
     
 
 
@@ -1274,7 +1329,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_13.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_13.png)
     
 
 
@@ -1285,7 +1340,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_48_15.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_15.png)
     
 
 
@@ -1473,7 +1528,7 @@ diffsel_batch.to_csv(diffsel_batchfile, index=False)
 log = ! dms2_batch_diffsel \
         --batchfile {diffsel_batchfile} \
         --summaryprefix summary \
-        --indir {countsdir} \
+        --indir {renumb_countsdir} \
         --outdir {diffseldir} \
         --ncpus {ncpus} \
         --use_existing {use_existing}
@@ -1505,7 +1560,7 @@ for plot_type, desc in [('positivesite', 'positive site'),
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_1.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_64_1.png)
     
 
 
@@ -1516,7 +1571,7 @@ for plot_type, desc in [('positivesite', 'positive site'),
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_3.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_64_3.png)
     
 
 
@@ -1527,7 +1582,7 @@ for plot_type, desc in [('positivesite', 'positive site'),
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_5.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_64_5.png)
     
 
 
@@ -1568,7 +1623,7 @@ for group in diffsel_groups:
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_58_1.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_66_1.png)
     
 
 
@@ -1582,7 +1637,7 @@ for group in diffsel_groups:
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_58_3.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_66_3.png)
     
 
 
@@ -1596,7 +1651,7 @@ for group in diffsel_groups:
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_58_5.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_66_5.png)
     
 
 
@@ -1610,7 +1665,7 @@ for group in diffsel_groups:
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_58_7.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_66_7.png)
     
 
 
@@ -1624,7 +1679,7 @@ for group in diffsel_groups:
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_58_9.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_66_9.png)
     
 
 
@@ -1638,19 +1693,17 @@ for group in diffsel_groups:
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_58_11.png)
+![png](dms_tile_1_analysis_files/dms_tile_1_analysis_66_11.png)
     
 
 
 ## Create `dms-view` input files
 Now we create a file to visualize the results of the deep mutational scanning using [dms-view](https://dms-view.github.io), setting up the mapping for the [6WCZ](https://www.rcsb.org/structure/6wcz) PDB file.
 In this PDB file, chain A is human STAT2 and chain B is ZIKV NS5.
-The number is shifted such that sequential numbering of the sequence used in the deep mutational scanning is one greater than PDB numbering.
-In other words, residue 6 in the PDB is residue 7 in the sequence used for the DMS.
 
 
 ```python
-offset_to_pdb = -1
+offset_to_pdb = 0
 pdb_chain = 'B'
 ```
 
@@ -1726,7 +1779,7 @@ display(HTML(dms_view_data.head().to_html()))
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
+      <td>0</td>
       <td>A</td>
       <td>0.01506</td>
       <td>2.163344</td>
@@ -1742,7 +1795,7 @@ display(HTML(dms_view_data.head().to_html()))
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
+      <td>0</td>
       <td>A</td>
       <td>0.01736</td>
       <td>2.260977</td>
@@ -1758,7 +1811,7 @@ display(HTML(dms_view_data.head().to_html()))
     </tr>
     <tr>
       <th>2</th>
-      <td>1</td>
+      <td>0</td>
       <td>A</td>
       <td>0.01937</td>
       <td>2.336533</td>
@@ -1774,7 +1827,7 @@ display(HTML(dms_view_data.head().to_html()))
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
+      <td>0</td>
       <td>A</td>
       <td>0.01688</td>
       <td>2.095551</td>
@@ -1790,7 +1843,7 @@ display(HTML(dms_view_data.head().to_html()))
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>A</td>
       <td>0.00954</td>
       <td>1.979059</td>

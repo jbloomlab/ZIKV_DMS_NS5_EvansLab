@@ -3,7 +3,7 @@ Experiments by Blake Richardson and Matt Evans.
 Analysis by Jesse Bloom.
 
 ## Results
-For a summary of the results, see [results/summary/dms_analysis.md](results/summary/dms_analysis.md), which is the Markdown summary of running the Jupyter notebook [dms_analysis.ipynb](dms_analysis.ipynb).
+For a summary of the results, see [results/summary/](results/summary/), which has Markdown summaries for the analysis of each tile (e.g., [results/summary/dms_tile_1_analysis.md](results/summary/dms_tile_1_analysis.md), etc).
 
 Other results are placed in [./results/](results), although not all files are tracked in the GitHub repo.
 

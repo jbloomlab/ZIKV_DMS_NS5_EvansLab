@@ -5,3 +5,6 @@ tiles:
   tile_1:
     errpre: wt-plasmid-201112  # pre-selection error control
     site_number_offset: -1  # add to 1, 2, ... site numbers when re-numbering
+  tile_2:
+    errpre: wt-plasmid-210528
+    site_number_offset: 110

@@ -1,7 +1,7 @@
 ```python
 
 ######## snakemake preamble start (automatically inserted, do not edit) ########
-import sys; sys.path.extend(['/fh/fast/bloom_j/software/miniconda3/envs/ZIKV_DMS_NS5_EvansLab/lib/python3.8/site-packages', '/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab']); import pickle; snakemake = pickle.loads(b'\x80\x04\x95\x9c\x05\x00\x00\x00\x00\x00\x00\x8c\x10snakemake.script\x94\x8c\tSnakemake\x94\x93\x94)\x81\x94}\x94(\x8c\x05input\x94\x8c\x0csnakemake.io\x94\x8c\nInputFiles\x94\x93\x94)\x81\x94(\x8c\x1adata/tile_1_amplicon.fasta\x94\x8c&data/tile_1_subamplicon_alignspecs.txt\x94\x8c\x1adata/tile_1_samplelist.csv\x94e}\x94(\x8c\x06_names\x94}\x94(\x8c\x08amplicon\x94K\x00N\x86\x94\x8c\nalignspecs\x94K\x01N\x86\x94\x8c\nsamplelist\x94K\x02N\x86\x94u\x8c\x12_allowed_overrides\x94]\x94(\x8c\x05index\x94\x8c\x04sort\x94eh\x18\x8c\tfunctools\x94\x8c\x07partial\x94\x93\x94h\x06\x8c\x19Namedlist._used_attribute\x94\x93\x94\x85\x94R\x94(h\x1e)}\x94\x8c\x05_name\x94h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x10h\nh\x12h\x0bh\x14h\x0cub\x8c\x06output\x94h\x06\x8c\x0bOutputFiles\x94\x93\x94)\x81\x94\x8c\x0eresults/tile_1\x94a}\x94(h\x0e}\x94\x8c\nresultsdir\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh/h,ub\x8c\x06params\x94h\x06\x8c\x06Params\x94\x93\x94)\x81\x94(\x8c\x11wt-plasmid-201112\x94J\xff\xff\xff\xffe}\x94(h\x0e}\x94(\x8c\x06errpre\x94K\x00N\x86\x94\x8c\x12site_number_offset\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhAh>hCJ\xff\xff\xff\xffub\x8c\twildcards\x94h\x06\x8c\tWildcards\x94\x93\x94)\x81\x94\x8c\x06tile_1\x94a}\x94(h\x0e}\x94\x8c\x04tile\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94b\x8c\x04tile\x94hRub\x8c\x07threads\x94K$\x8c\tresources\x94h\x06\x8c\tResources\x94\x93\x94)\x81\x94(K$K\x01\x8c\x15/loc/scratch/32621763\x94e}\x94(h\x0e}\x94(\x8c\x06_cores\x94K\x00N\x86\x94\x8c\x06_nodes\x94K\x01N\x86\x94\x8c\x06tmpdir\x94K\x02N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhiK$hkK\x01hmhfub\x8c\x03log\x94h\x06\x8c\x03Log\x94\x93\x94)\x81\x94\x8c+results/notebooks/dms_tile_1_analysis.ipynb\x94a}\x94(h\x0e}\x94\x8c\x08notebook\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x7fh|ub\x8c\x06config\x94}\x94(\x8c\x08max_cpus\x94K$\x8c\x05tiles\x94}\x94\x8c\x06tile_1\x94}\x94(\x8c\x06errpre\x94h>\x8c\x12site_number_offset\x94J\xff\xff\xff\xffusu\x8c\x04rule\x94\x8c\x11dms_tile_analysis\x94\x8c\x0fbench_iteration\x94N\x8c\tscriptdir\x94\x8cJ/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab\x94ub.'); from snakemake.logging import logger; logger.printshellcmds = False; import os; os.chdir(r'/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab');
+import sys; sys.path.extend(['/fh/fast/bloom_j/software/miniconda3/envs/ZIKV_DMS_NS5_EvansLab/lib/python3.8/site-packages', '/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab']); import pickle; snakemake = pickle.loads(b'\x80\x04\x95\xd8\x05\x00\x00\x00\x00\x00\x00\x8c\x10snakemake.script\x94\x8c\tSnakemake\x94\x93\x94)\x81\x94}\x94(\x8c\x05input\x94\x8c\x0csnakemake.io\x94\x8c\nInputFiles\x94\x93\x94)\x81\x94(\x8c\x1adata/tile_2_amplicon.fasta\x94\x8c&data/tile_2_subamplicon_alignspecs.txt\x94\x8c\x1adata/tile_2_samplelist.csv\x94e}\x94(\x8c\x06_names\x94}\x94(\x8c\x08amplicon\x94K\x00N\x86\x94\x8c\nalignspecs\x94K\x01N\x86\x94\x8c\nsamplelist\x94K\x02N\x86\x94u\x8c\x12_allowed_overrides\x94]\x94(\x8c\x05index\x94\x8c\x04sort\x94eh\x18\x8c\tfunctools\x94\x8c\x07partial\x94\x93\x94h\x06\x8c\x19Namedlist._used_attribute\x94\x93\x94\x85\x94R\x94(h\x1e)}\x94\x8c\x05_name\x94h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x10h\nh\x12h\x0bh\x14h\x0cub\x8c\x06output\x94h\x06\x8c\x0bOutputFiles\x94\x93\x94)\x81\x94\x8c\x0eresults/tile_2\x94a}\x94(h\x0e}\x94\x8c\nresultsdir\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh/h,ub\x8c\x06params\x94h\x06\x8c\x06Params\x94\x93\x94)\x81\x94(\x8c\x11wt-plasmid-210528\x94Kne}\x94(h\x0e}\x94(\x8c\x06errpre\x94K\x00N\x86\x94\x8c\x12site_number_offset\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhAh>hCKnub\x8c\twildcards\x94h\x06\x8c\tWildcards\x94\x93\x94)\x81\x94\x8c\x06tile_2\x94a}\x94(h\x0e}\x94\x8c\x04tile\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94b\x8c\x04tile\x94hRub\x8c\x07threads\x94K$\x8c\tresources\x94h\x06\x8c\tResources\x94\x93\x94)\x81\x94(K$K\x01\x8c\x15/loc/scratch/32624856\x94e}\x94(h\x0e}\x94(\x8c\x06_cores\x94K\x00N\x86\x94\x8c\x06_nodes\x94K\x01N\x86\x94\x8c\x06tmpdir\x94K\x02N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhiK$hkK\x01hmhfub\x8c\x03log\x94h\x06\x8c\x03Log\x94\x93\x94)\x81\x94\x8c+results/notebooks/dms_tile_2_analysis.ipynb\x94a}\x94(h\x0e}\x94\x8c\x08notebook\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x7fh|ub\x8c\x06config\x94}\x94(\x8c\x08max_cpus\x94K$\x8c\x05tiles\x94}\x94(\x8c\x06tile_1\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-201112\x94\x8c\x12site_number_offset\x94J\xff\xff\xff\xffu\x8c\x06tile_2\x94}\x94(\x8c\x06errpre\x94h>\x8c\x12site_number_offset\x94Knuuu\x8c\x04rule\x94\x8c\x11dms_tile_analysis\x94\x8c\x0fbench_iteration\x94N\x8c\tscriptdir\x94\x8cJ/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab\x94ub.'); from snakemake.logging import logger; logger.printshellcmds = False; import os; os.chdir(r'/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab');
 ######## snakemake preamble end #########
 
 ```
@@ -74,7 +74,7 @@ print(f"Read reference sequence of {len(refseq)} nucleotides from {refseqfile} "
       f"that translates to protein of {len(refprot)} amino acids.")
 ```
 
-    Read reference sequence of 333 nucleotides from data/tile_1_amplicon.fasta that translates to protein of 111 amino acids.
+    Read reference sequence of 342 nucleotides from data/tile_2_amplicon.fasta that translates to protein of 114 amino acids.
 
 
 ## Process deep sequencing data
@@ -105,100 +105,68 @@ display(HTML(samples.to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>wt</td>
-      <td>plasmid</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-WT-plasmid_S5_L001_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>wt-plasmid-201112</td>
-    </tr>
-    <tr>
-      <td>lib1</td>
-      <td>plasmid</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib1-plasmid_S6_L001_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>lib1-plasmid-201112</td>
-    </tr>
-    <tr>
-      <td>lib2</td>
-      <td>plasmid</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib2-plasmid_S7_L001_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>lib2-plasmid-201112</td>
-    </tr>
-    <tr>
       <td>lib3</td>
       <td>plasmid</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib3-plasmid_S8_L001_R1_001.fastq.gz</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/lib-3-plasmid_S3_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib3-plasmid-201112</td>
-    </tr>
-    <tr>
-      <td>wt</td>
-      <td>Huh-7.5</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-WT-No-IFN_S9_L001_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>wt-Huh-7.5-201112</td>
+      <td>lib3-plasmid-210528</td>
     </tr>
     <tr>
       <td>lib1</td>
       <td>Huh-7.5</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib1-No-IFN_S10_L001_R1_001.fastq.gz</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-1_S5_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib1-Huh-7.5-201112</td>
-    </tr>
-    <tr>
-      <td>lib2</td>
-      <td>Huh-7.5</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib2-No-IFN_S11_L001_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>lib2-Huh-7.5-201112</td>
+      <td>lib1-Huh-7.5-210528</td>
     </tr>
     <tr>
       <td>lib3</td>
       <td>Huh-7.5</td>
-      <td>201112</td>
-      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/BR-Lib3-No-IFN_S12_L001_R1_001.fastq.gz</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-3_S7_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>lib3-Huh-7.5-201112</td>
-    </tr>
-    <tr>
-      <td>lib1</td>
-      <td>Huh-7.5</td>
-      <td>210313</td>
-      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_Lib1_S2_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>lib1-Huh-7.5-210313</td>
-    </tr>
-    <tr>
-      <td>lib2</td>
-      <td>Huh-7.5</td>
-      <td>210313</td>
-      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_Lib2_S3_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>lib2-Huh-7.5-210313</td>
-    </tr>
-    <tr>
-      <td>lib3</td>
-      <td>Huh-7.5</td>
-      <td>210313</td>
-      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_Lib3_S4_R1_001.fastq.gz</td>
-      <td>NaN</td>
-      <td>lib3-Huh-7.5-210313</td>
+      <td>lib3-Huh-7.5-210528</td>
     </tr>
     <tr>
       <td>wt</td>
       <td>Huh-7.5</td>
-      <td>210313</td>
-      <td>/shared/ngs/illumina/bloom_lab/210312_D00300_1192_BHKHNYBCX3/Unaligned/Project_dbacsik/BR_0_IFN_WT_S1_R1_001.fastq.gz</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-wt_S8_L001_R1_001.fastq.gz</td>
       <td>NaN</td>
-      <td>wt-Huh-7.5-210313</td>
+      <td>wt-Huh-7.5-210528</td>
+    </tr>
+    <tr>
+      <td>wt</td>
+      <td>plasmid</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/WT-plasmid_S4_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-plasmid-210528</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>plasmid</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/lib-2-plasmid_S2_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-plasmid-210528</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>plasmid</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/lib-1-plasmid_S1_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-plasmid-210528</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>Huh-7.5</td>
+      <td>210528</td>
+      <td>/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-2_S6_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-Huh-7.5-210528</td>
     </tr>
   </tbody>
 </table>
@@ -213,7 +181,7 @@ with open(alignspecsfile) as f:
 print(alignspecs)
 ```
 
-    1,333,30,30
+    1,342,30,30
 
 
 Now we use the [dms2_batch_bcsubamp](https://jbloomlab.github.io/dms_tools2/dms2_batch_bcsubamp.html) program to process the deep sequencing data to obtain codon counts:
@@ -245,7 +213,7 @@ assert all(map(os.path.isfile, samples.codoncounts)), '\n'.join(log)
 print(f"Processed sequencing data to create codon counts files in {countsdir}")
 ```
 
-    Processed sequencing data to create codon counts files in results/tile_1/codoncounts
+    Processed sequencing data to create codon counts files in results/tile_2/codoncounts
 
 
 Now we look at the plots.
@@ -257,7 +225,7 @@ bcsubamp_plot_prefix = os.path.join(countsdir, 'summary_')
 print(f"Plots prefix is {bcsubamp_plot_prefix}")
 ```
 
-    Plots prefix is results/tile_1/codoncounts/summary_
+    Plots prefix is results/tile_2/codoncounts/summary_
 
 
 First, we look at the number of reads and barcodes per sample.
@@ -272,13 +240,13 @@ showPDF(bcsubamp_plot_prefix + 'bcstats.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_18_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_18_0.png)
     
 
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_18_1.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_18_1.png)
     
 
 
@@ -292,7 +260,7 @@ showPDF(bcsubamp_plot_prefix + 'readsperbc.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_20_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_20_0.png)
     
 
 
@@ -307,7 +275,7 @@ showPDF(bcsubamp_plot_prefix + 'depth.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_22_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_22_0.png)
     
 
 
@@ -321,7 +289,7 @@ showPDF(bcsubamp_plot_prefix + 'mutfreq.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_24_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_24_0.png)
     
 
 
@@ -334,7 +302,7 @@ showPDF(bcsubamp_plot_prefix + 'codonmuttypes.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_26_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_26_0.png)
     
 
 
@@ -347,7 +315,7 @@ showPDF(bcsubamp_plot_prefix + 'codonntchanges.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_28_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_28_0.png)
     
 
 
@@ -361,7 +329,7 @@ showPDF(bcsubamp_plot_prefix + 'singlentchanges.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_30_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_30_0.png)
     
 
 
@@ -375,7 +343,7 @@ showPDF(bcsubamp_plot_prefix + 'cumulmutcounts.pdf')
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_32_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_32_0.png)
     
 
 
@@ -388,7 +356,7 @@ We want to renumber for the whole gene:
 print(f"Renumbering by adding an offset of {site_number_offset}")
 ```
 
-    Renumbering by adding an offset of -1
+    Renumbering by adding an offset of 110
 
 
 Create a directory for the re-numbered codon counts:
@@ -400,7 +368,7 @@ os.makedirs(renumb_countsdir, exist_ok=True)
 print(f"Putting renumbered codon counts in {renumb_countsdir}")
 ```
 
-    Putting renumbered codon counts in results/tile_1/renumbered_codoncounts
+    Putting renumbered codon counts in results/tile_2/renumbered_codoncounts
 
 
 Create a renumbering file:
@@ -427,7 +395,7 @@ print(f"Renumbering {len(counts_files)} files")
 dms_tools2.utils.renumberSites(renumbfile, counts_files, outdir=renumb_countsdir)
 ```
 
-    Renumbering 12 files
+    Renumbering 8 files
 
 
 ## Functional effects of mutations of viral growth
@@ -495,69 +463,36 @@ display(prefs_batch)
   <tbody>
     <tr>
       <th>0</th>
-      <td>lib1-Huh-7.5-201112</td>
+      <td>lib1-Huh-7.5-210528</td>
       <td>Huh-7.5</td>
       <td>lib1</td>
-      <td>lib1-plasmid-201112</td>
-      <td>lib1-Huh-7.5-201112</td>
-      <td>201112</td>
-      <td>wt-plasmid-201112</td>
-      <td>wt-Huh-7.5-201112</td>
+      <td>lib1-plasmid-210528</td>
+      <td>lib1-Huh-7.5-210528</td>
+      <td>210528</td>
+      <td>wt-plasmid-210528</td>
+      <td>wt-Huh-7.5-210528</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>lib2-Huh-7.5-201112</td>
+      <td>lib3-Huh-7.5-210528</td>
       <td>Huh-7.5</td>
-      <td>lib2</td>
-      <td>lib2-plasmid-201112</td>
-      <td>lib2-Huh-7.5-201112</td>
-      <td>201112</td>
-      <td>wt-plasmid-201112</td>
-      <td>wt-Huh-7.5-201112</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-210528</td>
+      <td>lib3-Huh-7.5-210528</td>
+      <td>210528</td>
+      <td>wt-plasmid-210528</td>
+      <td>wt-Huh-7.5-210528</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>lib3-Huh-7.5-201112</td>
-      <td>Huh-7.5</td>
-      <td>lib3</td>
-      <td>lib3-plasmid-201112</td>
-      <td>lib3-Huh-7.5-201112</td>
-      <td>201112</td>
-      <td>wt-plasmid-201112</td>
-      <td>wt-Huh-7.5-201112</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>lib1-Huh-7.5-210313</td>
-      <td>Huh-7.5</td>
-      <td>lib1</td>
-      <td>lib1-plasmid-201112</td>
-      <td>lib1-Huh-7.5-210313</td>
-      <td>210313</td>
-      <td>wt-plasmid-201112</td>
-      <td>wt-Huh-7.5-210313</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>lib2-Huh-7.5-210313</td>
+      <td>lib2-Huh-7.5-210528</td>
       <td>Huh-7.5</td>
       <td>lib2</td>
-      <td>lib2-plasmid-201112</td>
-      <td>lib2-Huh-7.5-210313</td>
-      <td>210313</td>
-      <td>wt-plasmid-201112</td>
-      <td>wt-Huh-7.5-210313</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>lib3-Huh-7.5-210313</td>
-      <td>Huh-7.5</td>
-      <td>lib3</td>
-      <td>lib3-plasmid-201112</td>
-      <td>lib3-Huh-7.5-210313</td>
-      <td>210313</td>
-      <td>wt-plasmid-201112</td>
-      <td>wt-Huh-7.5-210313</td>
+      <td>lib2-plasmid-210528</td>
+      <td>lib2-Huh-7.5-210528</td>
+      <td>210528</td>
+      <td>wt-plasmid-210528</td>
+      <td>wt-Huh-7.5-210528</td>
     </tr>
   </tbody>
 </table>
@@ -600,7 +535,7 @@ showPDF(os.path.join(prefsdir, 'summary_prefscorr.pdf'))
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_46_0.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_46_0.png)
     
 
 
@@ -641,11 +576,11 @@ display(HTML(pd.Series(prefs_files).rename('file').to_frame().to_html()))
   <tbody>
     <tr>
       <th>all</th>
-      <td>results/tile_1/prefs/prefs_all.csv</td>
+      <td>results/tile_2/prefs/prefs_all.csv</td>
     </tr>
     <tr>
       <th>Huh-7.5</th>
-      <td>results/tile_1/prefs/prefs_Huh-7.5.csv</td>
+      <td>results/tile_2/prefs/prefs_Huh-7.5.csv</td>
     </tr>
   </tbody>
 </table>
@@ -695,7 +630,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_1.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_50_1.png)
     
 
 
@@ -706,7 +641,7 @@ for selection, prefs_csv in prefs_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_50_3.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_50_3.png)
     
 
 
@@ -740,8 +675,8 @@ for selection, prefs_csv in prefs_files.items():
     muteffects.to_csv(muteffects_files[selection], index=False, float_format='%.5g')
 ```
 
-    Writing mutational effects for all to results/tile_1/muteffects/all_muteffects.csv
-    Writing mutational effects for Huh-7.5 to results/tile_1/muteffects/Huh-7.5_muteffects.csv
+    Writing mutational effects for all to results/tile_2/muteffects/all_muteffects.csv
+    Writing mutational effects for Huh-7.5 to results/tile_2/muteffects/Huh-7.5_muteffects.csv
 
 
 Now make a logo plots showing the mutational effects for all samples, and for each condition.
@@ -776,7 +711,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_1.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_56_1.png)
     
 
 
@@ -787,7 +722,7 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
     
-![png](dms_tile_1_analysis_files/dms_tile_1_analysis_56_3.png)
+![png](dms_tile_2_analysis_files/dms_tile_2_analysis_56_3.png)
     
 
 
@@ -834,7 +769,7 @@ dms_view_data.to_csv(dms_view_csv)
 display(HTML(dms_view_data.head().to_html()))
 ```
 
-    Writing CSV to results/tile_1/dms_view/data.csv; here are first few lines:
+    Writing CSV to results/tile_2/dms_view/data.csv; here are first few lines:
 
 
 
@@ -856,62 +791,62 @@ display(HTML(dms_view_data.head().to_html()))
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
+      <td>111</td>
       <td>A</td>
-      <td>0.01288</td>
-      <td>2.095309</td>
-      <td>8.12795</td>
+      <td>0.01465</td>
+      <td>1.862184</td>
+      <td>6.437782</td>
       <td>all</td>
-      <td>0</td>
-      <td>0</td>
+      <td>111</td>
+      <td>111</td>
       <td>B</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0</td>
+      <td>111</td>
       <td>C</td>
-      <td>0.05070</td>
-      <td>2.095309</td>
-      <td>8.12795</td>
+      <td>0.21870</td>
+      <td>1.862184</td>
+      <td>6.437782</td>
       <td>all</td>
-      <td>0</td>
-      <td>0</td>
+      <td>111</td>
+      <td>111</td>
       <td>B</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0</td>
+      <td>111</td>
       <td>D</td>
-      <td>0.02528</td>
-      <td>2.095309</td>
-      <td>8.12795</td>
+      <td>0.06055</td>
+      <td>1.862184</td>
+      <td>6.437782</td>
       <td>all</td>
-      <td>0</td>
-      <td>0</td>
+      <td>111</td>
+      <td>111</td>
       <td>B</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
+      <td>111</td>
       <td>E</td>
-      <td>0.02024</td>
-      <td>2.095309</td>
-      <td>8.12795</td>
+      <td>0.46624</td>
+      <td>1.862184</td>
+      <td>6.437782</td>
       <td>all</td>
-      <td>0</td>
-      <td>0</td>
+      <td>111</td>
+      <td>111</td>
       <td>B</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0</td>
+      <td>111</td>
       <td>F</td>
-      <td>0.01431</td>
-      <td>2.095309</td>
-      <td>8.12795</td>
+      <td>0.01174</td>
+      <td>1.862184</td>
+      <td>6.437782</td>
       <td>all</td>
-      <td>0</td>
-      <td>0</td>
+      <td>111</td>
+      <td>111</td>
       <td>B</td>
     </tr>
   </tbody>

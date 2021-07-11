@@ -261,8 +261,6 @@ print(f"Plots prefix is {bcsubamp_plot_prefix}")
 
 
 First, we look at the number of reads and barcodes per sample.
-Most reads align with high quality, but many of the barcodes don't have too few reads.
-This indicates we need more sequencing depth given the number of unique molecules (barcodes) that were retained going from round 1 to round 2 of the [barcoded subamplicon sequencing](https://jbloomlab.github.io/dms_tools2/bcsubamp.html).
 
 
 ```python
@@ -283,7 +281,6 @@ showPDF(bcsubamp_plot_prefix + 'bcstats.pdf')
 
 
 Next we look at number of reads per barcode.
-Again, this shows that we need more sequencing depth, as most barcodes only have a single read, which prevents error correction using multiple reads per barcode:
 
 
 ```python
@@ -298,7 +295,6 @@ showPDF(bcsubamp_plot_prefix + 'readsperbc.pdf')
 
 Now we look at the depth across the gene.
 Note that this is still 1, 2, ... numbering of the reference sequence for this tile alone.
-The depth is not uniform, suggesting that some subamplicons (particularly the second and third ones) were under-loaded relative to the other subamplicons:
 
 
 ```python

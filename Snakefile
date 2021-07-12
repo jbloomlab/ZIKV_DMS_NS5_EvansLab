@@ -3,6 +3,8 @@
 
 import os
 
+import pandas as pd
+
 
 configfile: 'config.yml'
 
@@ -20,8 +22,11 @@ rule cat_dms_view:
         expand("results/{tile}/dms_view/data.csv",
                tile=config['tiles'])
     output: csv='results/dms-view/data_all_tiles.csv'
-    conda: 'environment.yml'
-    shell: "cat {input} > {output.csv}"
+    run:
+        (pd.concat([pd.read_csv(f) for f in input])
+         .to_csv(output.csv, index=False)
+         )
+
 
 rule jupnb_to_md:
     """Convert Jupyter notebook to Markdown format."""

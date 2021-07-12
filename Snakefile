@@ -11,7 +11,17 @@ rule all:
         expand("results/{tile}",
                tile=config['tiles']),
         expand("results/summary/dms_{tile}_analysis.md",
+               tile=config['tiles']),
+        'results/dms-view/data_all_tiles.csv'
+
+rule cat_dms_view:
+    """Concatenate all `dms-view` data."""
+    input:
+        expand("results/{tile}/dms_view/data.csv",
                tile=config['tiles'])
+    output: csv='results/dms-view/data_all_tiles.csv'
+    conda: 'environment.yml'
+    shell: "cat {input} > {output.csv}"
 
 rule jupnb_to_md:
     """Convert Jupyter notebook to Markdown format."""

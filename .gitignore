@@ -5,6 +5,7 @@ _*
 
 results/*
 !results/summary
+!results/dms-view
 
 !results/tile_*
 results/tile_*/*

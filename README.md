@@ -39,3 +39,14 @@ The input data are in [./data/](data):
  - `./data/tile_*_samplelist.csv`: all the samples that we sequenced and the locations of the associated deep-sequencing data for each amplicon.
 
  - [./data/6WCZ.pdb](data/6WCZ.pdb) is the [6WCZ](https://www.rcsb.org/structure/6wcz) PDB file of ZIKV NS5 bound to human STAT2.
+
+## Visualizing results with `dms-view`
+To visualize results with `dms-view`, first go to the `dms-view` homepage at [https://dms-view.github.io/](https://dms-view.github.io/).
+Then you need to navigate to the protein structure and data you want to show, and paste those in the data box (upper left) and protein structure box (upper right).
+Importantly, you need to enter the `Raw` values.
+Specifically:
+ 1. Go to [https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/results/dms-view/data_all_tiles.csv](https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/results/dms-view/data_all_tiles.csv), click on `Raw`, and then enter the resulting link in the upper-right box for a CSV on the `dms-view` page.
+ 2. Go to [https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/6WCZ.pdb](https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/6WCZ.pdb), click on the `Raw` button, and enter the resulting link on the upper-right CSV box on `dms-view` for the protein structure.
+ 3. Go to [https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/dms-view_manifest.md](https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/dms-view_manifest.md), click on the `Raw` button, and enter the resulting link in the lower box for the manifest.
+The resulting `dms-view` link can be copied and shared.
+However, as long as this repository remains "private" the link will expire and we can't make a fully permanent one.

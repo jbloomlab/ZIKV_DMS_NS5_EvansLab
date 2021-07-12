@@ -1,0 +1,9 @@
+library,selection,date,R1,SRA_accession
+lib1,Huh-7.5,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-Lib-1-Sample_S5_L001_R1_001.fastq.gz,
+lib2,Huh-7.5,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-Lib-2-Sample_S6_L001_R1_001.fastq.gz,
+wt,plasmid,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-WT-Plasmid_S10_L001_R1_001.fastq.gz,
+lib2,plasmid,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-Lib-2-Plasmid_S15_L001_R1_001.fastq.gz,
+lib3,Huh-7.5,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-Lib-3-Sample_S7_L001_R1_001.fastq.gz,
+lib1,plasmid,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-Lib-1-Plasmid_S14_L001_R1_001.fastq.gz,
+lib3,plasmid,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-Lib-3-Plasmid_S16_L001_R1_001.fastq.gz,
+wt,Huh-7.5,210702,/shared/ngs/illumina/bloom_lab/210702_M03100_0691_000000000-JP3WB/Data/Intensities/BaseCalls/Tile-8-WT-Sample_S8_L001_R1_001.fastq.gz,

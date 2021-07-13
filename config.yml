@@ -11,6 +11,6 @@ tiles:
   tile_7:
     errpre: wt-plasmid-210702
     site_number_offset: 676
-  tile_8:
-    errpre: wt-plasmid-210702
-    site_number_offset: 789
+#  tile_8:
+#    errpre: wt-plasmid-210702
+#    site_number_offset: 789

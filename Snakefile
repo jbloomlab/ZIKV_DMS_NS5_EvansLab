@@ -24,9 +24,8 @@ rule cat_dms_view:
     output: csv='results/dms-view/data_all_tiles.csv'
     run:
         (pd.concat([pd.read_csv(f) for f in input])
-         .to_csv(output.csv, index=False)
+         .to_csv(output.csv, index=False, float_format='%.4f')
          )
-
 
 rule jupnb_to_md:
     """Convert Jupyter notebook to Markdown format."""

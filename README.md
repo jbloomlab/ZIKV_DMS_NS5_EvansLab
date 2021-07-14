@@ -40,6 +40,8 @@ The input data are in [./data/](data):
 
  - [./data/6WCZ.pdb](data/6WCZ.pdb) is the [6WCZ](https://www.rcsb.org/structure/6wcz) PDB file of ZIKV NS5 bound to human STAT2.
 
+ - [./data/NS5_STAT2_joined.pdb](data/NS5_STAT2_joined.pdb) is a PDB file provided by Matt Evans that manually combines several other relevant PDBs.
+
 ## Visualizing results with `dms-view`
 To visualize results with `dms-view`, first go to the `dms-view` homepage at [https://dms-view.github.io/](https://dms-view.github.io/).
 Then you need to navigate to the protein structure and data you want to show, and paste those in the data box (upper left) and protein structure box (upper right).

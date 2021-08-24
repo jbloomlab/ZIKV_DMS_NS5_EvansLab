@@ -8,6 +8,9 @@ import pandas as pd
 
 configfile: 'config.yml'
 
+wildcard_constraints:
+    tile="tile_\d+"
+
 rule all:
     input:
         expand("results/{tile}",
@@ -47,7 +50,9 @@ rule dms_tile_analysis:
         amplicon="data/{tile}_amplicon.fasta",
         alignspecs="data/{tile}_subamplicon_alignspecs.txt",
         samplelist="data/{tile}_samplelist.csv",
-    output: resultsdir=directory("results/{tile}")
+    output:
+        resultsdir=directory("results/{tile}"),
+        dms_view="results/{tile}/dms_view/data.csv",
     params:
         errpre=lambda wc: config['tiles'][wc.tile]['errpre'],
         site_number_offset=lambda wc: config['tiles'][wc.tile]['site_number_offset']

@@ -8,6 +8,9 @@ tiles:
   tile_2:
     errpre: wt-plasmid-210528
     site_number_offset: 110
+  tile_3:
+    errpre: wt-plasmid-210921
+    site_number_offset: 224
   tile_7:
     errpre: wt-plasmid-210702
     site_number_offset: 676

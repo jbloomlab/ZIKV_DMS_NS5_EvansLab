@@ -1,0 +1,9 @@
+library,selection,date,R1,SRA_accession
+lib2,Huh-7.5,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_5-2_Sample_S20_R1_001.fastq.gz,
+lib2,plasmid,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_5-2_Plasmid_S24_R1_001.fastq.gz,
+lib3,plasmid,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_5-3_Plasmid_S25_R1_001.fastq.gz,
+lib1,plasmid,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_5-1_Plasmid_S23_R1_001.fastq.gz,
+lib3,Huh-7.5,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_5-3_Sample_S21_R1_001.fastq.gz,
+lib1,Huh-7.5,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_5-1_Sample_S19_R1_001.fastq.gz,
+wt,Huh-7.5,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_5_Sample_S18_R1_001.fastq.gz,
+wt,plasmid,210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_5_Plasmid_S22_R1_001.fastq.gz,

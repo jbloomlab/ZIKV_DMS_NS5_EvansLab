@@ -11,6 +11,15 @@ tiles:
   tile_3:
     errpre: wt-plasmid-210921
     site_number_offset: 224
+  tile_4:
+    errpre: wt-plasmid-210921
+    site_number_offset: 337
+  tile_5:
+    errpre: wt-plasmid-210921
+    site_number_offset: 450
+  tile_6:
+    errpre: wt-plasmid-210921
+    site_number_offset: 563
   tile_7:
     errpre: wt-plasmid-210702
     site_number_offset: 676

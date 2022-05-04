@@ -1,4 +1,4 @@
-max_cpus: 36  # max CPUs to use for any job
+max_cpus: 72  # max CPUs to use for any job
 
 # specify information for each tile
 tiles:

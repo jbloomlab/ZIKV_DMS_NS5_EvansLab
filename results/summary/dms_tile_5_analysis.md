@@ -1,7 +1,7 @@
 ```python
 
 ######## snakemake preamble start (automatically inserted, do not edit) ########
-import sys; sys.path.extend(['/fh/fast/bloom_j/software/miniconda3/envs/ZIKV_DMS_NS5_EvansLab/lib/python3.8/site-packages', '/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab']); import pickle; snakemake = pickle.loads(b'\x80\x04\x95\x9e\x07\x00\x00\x00\x00\x00\x00\x8c\x10snakemake.script\x94\x8c\tSnakemake\x94\x93\x94)\x81\x94}\x94(\x8c\x05input\x94\x8c\x0csnakemake.io\x94\x8c\nInputFiles\x94\x93\x94)\x81\x94(\x8c\x1adata/tile_5_amplicon.fasta\x94\x8c&data/tile_5_subamplicon_alignspecs.txt\x94\x8c\x1adata/tile_5_samplelist.csv\x94e}\x94(\x8c\x06_names\x94}\x94(\x8c\x08amplicon\x94K\x00N\x86\x94\x8c\nalignspecs\x94K\x01N\x86\x94\x8c\nsamplelist\x94K\x02N\x86\x94u\x8c\x12_allowed_overrides\x94]\x94(\x8c\x05index\x94\x8c\x04sort\x94eh\x18\x8c\tfunctools\x94\x8c\x07partial\x94\x93\x94h\x06\x8c\x19Namedlist._used_attribute\x94\x93\x94\x85\x94R\x94(h\x1e)}\x94\x8c\x05_name\x94h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x10h\nh\x12h\x0bh\x14h\x0cub\x8c\x06output\x94h\x06\x8c\x0bOutputFiles\x94\x93\x94)\x81\x94(\x8c\x0eresults/tile_5\x94\x8c results/tile_5/dms_view/data.csv\x94e}\x94(h\x0e}\x94(\x8c\nresultsdir\x94K\x00N\x86\x94\x8c\x08dms_view\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh0h,h2h-ub\x8c\x06params\x94h\x06\x8c\x06Params\x94\x93\x94)\x81\x94(\x8c\x11wt-plasmid-210921\x94M\xc2\x01e}\x94(h\x0e}\x94(\x8c\x06errpre\x94K\x00N\x86\x94\x8c\x12site_number_offset\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhDhAhFM\xc2\x01ub\x8c\twildcards\x94h\x06\x8c\tWildcards\x94\x93\x94)\x81\x94\x8c\x06tile_5\x94a}\x94(h\x0e}\x94\x8c\x04tile\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94b\x8c\x04tile\x94hUub\x8c\x07threads\x94K$\x8c\tresources\x94h\x06\x8c\tResources\x94\x93\x94)\x81\x94(K$K\x01\x8c\x15/loc/scratch/38579273\x94e}\x94(h\x0e}\x94(\x8c\x06_cores\x94K\x00N\x86\x94\x8c\x06_nodes\x94K\x01N\x86\x94\x8c\x06tmpdir\x94K\x02N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhlK$hnK\x01hphiub\x8c\x03log\x94h\x06\x8c\x03Log\x94\x93\x94)\x81\x94\x8c+results/notebooks/dms_tile_5_analysis.ipynb\x94a}\x94(h\x0e}\x94\x8c\x08notebook\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x82h\x7fub\x8c\x06config\x94}\x94(\x8c\x08max_cpus\x94K$\x8c\x05tiles\x94}\x94(\x8c\x06tile_1\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-201112\x94\x8c\x12site_number_offset\x94J\xff\xff\xff\xffu\x8c\x06tile_2\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210528\x94\x8c\x12site_number_offset\x94Knu\x8c\x06tile_3\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210921\x94\x8c\x12site_number_offset\x94K\xe0u\x8c\x06tile_4\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210921\x94\x8c\x12site_number_offset\x94MQ\x01u\x8c\x06tile_5\x94}\x94(\x8c\x06errpre\x94hA\x8c\x12site_number_offset\x94M\xc2\x01u\x8c\x06tile_6\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210921\x94\x8c\x12site_number_offset\x94M3\x02u\x8c\x06tile_7\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210702\x94\x8c\x12site_number_offset\x94M\xa4\x02u\x8c\x06tile_8\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210702\x94\x8c\x12site_number_offset\x94M\x15\x03uuu\x8c\x04rule\x94\x8c\x11dms_tile_analysis\x94\x8c\x0fbench_iteration\x94N\x8c\tscriptdir\x94\x8cJ/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab\x94ub.'); from snakemake.logging import logger; logger.printshellcmds = False; import os; os.chdir(r'/fh/fast/bloom_j/computational_notebooks/jbloom/2021/ZIKV_DMS_NS5_EvansLab');
+import sys; sys.path.extend(['/fh/fast/bloom_j/software/miniconda3/envs/ZIKV_DMS_NS5_EvansLab/lib/python3.8/site-packages', '/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab']); import pickle; snakemake = pickle.loads(b'\x80\x04\x95\x9f\x07\x00\x00\x00\x00\x00\x00\x8c\x10snakemake.script\x94\x8c\tSnakemake\x94\x93\x94)\x81\x94}\x94(\x8c\x05input\x94\x8c\x0csnakemake.io\x94\x8c\nInputFiles\x94\x93\x94)\x81\x94(\x8c\x1adata/tile_5_amplicon.fasta\x94\x8c&data/tile_5_subamplicon_alignspecs.txt\x94\x8c\x1adata/tile_5_samplelist.csv\x94e}\x94(\x8c\x06_names\x94}\x94(\x8c\x08amplicon\x94K\x00N\x86\x94\x8c\nalignspecs\x94K\x01N\x86\x94\x8c\nsamplelist\x94K\x02N\x86\x94u\x8c\x12_allowed_overrides\x94]\x94(\x8c\x05index\x94\x8c\x04sort\x94eh\x18\x8c\tfunctools\x94\x8c\x07partial\x94\x93\x94h\x06\x8c\x19Namedlist._used_attribute\x94\x93\x94\x85\x94R\x94(h\x1e)}\x94\x8c\x05_name\x94h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x10h\nh\x12h\x0bh\x14h\x0cub\x8c\x06output\x94h\x06\x8c\x0bOutputFiles\x94\x93\x94)\x81\x94(\x8c\x0eresults/tile_5\x94\x8c results/tile_5/dms_view/data.csv\x94e}\x94(h\x0e}\x94(\x8c\nresultsdir\x94K\x00N\x86\x94\x8c\x08dms_view\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh0h,h2h-ub\x8c\x06params\x94h\x06\x8c\x06Params\x94\x93\x94)\x81\x94(\x8c\x11wt-plasmid-210921\x94M\xc2\x01e}\x94(h\x0e}\x94(\x8c\x06errpre\x94K\x00N\x86\x94\x8c\x12site_number_offset\x94K\x01N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhDhAhFM\xc2\x01ub\x8c\twildcards\x94h\x06\x8c\tWildcards\x94\x93\x94)\x81\x94\x8c\x06tile_5\x94a}\x94(h\x0e}\x94\x8c\x04tile\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94b\x8c\x04tile\x94hUub\x8c\x07threads\x94KH\x8c\tresources\x94h\x06\x8c\tResources\x94\x93\x94)\x81\x94(KHK\x01\x8c\x15/loc/scratch/52069418\x94e}\x94(h\x0e}\x94(\x8c\x06_cores\x94K\x00N\x86\x94\x8c\x06_nodes\x94K\x01N\x86\x94\x8c\x06tmpdir\x94K\x02N\x86\x94uh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bhlKHhnK\x01hphiub\x8c\x03log\x94h\x06\x8c\x03Log\x94\x93\x94)\x81\x94\x8c+results/notebooks/dms_tile_5_analysis.ipynb\x94a}\x94(h\x0e}\x94\x8c\x08notebook\x94K\x00N\x86\x94sh\x16]\x94(h\x18h\x19eh\x18h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x18sNt\x94bh\x19h\x1ch\x1e\x85\x94R\x94(h\x1e)}\x94h"h\x19sNt\x94bh\x82h\x7fub\x8c\x06config\x94}\x94(\x8c\x08max_cpus\x94KH\x8c\x05tiles\x94}\x94(\x8c\x06tile_1\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-201112\x94\x8c\x12site_number_offset\x94J\xff\xff\xff\xffu\x8c\x06tile_2\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210528\x94\x8c\x12site_number_offset\x94Knu\x8c\x06tile_3\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210921\x94\x8c\x12site_number_offset\x94K\xe0u\x8c\x06tile_4\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210921\x94\x8c\x12site_number_offset\x94MQ\x01u\x8c\x06tile_5\x94}\x94(\x8c\x06errpre\x94hA\x8c\x12site_number_offset\x94M\xc2\x01u\x8c\x06tile_6\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210921\x94\x8c\x12site_number_offset\x94M3\x02u\x8c\x06tile_7\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210702\x94\x8c\x12site_number_offset\x94M\xa4\x02u\x8c\x06tile_8\x94}\x94(\x8c\x06errpre\x94\x8c\x11wt-plasmid-210702\x94\x8c\x12site_number_offset\x94M\x15\x03uuu\x8c\x04rule\x94\x8c\x11dms_tile_analysis\x94\x8c\x0fbench_iteration\x94N\x8c\tscriptdir\x94\x8cK/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab\x94ub.'); from snakemake.logging import logger; logger.printshellcmds = False; import os; os.chdir(r'/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab');
 ######## snakemake preamble end #########
 
 ```
@@ -91,9 +91,6 @@ samples = (pd.read_csv(samplelist)
 display(HTML(samples.to_html(index=False)))
 ```
 
-    INFO:numexpr.utils:Note: NumExpr detected 36 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-
-
 
 <table border="1" class="dataframe">
   <thead>
@@ -171,6 +168,38 @@ display(HTML(samples.to_html(index=False)))
       <td>NaN</td>
       <td>wt-plasmid-210921</td>
     </tr>
+    <tr>
+      <td>wt</td>
+      <td>C6-36</td>
+      <td>220225</td>
+      <td>/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/WT_S4_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wt-C6-36-220225</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>C6-36</td>
+      <td>220225</td>
+      <td>/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib1_S1_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib1-C6-36-220225</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>C6-36</td>
+      <td>220225</td>
+      <td>/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib2_S2_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib2-C6-36-220225</td>
+    </tr>
+    <tr>
+      <td>lib3</td>
+      <td>C6-36</td>
+      <td>220225</td>
+      <td>/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib3_S3_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib3-C6-36-220225</td>
+    </tr>
   </tbody>
 </table>
 
@@ -240,11 +269,15 @@ showPDF(bcsubamp_plot_prefix + 'bcstats.pdf')
 ```
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_18_0.png)
+    
 
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_18_1.png)
+    
 
 
 Next we look at number of reads per barcode.
@@ -254,11 +287,10 @@ Next we look at number of reads per barcode.
 showPDF(bcsubamp_plot_prefix + 'readsperbc.pdf')
 ```
 
-    convert: profile 'icc': 'RGB ': RGB color space not permitted on grayscale PNG `results/tile_5/codoncounts/._summary_readsperbc.png' @ warning/png.c/MagickPNGWarningHandler/1746.
 
-
-
-![png](dms_tile_5_analysis_files/dms_tile_5_analysis_20_1.png)
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_20_0.png)
+    
 
 
 Now we look at the depth across the gene.
@@ -269,11 +301,10 @@ Note that this is still 1, 2, ... numbering of the reference sequence for this t
 showPDF(bcsubamp_plot_prefix + 'depth.pdf')
 ```
 
-    convert: profile 'icc': 'RGB ': RGB color space not permitted on grayscale PNG `results/tile_5/codoncounts/._summary_depth.png' @ warning/png.c/MagickPNGWarningHandler/1746.
 
-
-
-![png](dms_tile_5_analysis_files/dms_tile_5_analysis_22_1.png)
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_22_0.png)
+    
 
 
 Here are the mutation frequencies across the gene.
@@ -284,11 +315,10 @@ As expected, the library plasmids have higher mutation rates than the wildtype c
 showPDF(bcsubamp_plot_prefix + 'mutfreq.pdf')
 ```
 
-    convert: profile 'icc': 'RGB ': RGB color space not permitted on grayscale PNG `results/tile_5/codoncounts/._summary_mutfreq.png' @ warning/png.c/MagickPNGWarningHandler/1746.
 
-
-
-![png](dms_tile_5_analysis_files/dms_tile_5_analysis_24_1.png)
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_24_0.png)
+    
 
 
 Here are the overall per-codon mutation rate averages:
@@ -299,7 +329,9 @@ showPDF(bcsubamp_plot_prefix + 'codonmuttypes.pdf')
 ```
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_26_0.png)
+    
 
 
 We have single and multi-nucleotide changes in the libraries, although the single nucleotide changes are perhaps over-represented:
@@ -310,7 +342,9 @@ showPDF(bcsubamp_plot_prefix + 'codonntchanges.pdf')
 ```
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_28_0.png)
+    
 
 
 Here are the frequencies of different types of mutations among single-nucleotide codon changes.
@@ -322,7 +356,9 @@ showPDF(bcsubamp_plot_prefix + 'singlentchanges.pdf')
 ```
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_30_0.png)
+    
 
 
 Finally, we look at mutation sampling.
@@ -334,7 +370,9 @@ showPDF(bcsubamp_plot_prefix + 'cumulmutcounts.pdf')
 ```
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_32_0.png)
+    
 
 
 ## Now re-number the sites
@@ -385,7 +423,7 @@ print(f"Renumbering {len(counts_files)} files")
 dms_tools2.utils.renumberSites(renumbfile, counts_files, outdir=renumb_countsdir)
 ```
 
-    Renumbering 8 files
+    Renumbering 12 files
 
 
 ## Functional effects of mutations of viral growth
@@ -484,6 +522,39 @@ display(prefs_batch)
       <td>wt-plasmid-210921</td>
       <td>wt-Huh-7.5-210921</td>
     </tr>
+    <tr>
+      <th>3</th>
+      <td>lib1-C6-36-220225</td>
+      <td>C6-36</td>
+      <td>lib1</td>
+      <td>lib1-plasmid-210921</td>
+      <td>lib1-C6-36-220225</td>
+      <td>220225</td>
+      <td>wt-plasmid-210921</td>
+      <td>wt-C6-36-220225</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>lib2-C6-36-220225</td>
+      <td>C6-36</td>
+      <td>lib2</td>
+      <td>lib2-plasmid-210921</td>
+      <td>lib2-C6-36-220225</td>
+      <td>220225</td>
+      <td>wt-plasmid-210921</td>
+      <td>wt-C6-36-220225</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>lib3-C6-36-220225</td>
+      <td>C6-36</td>
+      <td>lib3</td>
+      <td>lib3-plasmid-210921</td>
+      <td>lib3-C6-36-220225</td>
+      <td>220225</td>
+      <td>wt-plasmid-210921</td>
+      <td>wt-C6-36-220225</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -504,6 +575,7 @@ log = ! dms2_batch_prefs \
         --batchfile {prefs_batchfile} \
         --outdir {prefsdir} \
         --summaryprefix summary \
+        --method ratio \
         --use_existing {use_existing} \
         --ncpus {ncpus}
 
@@ -523,11 +595,10 @@ Look at correlation among the amino-acid preferences for the individual librarie
 showPDF(os.path.join(prefsdir, 'summary_prefscorr.pdf'))
 ```
 
-    convert: profile 'icc': 'RGB ': RGB color space not permitted on grayscale PNG `results/tile_5/prefs/._summary_prefscorr.png' @ warning/png.c/MagickPNGWarningHandler/1746.
 
-
-
-![png](dms_tile_5_analysis_files/dms_tile_5_analysis_46_1.png)
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_46_0.png)
+    
 
 
 Now let's get the amino-acid preferences for **all** samples, and for each condition separately:
@@ -568,6 +639,10 @@ display(HTML(pd.Series(prefs_files).rename('file').to_frame().to_html()))
     <tr>
       <th>all</th>
       <td>results/tile_5/prefs/prefs_all.csv</td>
+    </tr>
+    <tr>
+      <th>C6-36</th>
+      <td>results/tile_5/prefs/prefs_C6-36.csv</td>
     </tr>
     <tr>
       <th>Huh-7.5</th>
@@ -620,7 +695,20 @@ for selection, prefs_csv in prefs_files.items():
 
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_50_1.png)
+    
+
+
+    
+    
+    Preferences for C6-36 samples:
+
+
+
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_50_3.png)
+    
 
 
     
@@ -629,7 +717,9 @@ for selection, prefs_csv in prefs_files.items():
 
 
 
-![png](dms_tile_5_analysis_files/dms_tile_5_analysis_50_3.png)
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_50_5.png)
+    
 
 
 We can also represent the effects of mutations in a different way than the amino acid preferences.
@@ -663,6 +753,7 @@ for selection, prefs_csv in prefs_files.items():
 ```
 
     Writing mutational effects for all to results/tile_5/muteffects/all_muteffects.csv
+    Writing mutational effects for C6-36 to results/tile_5/muteffects/C6-36_muteffects.csv
     Writing mutational effects for Huh-7.5 to results/tile_5/muteffects/Huh-7.5_muteffects.csv
 
 
@@ -697,7 +788,20 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
 
+    
 ![png](dms_tile_5_analysis_files/dms_tile_5_analysis_56_1.png)
+    
+
+
+    
+    
+    Mutational effects for C6-36 samples:
+
+
+
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_56_3.png)
+    
 
 
     
@@ -706,7 +810,9 @@ for selection, muteffects_csv in muteffects_files.items():
 
 
 
-![png](dms_tile_5_analysis_files/dms_tile_5_analysis_56_3.png)
+    
+![png](dms_tile_5_analysis_files/dms_tile_5_analysis_56_5.png)
+    
 
 
 ## Create `dms-view` input files
@@ -777,9 +883,9 @@ display(HTML(dms_view_data.head().to_html()))
       <th>0</th>
       <td>451</td>
       <td>A</td>
-      <td>0.00999</td>
-      <td>1.752041</td>
-      <td>5.76636</td>
+      <td>0.01205</td>
+      <td>2.156287</td>
+      <td>8.639004</td>
       <td>all</td>
       <td>451</td>
       <td>451</td>
@@ -789,9 +895,9 @@ display(HTML(dms_view_data.head().to_html()))
       <th>1</th>
       <td>451</td>
       <td>C</td>
-      <td>0.61985</td>
-      <td>1.752041</td>
-      <td>5.76636</td>
+      <td>0.46574</td>
+      <td>2.156287</td>
+      <td>8.639004</td>
       <td>all</td>
       <td>451</td>
       <td>451</td>
@@ -801,9 +907,9 @@ display(HTML(dms_view_data.head().to_html()))
       <th>2</th>
       <td>451</td>
       <td>D</td>
-      <td>0.01757</td>
-      <td>1.752041</td>
-      <td>5.76636</td>
+      <td>0.02734</td>
+      <td>2.156287</td>
+      <td>8.639004</td>
       <td>all</td>
       <td>451</td>
       <td>451</td>
@@ -813,9 +919,9 @@ display(HTML(dms_view_data.head().to_html()))
       <th>3</th>
       <td>451</td>
       <td>E</td>
-      <td>0.01692</td>
-      <td>1.752041</td>
-      <td>5.76636</td>
+      <td>0.02654</td>
+      <td>2.156287</td>
+      <td>8.639004</td>
       <td>all</td>
       <td>451</td>
       <td>451</td>
@@ -825,9 +931,9 @@ display(HTML(dms_view_data.head().to_html()))
       <th>4</th>
       <td>451</td>
       <td>F</td>
-      <td>0.02438</td>
-      <td>1.752041</td>
-      <td>5.76636</td>
+      <td>0.03326</td>
+      <td>2.156287</td>
+      <td>8.639004</td>
       <td>all</td>
       <td>451</td>
       <td>451</td>

@@ -15,3 +15,7 @@ wt,C6-36,220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JD
 lib1,C6-36,220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib1_S1_R1_001.fastq.gz,
 lib2,C6-36,220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib2_S2_R1_001.fastq.gz,
 lib3,C6-36,220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib3_S3_R1_001.fastq.gz,
+wt,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/WT_S4_R1_001.fastq.gz,
+lib1,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib1_S1_R1_001.fastq.gz,
+lib2,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib2_S2_R1_001.fastq.gz ,
+lib3,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib3_S3_R1_001.fastq.gz  ,

@@ -1,0 +1,98 @@
+2022-05-06 09:50:43,767 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+
+2022-05-06 09:50:43,767 - INFO - Progress is being logged to results/tile_6/codoncounts/lib2-plasmid-210921.log
+2022-05-06 09:50:43,801 - INFO - Version information:
+	Time and date: Fri May  6 09:50:43 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-05-06 09:50:43,801 - INFO - Parsed the following arguments:
+	outdir = results/tile_6/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = data/tile_6_amplicon.fasta
+	alignspecs = ['1,339,30,30']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [210]
+	R2trim = [210]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = lib2-plasmid-210921
+	R1 = ['/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_6-2_Plasmid_S32_R1_001.fastq.gz']
+
+2022-05-06 09:50:43,814 - INFO - Read refseq of 339 codons from data/tile_6_amplicon.fasta
+2022-05-06 09:50:43,850 - INFO - Reads are in these FASTQ pairs:
+	/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_6-2_Plasmid_S32_R1_001.fastq.gz and /shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_6-2_Plasmid_S32_R2_001.fastq.gz
+
+2022-05-06 09:50:43,850 - INFO - Now parsing read pairs...
+2022-05-06 09:50:49,813 - INFO - Reads parsed so far: 500000
+2022-05-06 09:50:55,148 - INFO - Reads parsed so far: 1000000
+2022-05-06 09:50:55,287 - INFO - Parsed 1013824 reads, found 263206 unique barcodes.
+2022-05-06 09:50:55,291 - INFO - Summary stats on reads:
+   total  fail filter  low Q barcode
+ 1013824        21104         143644
+2022-05-06 09:50:55,291 - INFO - Writing these stats to results/tile_6/codoncounts/lib2-plasmid-210921_readstats.csv
+
+2022-05-06 09:50:55,356 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                             71306
+2                             49461
+3                             44805
+4                             34477
+5                             24128
+6                             15953
+7                              9665
+8                              5996
+9                              3446
+10                             1928
+11                             1061
+12                              515
+13                              243
+14                              138
+15                               49
+16                               27
+17                                5
+18                                1
+19                                2
+2022-05-06 09:50:55,356 - INFO - Writing these stats to results/tile_6/codoncounts/lib2-plasmid-210921_readsperbc.csv
+
+2022-05-06 09:50:55,359 - INFO - Examining the 263206 barcodes to build and align subamplicons...
+2022-05-06 09:51:07,454 - INFO - Barcodes examined so far: 200000
+2022-05-06 09:51:09,573 - INFO - Examined all barcodes. Summary stats:
+  total  too few reads  not alignable  aligned
+ 263206          71306          25973   165927
+2022-05-06 09:51:09,573 - INFO - Writing these stats to results/tile_6/codoncounts/lib2-plasmid-210921_bcstats.csv
+
+2022-05-06 09:51:09,587 - INFO - Writing the counts of each codon identity at each site to results/tile_6/codoncounts/lib2-plasmid-210921_codoncounts.csv
+
+2022-05-06 09:51:09,598 - INFO - Successful completion of dms2_bcsubamp

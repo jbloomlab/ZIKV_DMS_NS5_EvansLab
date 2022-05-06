@@ -1,0 +1,118 @@
+2022-05-06 09:55:01,777 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+
+2022-05-06 09:55:01,777 - INFO - Progress is being logged to results/tile_5/codoncounts/wt-C6-36-220225.log
+2022-05-06 09:55:01,814 - INFO - Version information:
+	Time and date: Fri May  6 09:55:01 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-05-06 09:55:01,814 - INFO - Parsed the following arguments:
+	outdir = results/tile_5/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = data/tile_5_amplicon.fasta
+	alignspecs = ['1,339,30,30']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [210]
+	R2trim = [210]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = wt-C6-36-220225
+	R1 = ['/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/WT_S4_R1_001.fastq.gz']
+
+2022-05-06 09:55:01,827 - INFO - Read refseq of 339 codons from data/tile_5_amplicon.fasta
+2022-05-06 09:55:01,886 - INFO - Reads are in these FASTQ pairs:
+	/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/WT_S4_R1_001.fastq.gz and /shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/WT_S4_R2_001.fastq.gz
+
+2022-05-06 09:55:01,887 - INFO - Now parsing read pairs...
+2022-05-06 09:55:08,121 - INFO - Reads parsed so far: 500000
+2022-05-06 09:55:14,281 - INFO - Reads parsed so far: 1000000
+2022-05-06 09:55:19,972 - INFO - Reads parsed so far: 1500000
+2022-05-06 09:55:25,781 - INFO - Reads parsed so far: 2000000
+2022-05-06 09:55:31,904 - INFO - Reads parsed so far: 2500000
+2022-05-06 09:55:38,232 - INFO - Reads parsed so far: 3000000
+2022-05-06 09:55:43,452 - INFO - Reads parsed so far: 3500000
+2022-05-06 09:55:48,660 - INFO - Reads parsed so far: 4000000
+2022-05-06 09:55:55,377 - INFO - Reads parsed so far: 4500000
+2022-05-06 09:56:00,614 - INFO - Reads parsed so far: 5000000
+2022-05-06 09:56:02,747 - INFO - Parsed 5202134 reads, found 2399333 unique barcodes.
+2022-05-06 09:56:02,749 - INFO - Summary stats on reads:
+   total  fail filter  low Q barcode
+ 5202134       586694         568734
+2022-05-06 09:56:02,749 - INFO - Writing these stats to results/tile_5/codoncounts/wt-C6-36-220225_readstats.csv
+
+2022-05-06 09:56:03,271 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           1350784
+2                            639732
+3                            273018
+4                             96021
+5                             29159
+6                              7969
+7                              1966
+8                               470
+9                               136
+10                               33
+11                               13
+12                               15
+13                                3
+14                                2
+16                                3
+17                                3
+18                                1
+21                                2
+24                                1
+27                                1
+35                                1
+2022-05-06 09:56:03,271 - INFO - Writing these stats to results/tile_5/codoncounts/wt-C6-36-220225_readsperbc.csv
+
+2022-05-06 09:56:03,274 - INFO - Examining the 2399333 barcodes to build and align subamplicons...
+2022-05-06 09:56:07,828 - INFO - Barcodes examined so far: 200000
+2022-05-06 09:56:12,285 - INFO - Barcodes examined so far: 400000
+2022-05-06 09:56:16,594 - INFO - Barcodes examined so far: 600000
+2022-05-06 09:56:20,797 - INFO - Barcodes examined so far: 800000
+2022-05-06 09:56:24,848 - INFO - Barcodes examined so far: 1000000
+2022-05-06 09:56:28,757 - INFO - Barcodes examined so far: 1200000
+2022-05-06 09:56:32,482 - INFO - Barcodes examined so far: 1400000
+2022-05-06 09:56:35,977 - INFO - Barcodes examined so far: 1600000
+2022-05-06 09:56:39,202 - INFO - Barcodes examined so far: 1800000
+2022-05-06 09:56:42,119 - INFO - Barcodes examined so far: 2000000
+2022-05-06 09:56:44,620 - INFO - Barcodes examined so far: 2200000
+2022-05-06 09:56:46,623 - INFO - Examined all barcodes. Summary stats:
+   total  too few reads  not alignable  aligned
+ 2399333        1350784         951502    97047
+2022-05-06 09:56:46,624 - INFO - Writing these stats to results/tile_5/codoncounts/wt-C6-36-220225_bcstats.csv
+
+2022-05-06 09:56:46,635 - INFO - Writing the counts of each codon identity at each site to results/tile_5/codoncounts/wt-C6-36-220225_codoncounts.csv
+
+2022-05-06 09:56:46,647 - INFO - Successful completion of dms2_bcsubamp

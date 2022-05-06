@@ -1,0 +1,17 @@
+name,R1
+lib1-Huh-7.5-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_4-1_Sample_S11_R1_001.fastq.gz
+lib3-plasmid-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_4-3_Plasmid_S17_R1_001.fastq.gz
+lib1-plasmid-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_4-1_Plasmid_S15_R1_001.fastq.gz
+lib2-Huh-7.5-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_4-2_Sample_S12_R1_001.fastq.gz
+lib2-plasmid-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_4-2_Plasmid_S16_R1_001.fastq.gz
+lib3-Huh-7.5-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_4-3_Sample_S13_R1_001.fastq.gz
+wt-Huh-7.5-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_4_Sample_S10_R1_001.fastq.gz
+wt-plasmid-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_4_Plasmid_S14_R1_001.fastq.gz
+wt-C6-36-220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/WT_S4_R1_001.fastq.gz
+lib1-C6-36-220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib1_S1_R1_001.fastq.gz
+lib2-C6-36-220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib2_S2_R1_001.fastq.gz
+lib3-C6-36-220225,/shared/ngs/illumina/bloom_lab/220225_M04866_0515_000000000-K5JDB/Unaligned/Project_bloom_lab/Lib3_S3_R1_001.fastq.gz
+wt-C6-36-220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/WT_S4_R1_001.fastq.gz
+lib1-C6-36-220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib1_S1_R1_001.fastq.gz
+lib2-C6-36-220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib2_S2_R1_001.fastq.gz
+lib3-C6-36-220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib3_S3_R1_001.fastq.gz

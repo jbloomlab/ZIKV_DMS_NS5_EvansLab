@@ -1,0 +1,161 @@
+2022-05-06 09:32:20,019 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+
+2022-05-06 09:32:20,020 - INFO - Progress is being logged to results/tile_1/prefs/lib2-C6-36-220225.log
+2022-05-06 09:32:20,058 - INFO - Version information:
+	Time and date: Fri May  6 09:32:20 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-05-06 09:32:20,058 - INFO - Parsed the following arguments:
+	outdir = results/tile_1/prefs
+	ncpus = 3
+	use_existing = yes
+	method = ratio
+	indir = results/tile_1/renumbered_codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	conc = [1.0, 1.0, 1.0]
+	pseudocount = 1
+	pre = lib2-plasmid-201112
+	post = lib2-C6-36-220225
+	name = lib2-C6-36-220225
+	err = ['wt-plasmid-201112', 'wt-C6-36-220225']
+
+2022-05-06 09:32:20,060 - INFO - Reading pre-selection counts from results/tile_1/renumbered_codoncounts/lib2-plasmid-201112_codoncounts.csv
+2022-05-06 09:32:20,071 - INFO - Reading post-selection counts from results/tile_1/renumbered_codoncounts/lib2-C6-36-220225_codoncounts.csv
+2022-05-06 09:32:20,076 - INFO - Reading pre-selection error-control counts from pre
+2022-05-06 09:32:20,080 - INFO - Reading post-selection error-control counts from post
+2022-05-06 09:32:20,090 - INFO - Read counts for 111 sites.
+2022-05-06 09:32:20,091 - INFO - Here are sites and wildtype identities:
+	0	CGT
+	1	GGA
+	2	GGT
+	3	GGG
+	4	ACG
+	5	GGA
+	6	GAG
+	7	ACT
+	8	CTG
+	9	GGA
+	10	GAG
+	11	AAG
+	12	TGG
+	13	AAA
+	14	GCT
+	15	CGT
+	16	CTG
+	17	AAT
+	18	CAG
+	19	ATG
+	20	TCG
+	21	GCC
+	22	CTG
+	23	GAG
+	24	TTC
+	25	TAC
+	26	TCT
+	27	TAT
+	28	AAA
+	29	AAG
+	30	TCA
+	31	GGT
+	32	ATC
+	33	ACT
+	34	GAA
+	35	GTG
+	36	TGT
+	37	AGA
+	38	GAG
+	39	GAG
+	40	GCT
+	41	CGC
+	42	CGT
+	43	GCC
+	44	CTC
+	45	AAG
+	46	GAT
+	47	GGA
+	48	GTG
+	49	GCC
+	50	ACA
+	51	GGA
+	52	GGA
+	53	CAT
+	54	GCC
+	55	GTA
+	56	TCC
+	57	CGG
+	58	GGA
+	59	AGT
+	60	GCA
+	61	AAG
+	62	CTC
+	63	AGA
+	64	TGG
+	65	TTG
+	66	GTG
+	67	GAG
+	68	AGA
+	69	GGA
+	70	TAT
+	71	CTG
+	72	CAG
+	73	CCC
+	74	TAT
+	75	GGG
+	76	AAG
+	77	GTT
+	78	GTT
+	79	GAC
+	80	CTC
+	81	GGA
+	82	TGT
+	83	GGC
+	84	AGA
+	85	GGG
+	86	GGC
+	87	TGG
+	88	AGC
+	89	TAT
+	90	TAT
+	91	GCC
+	92	GCC
+	93	ACC
+	94	ATC
+	95	CGC
+	96	AAA
+	97	GTG
+	98	CAG
+	99	GAG
+	100	GTG
+	101	AGA
+	102	GGA
+	103	TAC
+	104	ACA
+	105	AAG
+	106	GGA
+	107	GGT
+	108	CCC
+	109	GGT
+	110	CAT
+
+2022-05-06 09:32:20,091 - INFO - Computing preferences as normalized enrichment ratios...
+2022-05-06 09:32:20,411 - INFO - Writing preferences to results/tile_1/prefs/lib2-C6-36-220225_prefs.csv
+2022-05-06 09:32:20,418 - INFO - Successful completion of dms2_prefs

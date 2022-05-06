@@ -1,0 +1,13 @@
+name,selection,library,pre,post,date,errpre,errpost
+lib1-Huh-7.5-201112,Huh-7.5,lib1,lib1-plasmid-201112,lib1-Huh-7.5-201112,201112,wt-plasmid-201112,wt-Huh-7.5-201112
+lib2-Huh-7.5-201112,Huh-7.5,lib2,lib2-plasmid-201112,lib2-Huh-7.5-201112,201112,wt-plasmid-201112,wt-Huh-7.5-201112
+lib3-Huh-7.5-201112,Huh-7.5,lib3,lib3-plasmid-201112,lib3-Huh-7.5-201112,201112,wt-plasmid-201112,wt-Huh-7.5-201112
+lib1-Huh-7.5-210313,Huh-7.5,lib1,lib1-plasmid-201112,lib1-Huh-7.5-210313,210313,wt-plasmid-201112,wt-Huh-7.5-210313
+lib2-Huh-7.5-210313,Huh-7.5,lib2,lib2-plasmid-201112,lib2-Huh-7.5-210313,210313,wt-plasmid-201112,wt-Huh-7.5-210313
+lib3-Huh-7.5-210313,Huh-7.5,lib3,lib3-plasmid-201112,lib3-Huh-7.5-210313,210313,wt-plasmid-201112,wt-Huh-7.5-210313
+lib1-C6-36-220225,C6-36,lib1,lib1-plasmid-201112,lib1-C6-36-220225,220225,wt-plasmid-201112,wt-C6-36-220225
+lib2-C6-36-220225,C6-36,lib2,lib2-plasmid-201112,lib2-C6-36-220225,220225,wt-plasmid-201112,wt-C6-36-220225
+lib3-C6-36-220225,C6-36,lib3,lib3-plasmid-201112,lib3-C6-36-220225,220225,wt-plasmid-201112,wt-C6-36-220225
+lib1-C6-36-220415,C6-36,lib1,lib1-plasmid-201112,lib1-C6-36-220415,220415,wt-plasmid-201112,wt-C6-36-220415
+lib2-C6-36-220415,C6-36,lib2,lib2-plasmid-201112,lib2-C6-36-220415,220415,wt-plasmid-201112,wt-C6-36-220415
+lib3-C6-36-220415,C6-36,lib3,lib3-plasmid-201112,lib3-C6-36-220415,220415,wt-plasmid-201112,wt-C6-36-220415

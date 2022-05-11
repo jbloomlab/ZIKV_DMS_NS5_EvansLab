@@ -19,3 +19,7 @@ wt,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5R
 lib1,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib1_S1_R1_001.fastq.gz,
 lib2,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib2_S2_R1_001.fastq.gz,
 lib3,C6-36,220415,/shared/ngs/illumina/bloom_lab/220415_M00492_0013_000000000-KC5RK/Unaligned/Project_bloom_lab/Lib3_S3_R1_001.fastq.gz,
+wt,C6-36,FebApr-2022,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab/data/concat_c636/concatenated_WT_S4_R1_001.fastq.gz,
+lib1,C6-36,FebApr-2022,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab/data/concat_c636/concatenated_lib1_S1_R1_001.fastq.gz,
+lib2,C6-36,FebApr-2022,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab/data/concat_c636/concatenated_lib2_S2_R1_001.fastq.gz,
+lib3,C6-36,FebApr-2022,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab/data/concat_c636/concatenated_lib3_S3_R1_001.fastq.gz,

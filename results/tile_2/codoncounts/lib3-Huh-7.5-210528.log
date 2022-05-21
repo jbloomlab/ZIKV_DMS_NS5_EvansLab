@@ -1,0 +1,106 @@
+2022-05-20 17:46:06,876 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+
+2022-05-20 17:46:06,876 - INFO - Progress is being logged to results/tile_2/codoncounts/lib3-Huh-7.5-210528.log
+2022-05-20 17:46:06,908 - INFO - Version information:
+	Time and date: Fri May 20 17:46:06 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-05-20 17:46:06,908 - INFO - Parsed the following arguments:
+	outdir = results/tile_2/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = data/tile_2_amplicon.fasta
+	alignspecs = ['1,342,30,30']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [210]
+	R2trim = [210]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = lib3-Huh-7.5-210528
+	R1 = ['/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-3_S7_L001_R1_001.fastq.gz']
+
+2022-05-20 17:46:06,920 - INFO - Read refseq of 342 codons from data/tile_2_amplicon.fasta
+2022-05-20 17:46:06,923 - INFO - Reads are in these FASTQ pairs:
+	/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-3_S7_L001_R1_001.fastq.gz and /shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-3_S7_L001_R2_001.fastq.gz
+
+2022-05-20 17:46:06,923 - INFO - Now parsing read pairs...
+2022-05-20 17:46:26,062 - INFO - Reads parsed so far: 500000
+2022-05-20 17:46:35,346 - INFO - Parsed 885040 reads, found 350982 unique barcodes.
+2022-05-20 17:46:35,350 - INFO - Summary stats on reads:
+  total  fail filter  low Q barcode
+ 885040            0            154
+2022-05-20 17:46:35,350 - INFO - Writing these stats to results/tile_2/codoncounts/lib3-Huh-7.5-210528_readstats.csv
+
+2022-05-20 17:46:35,446 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            133681
+2                             70101
+3                             60323
+4                             41177
+5                             24169
+6                             12357
+7                              5540
+8                              2272
+9                               868
+10                              324
+11                              107
+12                               27
+13                               11
+14                                4
+15                                4
+16                                1
+17                                2
+22                                1
+23                                1
+26                                2
+33                                2
+35                                1
+36                                1
+37                                1
+46                                2
+48                                1
+51                                1
+59                                1
+2022-05-20 17:46:35,446 - INFO - Writing these stats to results/tile_2/codoncounts/lib3-Huh-7.5-210528_readsperbc.csv
+
+2022-05-20 17:46:35,451 - INFO - Examining the 350982 barcodes to build and align subamplicons...
+2022-05-20 17:46:46,652 - INFO - Barcodes examined so far: 200000
+2022-05-20 17:46:51,660 - INFO - Examined all barcodes. Summary stats:
+  total  too few reads  not alignable  aligned
+ 350982         133681          14981   202320
+2022-05-20 17:46:51,660 - INFO - Writing these stats to results/tile_2/codoncounts/lib3-Huh-7.5-210528_bcstats.csv
+
+2022-05-20 17:46:51,673 - INFO - Writing the counts of each codon identity at each site to results/tile_2/codoncounts/lib3-Huh-7.5-210528_codoncounts.csv
+
+2022-05-20 17:46:51,686 - INFO - Successful completion of dms2_bcsubamp

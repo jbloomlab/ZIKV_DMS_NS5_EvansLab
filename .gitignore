@@ -3,6 +3,8 @@
 _*
 *.out
 
+data/concat_fastqs/concat_fastq_out
+
 results/*
 !results/summary
 !results/dms-view

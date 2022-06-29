@@ -18,3 +18,6 @@ dependencies:
     - dms_tools2==2.6.10
     - dmslogo==0.6.2
     - snakemake==6.5.2
+    - altair
+    - vega_datasets
+    - dms_variants

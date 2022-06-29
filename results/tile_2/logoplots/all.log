@@ -1,8 +1,8 @@
-2022-05-20 17:51:12,666 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2022-06-29 12:12:49,025 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-05-20 17:51:12,666 - INFO - Progress is being logged to results/tile_2/logoplots/all.log
-2022-05-20 17:51:12,701 - INFO - Version information:
-	Time and date: Fri May 20 17:51:12 2022
+2022-06-29 12:12:49,025 - INFO - Progress is being logged to results/tile_2/logoplots/all.log
+2022-06-29 12:12:49,060 - INFO - Version information:
+	Time and date: Wed Jun 29 12:12:49 2022
 	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-05-20 17:51:12,701 - INFO - Parsed the following arguments:
+2022-06-29 12:12:49,060 - INFO - Parsed the following arguments:
 	outdir = results/tile_2/logoplots
 	ncpus = -1
 	use_existing = yes
@@ -54,13 +54,13 @@
 	ignore_extracols = no
 	sepline = yes
 
-2022-05-20 17:51:12,704 - INFO - Reading muteffects from file results/tile_2/muteffects/all_muteffects.csv...
-2022-05-20 17:51:12,713 - INFO - Read data for 114 sites.
+2022-06-29 12:12:49,063 - INFO - Reading muteffects from file results/tile_2/muteffects/all_muteffects.csv...
+2022-06-29 12:12:49,071 - INFO - Read data for 114 sites.
 
-2022-05-20 17:51:12,733 - INFO - Reading overlay for wildtype from results/tile_2/logoplots/wt_overlay.csv...
-2022-05-20 17:51:12,737 - INFO - Read overlay for 114 sites.
+2022-06-29 12:12:49,092 - INFO - Reading overlay for wildtype from results/tile_2/logoplots/wt_overlay.csv...
+2022-06-29 12:12:49,095 - INFO - Read overlay for 114 sites.
 
-2022-05-20 17:51:12,737 - INFO - Making logo plot results/tile_2/logoplots/all_muteffects.pdf...
-2022-05-20 17:51:14,574 - INFO - Successfully created logo plot.
+2022-06-29 12:12:49,095 - INFO - Making logo plot results/tile_2/logoplots/all_muteffects.pdf...
+2022-06-29 12:12:50,890 - INFO - Successfully created logo plot.
 
-2022-05-20 17:51:14,575 - INFO - Successful completion of dms2_logoplot
+2022-06-29 12:12:50,890 - INFO - Successful completion of dms2_logoplot

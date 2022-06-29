@@ -1,8 +1,8 @@
-2022-05-20 18:08:26,381 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2022-06-29 12:31:25,122 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-05-20 18:08:26,382 - INFO - Progress is being logged to results/tile_3/codoncounts/wt-plasmid-210921.log
-2022-05-20 18:08:26,415 - INFO - Version information:
-	Time and date: Fri May 20 18:08:26 2022
+2022-06-29 12:31:25,122 - INFO - Progress is being logged to results/tile_3/codoncounts/wt-plasmid-210921.log
+2022-06-29 12:31:25,154 - INFO - Version information:
+	Time and date: Wed Jun 29 12:31:25 2022
 	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-05-20 18:08:26,415 - INFO - Parsed the following arguments:
+2022-06-29 12:31:25,155 - INFO - Parsed the following arguments:
 	outdir = results/tile_3/codoncounts
 	ncpus = -1
 	use_existing = yes
@@ -49,18 +49,18 @@
 	name = wt-plasmid-210921
 	R1 = ['/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_3_Plasmid_S6_R1_001.fastq.gz']
 
-2022-05-20 18:08:26,428 - INFO - Read refseq of 339 codons from data/tile_3_amplicon.fasta
-2022-05-20 18:08:26,430 - INFO - Reads are in these FASTQ pairs:
+2022-06-29 12:31:25,168 - INFO - Read refseq of 339 codons from data/tile_3_amplicon.fasta
+2022-06-29 12:31:25,171 - INFO - Reads are in these FASTQ pairs:
 	/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_3_Plasmid_S6_R1_001.fastq.gz and /shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_3_Plasmid_S6_R2_001.fastq.gz
 
-2022-05-20 18:08:26,430 - INFO - Now parsing read pairs...
-2022-05-20 18:08:32,633 - INFO - Parsed 449975 reads, found 197671 unique barcodes.
-2022-05-20 18:08:32,636 - INFO - Summary stats on reads:
+2022-06-29 12:31:25,171 - INFO - Now parsing read pairs...
+2022-06-29 12:31:30,467 - INFO - Parsed 449975 reads, found 197671 unique barcodes.
+2022-06-29 12:31:30,471 - INFO - Summary stats on reads:
   total  fail filter  low Q barcode
  449975         9343          51978
-2022-05-20 18:08:32,636 - INFO - Writing these stats to results/tile_3/codoncounts/wt-plasmid-210921_readstats.csv
+2022-06-29 12:31:30,471 - INFO - Writing these stats to results/tile_3/codoncounts/wt-plasmid-210921_readstats.csv
 
-2022-05-20 18:08:32,693 - INFO - Number of reads per barcode:
+2022-06-29 12:31:30,528 - INFO - Number of reads per barcode:
                  number of barcodes
 number of reads                    
 1                             93675
@@ -75,14 +75,14 @@ number of reads
 10                               24
 11                                8
 12                                2
-2022-05-20 18:08:32,693 - INFO - Writing these stats to results/tile_3/codoncounts/wt-plasmid-210921_readsperbc.csv
+2022-06-29 12:31:30,528 - INFO - Writing these stats to results/tile_3/codoncounts/wt-plasmid-210921_readsperbc.csv
 
-2022-05-20 18:08:32,698 - INFO - Examining the 197671 barcodes to build and align subamplicons...
-2022-05-20 18:08:40,129 - INFO - Examined all barcodes. Summary stats:
+2022-06-29 12:31:30,532 - INFO - Examining the 197671 barcodes to build and align subamplicons...
+2022-06-29 12:31:37,899 - INFO - Examined all barcodes. Summary stats:
   total  too few reads  not alignable  aligned
  197671          93675          17869    86127
-2022-05-20 18:08:40,130 - INFO - Writing these stats to results/tile_3/codoncounts/wt-plasmid-210921_bcstats.csv
+2022-06-29 12:31:37,899 - INFO - Writing these stats to results/tile_3/codoncounts/wt-plasmid-210921_bcstats.csv
 
-2022-05-20 18:08:40,144 - INFO - Writing the counts of each codon identity at each site to results/tile_3/codoncounts/wt-plasmid-210921_codoncounts.csv
+2022-06-29 12:31:37,910 - INFO - Writing the counts of each codon identity at each site to results/tile_3/codoncounts/wt-plasmid-210921_codoncounts.csv
 
-2022-05-20 18:08:40,156 - INFO - Successful completion of dms2_bcsubamp
+2022-06-29 12:31:37,922 - INFO - Successful completion of dms2_bcsubamp

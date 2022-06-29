@@ -1,8 +1,8 @@
-2022-05-20 17:51:43,438 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2022-06-29 12:13:39,559 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-05-20 17:51:43,438 - INFO - Progress is being logged to results/tile_4/codoncounts/wt-Huh-7.5-210921.log
-2022-05-20 17:51:43,472 - INFO - Version information:
-	Time and date: Fri May 20 17:51:43 2022
+2022-06-29 12:13:39,560 - INFO - Progress is being logged to results/tile_4/codoncounts/wt-Huh-7.5-210921.log
+2022-06-29 12:13:39,592 - INFO - Version information:
+	Time and date: Wed Jun 29 12:13:39 2022
 	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-05-20 17:51:43,472 - INFO - Parsed the following arguments:
+2022-06-29 12:13:39,592 - INFO - Parsed the following arguments:
 	outdir = results/tile_4/codoncounts
 	ncpus = -1
 	use_existing = yes
@@ -49,19 +49,19 @@
 	name = wt-Huh-7.5-210921
 	R1 = ['/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_4_Sample_S10_R1_001.fastq.gz']
 
-2022-05-20 17:51:43,487 - INFO - Read refseq of 339 codons from data/tile_4_amplicon.fasta
-2022-05-20 17:51:43,534 - INFO - Reads are in these FASTQ pairs:
+2022-06-29 12:13:39,605 - INFO - Read refseq of 339 codons from data/tile_4_amplicon.fasta
+2022-06-29 12:13:39,607 - INFO - Reads are in these FASTQ pairs:
 	/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_4_Sample_S10_R1_001.fastq.gz and /shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/WT_Tile_4_Sample_S10_R2_001.fastq.gz
 
-2022-05-20 17:51:43,534 - INFO - Now parsing read pairs...
-2022-05-20 17:51:53,048 - INFO - Reads parsed so far: 500000
-2022-05-20 17:51:57,350 - INFO - Parsed 763586 reads, found 265834 unique barcodes.
-2022-05-20 17:51:57,354 - INFO - Summary stats on reads:
+2022-06-29 12:13:39,608 - INFO - Now parsing read pairs...
+2022-06-29 12:13:45,658 - INFO - Reads parsed so far: 500000
+2022-06-29 12:13:48,675 - INFO - Parsed 763586 reads, found 265834 unique barcodes.
+2022-06-29 12:13:48,678 - INFO - Summary stats on reads:
   total  fail filter  low Q barcode
  763586        16887         113969
-2022-05-20 17:51:57,354 - INFO - Writing these stats to results/tile_4/codoncounts/wt-Huh-7.5-210921_readstats.csv
+2022-06-29 12:13:48,678 - INFO - Writing these stats to results/tile_4/codoncounts/wt-Huh-7.5-210921_readstats.csv
 
-2022-05-20 17:51:57,441 - INFO - Number of reads per barcode:
+2022-06-29 12:13:48,755 - INFO - Number of reads per barcode:
                  number of barcodes
 number of reads                    
 1                            100478
@@ -79,15 +79,15 @@ number of reads
 13                               11
 14                                3
 17                                1
-2022-05-20 17:51:57,441 - INFO - Writing these stats to results/tile_4/codoncounts/wt-Huh-7.5-210921_readsperbc.csv
+2022-06-29 12:13:48,755 - INFO - Writing these stats to results/tile_4/codoncounts/wt-Huh-7.5-210921_readsperbc.csv
 
-2022-05-20 17:51:57,445 - INFO - Examining the 265834 barcodes to build and align subamplicons...
-2022-05-20 17:52:07,295 - INFO - Barcodes examined so far: 200000
-2022-05-20 17:52:08,989 - INFO - Examined all barcodes. Summary stats:
+2022-06-29 12:13:48,759 - INFO - Examining the 265834 barcodes to build and align subamplicons...
+2022-06-29 12:13:58,862 - INFO - Barcodes examined so far: 200000
+2022-06-29 12:14:00,636 - INFO - Examined all barcodes. Summary stats:
   total  too few reads  not alignable  aligned
  265834         100478          28889   136467
-2022-05-20 17:52:08,989 - INFO - Writing these stats to results/tile_4/codoncounts/wt-Huh-7.5-210921_bcstats.csv
+2022-06-29 12:14:00,637 - INFO - Writing these stats to results/tile_4/codoncounts/wt-Huh-7.5-210921_bcstats.csv
 
-2022-05-20 17:52:09,003 - INFO - Writing the counts of each codon identity at each site to results/tile_4/codoncounts/wt-Huh-7.5-210921_codoncounts.csv
+2022-06-29 12:14:00,648 - INFO - Writing the counts of each codon identity at each site to results/tile_4/codoncounts/wt-Huh-7.5-210921_codoncounts.csv
 
-2022-05-20 17:52:09,014 - INFO - Successful completion of dms2_bcsubamp
+2022-06-29 12:14:00,660 - INFO - Successful completion of dms2_bcsubamp

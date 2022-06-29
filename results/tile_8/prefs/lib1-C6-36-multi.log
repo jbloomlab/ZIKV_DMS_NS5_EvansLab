@@ -1,8 +1,8 @@
-2022-05-20 17:39:34,134 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2022-06-29 12:00:36,963 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-05-20 17:39:34,134 - INFO - Progress is being logged to results/tile_8/prefs/lib1-C6-36-multi.log
-2022-05-20 17:39:34,167 - INFO - Version information:
-	Time and date: Fri May 20 17:39:34 2022
+2022-06-29 12:00:36,963 - INFO - Progress is being logged to results/tile_8/prefs/lib1-C6-36-multi.log
+2022-06-29 12:00:36,993 - INFO - Version information:
+	Time and date: Wed Jun 29 12:00:36 2022
 	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-05-20 17:39:34,168 - INFO - Parsed the following arguments:
+2022-06-29 12:00:36,993 - INFO - Parsed the following arguments:
 	outdir = results/tile_8/prefs
 	ncpus = 6
 	use_existing = yes
@@ -38,12 +38,12 @@
 	name = lib1-C6-36-multi
 	err = ['wt-plasmid-210702', 'wt-C6-36-multi']
 
-2022-05-20 17:39:34,171 - INFO - Reading pre-selection counts from results/tile_8/renumbered_codoncounts/lib1-plasmid-210702_codoncounts.csv
-2022-05-20 17:39:34,180 - INFO - Reading post-selection counts from results/tile_8/renumbered_codoncounts/lib1-C6-36-multi_codoncounts.csv
-2022-05-20 17:39:34,187 - INFO - Reading pre-selection error-control counts from pre
-2022-05-20 17:39:34,193 - INFO - Reading post-selection error-control counts from post
-2022-05-20 17:39:34,205 - INFO - Read counts for 115 sites.
-2022-05-20 17:39:34,205 - INFO - Here are sites and wildtype identities:
+2022-06-29 12:00:36,996 - INFO - Reading pre-selection counts from results/tile_8/renumbered_codoncounts/lib1-plasmid-210702_codoncounts.csv
+2022-06-29 12:00:37,007 - INFO - Reading post-selection counts from results/tile_8/renumbered_codoncounts/lib1-C6-36-multi_codoncounts.csv
+2022-06-29 12:00:37,014 - INFO - Reading pre-selection error-control counts from pre
+2022-06-29 12:00:37,019 - INFO - Reading post-selection error-control counts from post
+2022-06-29 12:00:37,032 - INFO - Read counts for 115 sites.
+2022-06-29 12:00:37,032 - INFO - Here are sites and wildtype identities:
 	790	GTA
 	791	CCA
 	792	ACT
@@ -160,8 +160,8 @@
 	903	TTG
 	904	TAA
 
-2022-05-20 17:39:34,205 - INFO - Excluding the last site as it a stop codon.
+2022-06-29 12:00:37,032 - INFO - Excluding the last site as it a stop codon.
 
-2022-05-20 17:39:34,205 - INFO - Computing preferences as normalized enrichment ratios...
-2022-05-20 17:39:34,551 - INFO - Writing preferences to results/tile_8/prefs/lib1-C6-36-multi_prefs.csv
-2022-05-20 17:39:34,564 - INFO - Successful completion of dms2_prefs
+2022-06-29 12:00:37,032 - INFO - Computing preferences as normalized enrichment ratios...
+2022-06-29 12:00:37,329 - INFO - Writing preferences to results/tile_8/prefs/lib1-C6-36-multi_prefs.csv
+2022-06-29 12:00:37,338 - INFO - Successful completion of dms2_prefs

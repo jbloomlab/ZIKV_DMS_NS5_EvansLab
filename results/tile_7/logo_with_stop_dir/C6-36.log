@@ -1,0 +1,66 @@
+2022-07-19 17:39:02,801 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+
+2022-07-19 17:39:02,801 - INFO - Progress is being logged to results/tile_7/logo_with_stop_dir/C6-36.log
+2022-07-19 17:39:02,841 - INFO - Version information:
+	Time and date: Tue Jul 19 17:39:02 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-19 17:39:02,841 - INFO - Parsed the following arguments:
+	outdir = results/tile_7/logo_with_stop_dir
+	ncpus = -1
+	use_existing = no
+	prefs = None
+	diffsel = None
+	fracsurvive = None
+	diffprefs = None
+	muteffects = results/tile_7/muteffects_with_stop/C6-36_muteffects.csv
+	name = C6-36
+	nperline = 56
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = all
+	diffselrange = None
+	muteffectrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['results/tile_7/logoplots/wt_overlay_with_stop.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = no
+	scalebar = ['6.64', '100-fold change (log scale)']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = yes
+
+2022-07-19 17:39:02,843 - INFO - Reading muteffects from file results/tile_7/muteffects_with_stop/C6-36_muteffects.csv...
+2022-07-19 17:39:02,851 - INFO - Read data for 113 sites.
+
+2022-07-19 17:39:02,871 - INFO - Reading overlay for wildtype from results/tile_7/logoplots/wt_overlay_with_stop.csv...
+2022-07-19 17:39:02,875 - INFO - Read overlay for 113 sites.
+
+2022-07-19 17:39:02,875 - INFO - Making logo plot results/tile_7/logo_with_stop_dir/C6-36_muteffects.pdf...
+2022-07-19 17:39:04,762 - INFO - Successfully created logo plot.
+
+2022-07-19 17:39:04,762 - INFO - Successful completion of dms2_logoplot

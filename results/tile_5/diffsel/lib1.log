@@ -1,0 +1,73 @@
+2022-07-19 18:04:50,661 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+
+2022-07-19 18:04:50,661 - INFO - Progress is being logged to results/tile_5/diffsel/lib1.log
+2022-07-19 18:04:50,692 - INFO - Version information:
+	Time and date: Tue Jul 19 18:04:50 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-19 18:04:50,692 - INFO - Parsed the following arguments:
+	outdir = results/tile_5/diffsel
+	ncpus = 12
+	use_existing = yes
+	indir = None
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = lib1
+	sel = results/tile_5/renumbered_codoncounts/lib1-Huh-7.5-210921_codoncounts.csv
+	mock = results/tile_5/renumbered_codoncounts/lib1-C6-36-multi_codoncounts.csv
+	err = results/tile_5/renumbered_codoncounts/wt-plasmid-210921_codoncounts.csv
+
+2022-07-19 18:04:50,695 - INFO - Reading selected sample counts from results/tile_5/renumbered_codoncounts/lib1-Huh-7.5-210921_codoncounts.csv
+2022-07-19 18:04:50,702 - INFO - Reading mock-selected sample counts from results/tile_5/renumbered_codoncounts/lib1-C6-36-multi_codoncounts.csv
+2022-07-19 18:04:50,709 - INFO - Reading error-control sample counts from results/tile_5/renumbered_codoncounts/wt-plasmid-210921_codoncounts.csv
+2022-07-19 18:04:50,716 - INFO - Computing mutdiffsel...
+2022-07-19 18:04:51,615 - INFO - Mutations with largest mutdiffsel:
+ site wildtype mutation  mutdiffsel
+  533        A        S        3.07
+  468        K        V        2.42
+  474        A        Q        2.19
+  488        E        K        1.84
+  530        K        L        1.70
+  468        K        Y        1.39
+  500        G        A        1.34
+  464        G        A        1.30
+  468        K        S        1.19
+  470        K        T        1.12
+
+2022-07-19 18:04:51,615 - INFO - Writing to results/tile_5/diffsel/lib1_mutdiffsel.csv
+2022-07-19 18:04:51,626 - INFO - Computing sitediffsel...
+2022-07-19 18:04:51,650 - INFO - Sites with largest absolute sitediffsel:
+ site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+  557        14.58              0.34            -14.25         0.27        -1.84
+  518        12.98              0.07            -12.91         0.07        -2.44
+  546        12.61              0.26            -12.35         0.26        -1.83
+  549        11.98              0.97            -11.00         0.49        -2.24
+  561        11.80              0.20            -11.59         0.20        -1.49
+  513        11.68              1.17            -10.50         0.66        -1.86
+  530        11.39              6.57             -4.81         1.70        -1.71
+  500        11.29              9.05             -2.24         1.34        -1.45
+  521        11.29              0.24            -11.05         0.17        -1.93
+  552        10.67              0.49            -10.18         0.49        -2.20
+
+2022-07-19 18:04:51,650 - INFO - Writing to results/tile_5/diffsel/lib1_sitediffsel.csv
+2022-07-19 18:04:51,654 - INFO - Successful completion of dms2_diffsel

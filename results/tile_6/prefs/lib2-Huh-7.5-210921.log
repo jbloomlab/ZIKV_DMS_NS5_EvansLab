@@ -1,8 +1,8 @@
-2022-05-20 18:01:57,894 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2022-07-19 17:50:35,039 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-05-20 18:01:57,894 - INFO - Progress is being logged to results/tile_6/prefs/lib2-Huh-7.5-210921.log
-2022-05-20 18:01:57,925 - INFO - Version information:
-	Time and date: Fri May 20 18:01:57 2022
+2022-07-19 17:50:35,039 - INFO - Progress is being logged to results/tile_6/prefs/lib2-Huh-7.5-210921.log
+2022-07-19 17:50:35,072 - INFO - Version information:
+	Time and date: Tue Jul 19 17:50:35 2022
 	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-05-20 18:01:57,925 - INFO - Parsed the following arguments:
+2022-07-19 17:50:35,072 - INFO - Parsed the following arguments:
 	outdir = results/tile_6/prefs
 	ncpus = 6
 	use_existing = yes
@@ -38,12 +38,12 @@
 	name = lib2-Huh-7.5-210921
 	err = ['wt-plasmid-210921', 'wt-Huh-7.5-210921']
 
-2022-05-20 18:01:57,927 - INFO - Reading pre-selection counts from results/tile_6/renumbered_codoncounts/lib2-plasmid-210921_codoncounts.csv
-2022-05-20 18:01:57,937 - INFO - Reading post-selection counts from results/tile_6/renumbered_codoncounts/lib2-Huh-7.5-210921_codoncounts.csv
-2022-05-20 18:01:57,943 - INFO - Reading pre-selection error-control counts from pre
-2022-05-20 18:01:57,948 - INFO - Reading post-selection error-control counts from post
-2022-05-20 18:01:57,959 - INFO - Read counts for 113 sites.
-2022-05-20 18:01:57,960 - INFO - Here are sites and wildtype identities:
+2022-07-19 17:50:35,074 - INFO - Reading pre-selection counts from results/tile_6/renumbered_codoncounts/lib2-plasmid-210921_codoncounts.csv
+2022-07-19 17:50:35,081 - INFO - Reading post-selection counts from results/tile_6/renumbered_codoncounts/lib2-Huh-7.5-210921_codoncounts.csv
+2022-07-19 17:50:35,086 - INFO - Reading pre-selection error-control counts from pre
+2022-07-19 17:50:35,090 - INFO - Reading post-selection error-control counts from post
+2022-07-19 17:50:35,101 - INFO - Read counts for 113 sites.
+2022-07-19 17:50:35,102 - INFO - Here are sites and wildtype identities:
 	564	ACT
 	565	CTG
 	566	GCG
@@ -158,6 +158,6 @@
 	675	AGG
 	676	TTT
 
-2022-05-20 18:01:57,960 - INFO - Computing preferences as normalized enrichment ratios...
-2022-05-20 18:01:58,287 - INFO - Writing preferences to results/tile_6/prefs/lib2-Huh-7.5-210921_prefs.csv
-2022-05-20 18:01:58,296 - INFO - Successful completion of dms2_prefs
+2022-07-19 17:50:35,102 - INFO - Computing preferences as normalized enrichment ratios...
+2022-07-19 17:50:35,423 - INFO - Writing preferences to results/tile_6/prefs/lib2-Huh-7.5-210921_prefs.csv
+2022-07-19 17:50:35,430 - INFO - Successful completion of dms2_prefs

@@ -1,0 +1,4 @@
+name,mock,sel,err
+lib1,results/tile_2/renumbered_codoncounts/lib1-C6-36-multi_codoncounts.csv,results/tile_2/renumbered_codoncounts/lib1-Huh-7.5-210528_codoncounts.csv,results/tile_2/renumbered_codoncounts/wt-plasmid-210528_codoncounts.csv
+lib2,results/tile_2/renumbered_codoncounts/lib2-C6-36-multi_codoncounts.csv,results/tile_2/renumbered_codoncounts/lib2-Huh-7.5-210528_codoncounts.csv,results/tile_2/renumbered_codoncounts/wt-plasmid-210528_codoncounts.csv
+lib3,results/tile_2/renumbered_codoncounts/lib3-C6-36-multi_codoncounts.csv,results/tile_2/renumbered_codoncounts/lib3-Huh-7.5-210528_codoncounts.csv,results/tile_2/renumbered_codoncounts/wt-plasmid-210528_codoncounts.csv

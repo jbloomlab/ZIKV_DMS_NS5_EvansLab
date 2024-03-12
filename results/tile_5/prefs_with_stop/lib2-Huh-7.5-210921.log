@@ -1,29 +1,29 @@
-2022-07-19 18:05:09,872 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-03-11 16:45:04,844 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-07-19 18:05:09,872 - INFO - Progress is being logged to results/tile_5/prefs_with_stop/lib2-Huh-7.5-210921.log
-2022-07-19 18:05:09,905 - INFO - Version information:
-	Time and date: Tue Jul 19 18:05:09 2022
-	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
-	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+2024-03-11 16:45:04,844 - INFO - Progress is being logged to results/tile_5/prefs_with_stop/lib2-Huh-7.5-210921.log
+2024-03-11 16:45:04,880 - INFO - Version information:
+	Time and date: Mon Mar 11 16:45:04 2024
+	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
+	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
 	IPython version: 8.3.0
-	jupyter version: 1.0.0
+	jupyter version unknown
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
-	seaborn version: 0.10.1
+	scipy version: 1.10.1
+	seaborn version: 0.12.2
 	phydmslib version: 2.4.1
-	statsmodels version: 0.11.1
+	statsmodels version: 0.13.2
 	rpy2 cannot be imported
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-19 18:05:09,905 - INFO - Parsed the following arguments:
+2024-03-11 16:45:04,880 - INFO - Parsed the following arguments:
 	outdir = results/tile_5/prefs_with_stop
 	ncpus = 6
 	use_existing = no
@@ -38,12 +38,12 @@
 	name = lib2-Huh-7.5-210921
 	err = ['wt-plasmid-210921', 'wt-Huh-7.5-210921']
 
-2022-07-19 18:05:09,907 - INFO - Reading pre-selection counts from results/tile_5/renumbered_codoncounts/lib2-plasmid-210921_codoncounts.csv
-2022-07-19 18:05:09,914 - INFO - Reading post-selection counts from results/tile_5/renumbered_codoncounts/lib2-Huh-7.5-210921_codoncounts.csv
-2022-07-19 18:05:09,918 - INFO - Reading pre-selection error-control counts from pre
-2022-07-19 18:05:09,922 - INFO - Reading post-selection error-control counts from post
-2022-07-19 18:05:09,933 - INFO - Read counts for 113 sites.
-2022-07-19 18:05:09,933 - INFO - Here are sites and wildtype identities:
+2024-03-11 16:45:04,882 - INFO - Reading pre-selection counts from results/tile_5/renumbered_codoncounts/lib2-plasmid-210921_codoncounts.csv
+2024-03-11 16:45:04,888 - INFO - Reading post-selection counts from results/tile_5/renumbered_codoncounts/lib2-Huh-7.5-210921_codoncounts.csv
+2024-03-11 16:45:04,894 - INFO - Reading pre-selection error-control counts from pre
+2024-03-11 16:45:04,899 - INFO - Reading post-selection error-control counts from post
+2024-03-11 16:45:04,910 - INFO - Read counts for 113 sites.
+2024-03-11 16:45:04,911 - INFO - Here are sites and wildtype identities:
 	451	TGT
 	452	GTG
 	453	TAC
@@ -158,6 +158,6 @@
 	562	CAC
 	563	AGA
 
-2022-07-19 18:05:09,933 - INFO - Computing preferences as normalized enrichment ratios...
-2022-07-19 18:05:10,261 - INFO - Writing preferences to results/tile_5/prefs_with_stop/lib2-Huh-7.5-210921_prefs.csv
-2022-07-19 18:05:10,269 - INFO - Successful completion of dms2_prefs
+2024-03-11 16:45:04,911 - INFO - Computing preferences as normalized enrichment ratios...
+2024-03-11 16:45:05,254 - INFO - Writing preferences to results/tile_5/prefs_with_stop/lib2-Huh-7.5-210921_prefs.csv
+2024-03-11 16:45:05,262 - INFO - Successful completion of dms2_prefs

@@ -11,3 +11,7 @@ lib1,C6-36,multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_
 lib2,C6-36,multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib2_C636_R1.fastq.gz,
 lib3,C6-36,multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib3_C636_R1.fastq.gz,
 wt,C6-36,multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/wt_C636_R1.fastq.gz,
+lib1,Huh-7.5-noSTAT2,240130,/shared/ngs/illumina/ckikawa/240130_M00492_0192_000000000-L5NF8/Unaligned/Project_bloom_lab/BR011024_Tile_7_Library_1_S1_R1_001.fastq.gz,
+lib2,Huh-7.5-noSTAT2,240130,/shared/ngs/illumina/ckikawa/240130_M00492_0192_000000000-L5NF8/Unaligned/Project_bloom_lab/BR011024_Tile_7_Library_2_S2_R1_001.fastq.gz,
+lib3,Huh-7.5-noSTAT2,240130,/shared/ngs/illumina/ckikawa/240130_M00492_0192_000000000-L5NF8/Unaligned/Project_bloom_lab/BR011024_Tile_7_Library_3_S3_R1_001.fastq.gz,
+wt,Huh-7.5-noSTAT2,240130,/shared/ngs/illumina/ckikawa/240130_M00492_0192_000000000-L5NF8/Unaligned/Project_bloom_lab/BR011024_Tile_7_WT_S7_R1_001.fastq.gz,

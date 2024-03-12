@@ -1,32 +1,32 @@
-2022-07-19 17:37:33,997 - INFO - Beginning execution of dms2_batch_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-03-11 16:16:04,860 - INFO - Beginning execution of dms2_batch_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-07-19 17:37:33,997 - INFO - Progress is being logged to results/tile_7/prefs/summary.log
-2022-07-19 17:37:34,033 - INFO - Version information:
-	Time and date: Tue Jul 19 17:37:33 2022
-	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
-	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+2024-03-11 16:16:04,860 - INFO - Progress is being logged to results/tile_7/prefs/summary.log
+2024-03-11 16:16:04,899 - INFO - Version information:
+	Time and date: Mon Mar 11 16:16:04 2024
+	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
+	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
 	IPython version: 8.3.0
-	jupyter version: 1.0.0
+	jupyter version unknown
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
-	seaborn version: 0.10.1
+	scipy version: 1.10.1
+	seaborn version: 0.12.2
 	phydmslib version: 2.4.1
-	statsmodels version: 0.11.1
+	statsmodels version: 0.13.2
 	rpy2 cannot be imported
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-19 17:37:34,033 - INFO - Parsed the following arguments:
+2024-03-11 16:16:04,899 - INFO - Parsed the following arguments:
 	outdir = results/tile_7/prefs
 	ncpus = 72
-	use_existing = yes
+	use_existing = no
 	method = ratio
 	indir = results/tile_7/renumbered_codoncounts
 	chartype = codon_to_aa
@@ -38,8 +38,8 @@
 	no_corr = False
 	no_avg = False
 
-2022-07-19 17:37:34,035 - INFO - Parsing info from results/tile_7/prefs/batch.csv
-2022-07-19 17:37:34,047 - INFO - Read the following sample information:
+2024-03-11 16:16:04,901 - INFO - Parsing info from results/tile_7/prefs/batch.csv
+2024-03-11 16:16:04,912 - INFO - Read the following sample information:
 name,selection,library,pre,post,date,errpre,errpost
 lib3-Huh-7.5-210702,Huh-7.5,lib3,lib3-plasmid-210702,lib3-Huh-7.5-210702,210702,wt-plasmid-210702,wt-Huh-7.5-210702
 lib1-Huh-7.5-210702,Huh-7.5,lib1,lib1-plasmid-210702,lib1-Huh-7.5-210702,210702,wt-plasmid-210702,wt-Huh-7.5-210702
@@ -47,13 +47,16 @@ lib2-Huh-7.5-210702,Huh-7.5,lib2,lib2-plasmid-210702,lib2-Huh-7.5-210702,210702,
 lib1-C6-36-multi,C6-36,lib1,lib1-plasmid-210702,lib1-C6-36-multi,multi,wt-plasmid-210702,wt-C6-36-multi
 lib2-C6-36-multi,C6-36,lib2,lib2-plasmid-210702,lib2-C6-36-multi,multi,wt-plasmid-210702,wt-C6-36-multi
 lib3-C6-36-multi,C6-36,lib3,lib3-plasmid-210702,lib3-C6-36-multi,multi,wt-plasmid-210702,wt-C6-36-multi
+lib1-Huh-7.5-noSTAT2-240130,Huh-7.5-noSTAT2,lib1,lib1-plasmid-210702,lib1-Huh-7.5-noSTAT2-240130,240130,wt-plasmid-210702,wt-Huh-7.5-noSTAT2-240130
+lib2-Huh-7.5-noSTAT2-240130,Huh-7.5-noSTAT2,lib2,lib2-plasmid-210702,lib2-Huh-7.5-noSTAT2-240130,240130,wt-plasmid-210702,wt-Huh-7.5-noSTAT2-240130
+lib3-Huh-7.5-noSTAT2-240130,Huh-7.5-noSTAT2,lib3,lib3-plasmid-210702,lib3-Huh-7.5-noSTAT2-240130,240130,wt-plasmid-210702,wt-Huh-7.5-noSTAT2-240130
 
 
-2022-07-19 17:37:34,048 - INFO - Running dms2_prefs on all samples...
-2022-07-19 17:37:38,431 - INFO - Completed runs of dms2_prefs.
+2024-03-11 16:16:04,912 - INFO - Running dms2_prefs on all samples...
+2024-03-11 16:16:09,424 - INFO - Completed runs of dms2_prefs.
 
-2022-07-19 17:37:38,439 - INFO - Plotting correlations to results/tile_7/prefs/summary_prefscorr.pdf
+2024-03-11 16:16:09,431 - INFO - Plotting correlations to results/tile_7/prefs/summary_prefscorr.pdf
 
-2022-07-19 17:37:40,736 - INFO - Writing average preferences to results/tile_7/prefs/summary_avgprefs.csv
+2024-03-11 16:16:17,210 - INFO - Writing average preferences to results/tile_7/prefs/summary_avgprefs.csv
 
-2022-07-19 17:37:40,765 - INFO - Successful completion of dms2_batch_prefs
+2024-03-11 16:16:17,253 - INFO - Successful completion of dms2_batch_prefs

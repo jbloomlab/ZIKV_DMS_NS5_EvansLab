@@ -1,32 +1,32 @@
-2022-07-19 18:05:48,425 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-03-11 16:52:21,384 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-07-19 18:05:48,425 - INFO - Progress is being logged to results/tile_3/codoncounts/summary.log
-2022-07-19 18:05:48,461 - INFO - Version information:
-	Time and date: Tue Jul 19 18:05:48 2022
-	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
-	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+2024-03-11 16:52:21,384 - INFO - Progress is being logged to results/tile_3/codoncounts/summary.log
+2024-03-11 16:52:21,426 - INFO - Version information:
+	Time and date: Mon Mar 11 16:52:21 2024
+	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
+	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
 	IPython version: 8.3.0
-	jupyter version: 1.0.0
+	jupyter version unknown
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
-	seaborn version: 0.10.1
+	scipy version: 1.10.1
+	seaborn version: 0.12.2
 	phydmslib version: 2.4.1
-	statsmodels version: 0.11.1
+	statsmodels version: 0.13.2
 	rpy2 cannot be imported
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-19 18:05:48,461 - INFO - Parsed the following arguments:
+2024-03-11 16:52:21,426 - INFO - Parsed the following arguments:
 	outdir = results/tile_3/codoncounts
 	ncpus = 72
-	use_existing = yes
+	use_existing = no
 	refseq = data/tile_3_amplicon.fasta
 	alignspecs = ['1,339,30,30']
 	bclen = 8
@@ -49,8 +49,8 @@
 	batchfile = results/tile_3/codoncounts/batch.csv
 	summaryprefix = summary
 
-2022-07-19 18:05:48,461 - INFO - Parsing sample info from results/tile_3/codoncounts/batch.csv
-2022-07-19 18:05:48,468 - INFO - Read the following sample information:
+2024-03-11 16:52:21,426 - INFO - Parsing sample info from results/tile_3/codoncounts/batch.csv
+2024-03-11 16:52:21,433 - INFO - Read the following sample information:
 name,R1
 lib1-plasmid-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_3-1_Plasmid_S7_R1_001.fastq.gz
 lib2-plasmid-210921,/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_3-2_Plasmid_S8_R1_001.fastq.gz
@@ -66,16 +66,16 @@ lib3-C6-36-multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_
 wt-C6-36-multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/wt_C636_R1.fastq.gz
 
 
-2022-07-19 18:05:48,476 - INFO - Running dms2_bcsubamp on all samples using 36 CPUs...
-2022-07-19 18:09:58,542 - INFO - Completed runs of dms2_bcsubamp.
+2024-03-11 16:52:21,442 - INFO - Running dms2_bcsubamp on all samples using 36 CPUs...
+2024-03-11 16:56:37,375 - INFO - Completed runs of dms2_bcsubamp.
 
-2022-07-19 18:09:58,554 - INFO - Plotting read stats to results/tile_3/codoncounts/summary_readstats.pdf
-2022-07-19 18:09:58,945 - INFO - Plotting barcode stats to results/tile_3/codoncounts/summary_bcstats.pdf
-2022-07-19 18:09:59,317 - INFO - Plotting reads per barcode to results/tile_3/codoncounts/summary_readsperbc.pdf
-2022-07-19 18:10:00,436 - INFO - Plotting count depth to results/tile_3/codoncounts/summary_depth.pdf
-2022-07-19 18:10:01,538 - INFO - Plotting mutation frequencies to results/tile_3/codoncounts/summary_mutfreq.pdf
-2022-07-19 18:10:03,498 - INFO - Plotting average frequencies of codon mutation types to results/tile_3/codoncounts/summary_codonmuttypes.pdf, writing the data to results/tile_3/codoncounts/summary_codonmuttypes.csv
-2022-07-19 18:10:04,777 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to results/tile_3/codoncounts/summary_codonntchanges.pdf
-2022-07-19 18:10:06,150 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to results/tile_3/codoncounts/summary_singlentchanges.pdf
-2022-07-19 18:10:07,480 - INFO - Plotting fraction of mutations seen less than some number of times to results/tile_3/codoncounts/summary_cumulmutcounts.pdf
-2022-07-19 18:10:09,715 - INFO - Successful completion of dms2_batch_bcsubamp
+2024-03-11 16:56:37,388 - INFO - Plotting read stats to results/tile_3/codoncounts/summary_readstats.pdf
+2024-03-11 16:56:37,948 - INFO - Plotting barcode stats to results/tile_3/codoncounts/summary_bcstats.pdf
+2024-03-11 16:56:38,210 - INFO - Plotting reads per barcode to results/tile_3/codoncounts/summary_readsperbc.pdf
+2024-03-11 16:56:39,360 - INFO - Plotting count depth to results/tile_3/codoncounts/summary_depth.pdf
+2024-03-11 16:56:40,533 - INFO - Plotting mutation frequencies to results/tile_3/codoncounts/summary_mutfreq.pdf
+2024-03-11 16:56:42,723 - INFO - Plotting average frequencies of codon mutation types to results/tile_3/codoncounts/summary_codonmuttypes.pdf, writing the data to results/tile_3/codoncounts/summary_codonmuttypes.csv
+2024-03-11 16:56:44,093 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to results/tile_3/codoncounts/summary_codonntchanges.pdf
+2024-03-11 16:56:45,449 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to results/tile_3/codoncounts/summary_singlentchanges.pdf
+2024-03-11 16:56:46,875 - INFO - Plotting fraction of mutations seen less than some number of times to results/tile_3/codoncounts/summary_cumulmutcounts.pdf
+2024-03-11 16:56:49,203 - INFO - Successful completion of dms2_batch_bcsubamp

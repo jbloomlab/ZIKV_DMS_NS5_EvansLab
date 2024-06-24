@@ -1,35 +1,45 @@
-# Deep mutational scanning of ZIKV NS5 protein
-Experiments by Blake Richardson and Matt Evans.
-Analysis by Jesse Bloom.
+# Deep mutational scanning of ZIKV NS5 (RdRp) protein
 
-## Results
-For a summary of the results, see [results/summary/](results/summary/), which has Markdown summaries for the analysis of each tile (e.g., [results/summary/dms_tile_1_analysis.md](results/summary/dms_tile_1_analysis.md), etc).
+Experiments were performed by Blake Richardson and Matt Evans. Analysis was performed by Jesse Bloom, David Bacsik, and Caroline Kikawa
 
-Other results are placed in [./results/](results), although not all files are tracked in the GitHub repo.
+## Overview
 
-## Running analysis
-First activate the *ZIKV_DMS_NS5_EvansLab* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment for the analysis.
-If you have not already created this environment, build it from [environment.yml](ZIKV_DMS_NS5_EvansLab) with:
+The Evan's lab performed DMS on the ZIKV NS5 (RdRp) protein using a [tiled subamplicon approach](https://jbloomlab.github.io/dms_tools2/bcsubamp.html). A mutation's effect on ZIKV growth was assessed by comparing the passaged virus library to the original plasmid stock. 
 
-    conda env create -f environment.yml
+See [results/summary/](results/summary/) for a markdown summary of the results for each tile over the genome (e.g., [results/summary/dms_tile_1_analysis.md](results/summary/dms_tile_1_analysis.md), etc).
 
-Then activate the environment with:
+See [this file](results/all_tiles/alltiles_host_adaptation.csv) for the results from all tiles in a single table. The mutational scan was performed in two cell lines: Huh75 (human) and C636 (mosquito).
 
-    conda activate ZIKV_DMS_NS5_EvansLab
+## Running the analysis
 
-The analysis is run by the [snakemake](https://snakemake.readthedocs.io/) pipeline in [Snakefile](Snakefile).
-Essentially, this pipeline runs the Jupyter notebook [dms_tile_analysis.ipynb](dms_tile_analysis.ipynb) for each deep mutational scanning tile, with the tile information specified in [config.yml](config.yml).
-To run the pipeline using 36 jobs, use the command:
+Activate the *ZIKV_DMS_NS5_EvansLab* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment if it exists. Otherwise, create it from the [environment.yml](environment.yml) file:
 
-    snakemake -j 36
+```bash
+conda env create -f environment.yml
+```
 
-Add the `--keep-incomplete` flag if you don't want to delete results on an error.
-To run on the Hutch cluster using `slurm`, do:
+And activate the environment:
 
-    sbatch -c 36 run_Snakemake.bash
+```bash
+conda activate ZIKV_DMS_NS5_EvansLab
+```
 
+The analysis is run by the [snakemake](https://snakemake.readthedocs.io/) pipeline detailed in [Snakefile](Snakefile). This pipeline runs the Jupyter notebook [dms_tile_analysis.py.ipynb](dms_tile_analysis.ipynb) for each tile using the information specified in the [config.yml](config.yml) file, generating a markdown summary for each tile.
+
+Run the pipeline with following command:
+
+```bash
+snakemake
+```
+
+If you've got access to the Hutch's cluster, run the bash script:
+
+```bash
+sbatch run_Snakemake.bash
+```
 
 ## Input data
+
 The input data are in [./data/](data):
 
  - `./data/tile_*_amplicon.fasta`: amplicons for each tile of the barcoded-subamplicon sequencing.
@@ -41,14 +51,3 @@ The input data are in [./data/](data):
  - [./data/6WCZ.pdb](data/6WCZ.pdb) is the [6WCZ](https://www.rcsb.org/structure/6wcz) PDB file of ZIKV NS5 bound to human STAT2.
 
  - [./data/NS5_STAT2_joined.pdb](data/NS5_STAT2_joined.pdb) is a PDB file provided by Matt Evans that manually combines several other relevant PDBs.
-
-## Visualizing results with `dms-view`
-To visualize results with `dms-view`, first go to the `dms-view` homepage at [https://dms-view.github.io/](https://dms-view.github.io/).
-Then you need to navigate to the protein structure and data you want to show, and paste those in the data box (upper left) and protein structure box (upper right).
-Importantly, you need to enter the `Raw` values.
-Specifically:
- 1. Go to [https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/results/dms-view/data_all_tiles.csv](https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/results/dms-view/data_all_tiles.csv), click on `Raw`, and then enter the resulting link in the upper-right box for a CSV on the `dms-view` page.
- 2. Go to [https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/6WCZ.pdb](https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/6WCZ.pdb), click on the `Raw` button, and enter the resulting link on the upper-right CSV box on `dms-view` for the protein structure.
- 3. Go to [https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/dms-view_manifest.md](https://github.com/jbloomlab/ZIKV_DMS_NS5_EvansLab/blob/main/data/dms-view_manifest.md), click on the `Raw` button, and enter the resulting link in the lower box for the manifest.
-The resulting `dms-view` link can be copied and shared.
-However, as long as this repository remains "private" the link will expire and we can't make a fully permanent one.

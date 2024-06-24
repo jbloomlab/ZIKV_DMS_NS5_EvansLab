@@ -1,32 +1,32 @@
-2022-07-19 17:26:26,532 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-03-11 16:03:38,402 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-07-19 17:26:26,532 - INFO - Progress is being logged to results/tile_8/codoncounts/lib1-C6-36-multi.log
-2022-07-19 17:26:26,565 - INFO - Version information:
-	Time and date: Tue Jul 19 17:26:26 2022
-	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
-	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+2024-03-11 16:03:38,402 - INFO - Progress is being logged to results/tile_8/codoncounts/lib1-C6-36-multi.log
+2024-03-11 16:03:38,446 - INFO - Version information:
+	Time and date: Mon Mar 11 16:03:38 2024
+	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
+	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
 	IPython version: 8.3.0
-	jupyter version: 1.0.0
+	jupyter version unknown
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
-	seaborn version: 0.10.1
+	scipy version: 1.10.1
+	seaborn version: 0.12.2
 	phydmslib version: 2.4.1
-	statsmodels version: 0.11.1
+	statsmodels version: 0.13.2
 	rpy2 cannot be imported
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-19 17:26:26,565 - INFO - Parsed the following arguments:
+2024-03-11 16:03:38,447 - INFO - Parsed the following arguments:
 	outdir = results/tile_8/codoncounts
 	ncpus = -1
-	use_existing = yes
+	use_existing = no
 	refseq = data/tile_8_amplicon.fasta
 	alignspecs = ['1,345,30,30']
 	bclen = 8
@@ -49,44 +49,44 @@
 	name = lib1-C6-36-multi
 	R1 = ['/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib1_C636_R1.fastq.gz']
 
-2022-07-19 17:26:26,662 - INFO - Read refseq of 345 codons from data/tile_8_amplicon.fasta
-2022-07-19 17:26:26,663 - INFO - Reads are in these FASTQ pairs:
+2024-03-11 16:03:38,465 - INFO - Read refseq of 345 codons from data/tile_8_amplicon.fasta
+2024-03-11 16:03:38,533 - INFO - Reads are in these FASTQ pairs:
 	/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib1_C636_R1.fastq.gz and /fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib1_C636_R2.fastq.gz
 
-2022-07-19 17:26:26,663 - INFO - Now parsing read pairs...
-2022-07-19 17:26:32,817 - INFO - Reads parsed so far: 500000
-2022-07-19 17:26:39,000 - INFO - Reads parsed so far: 1000000
-2022-07-19 17:26:44,658 - INFO - Reads parsed so far: 1500000
-2022-07-19 17:26:50,271 - INFO - Reads parsed so far: 2000000
-2022-07-19 17:26:56,232 - INFO - Reads parsed so far: 2500000
-2022-07-19 17:27:02,432 - INFO - Reads parsed so far: 3000000
-2022-07-19 17:27:07,486 - INFO - Reads parsed so far: 3500000
-2022-07-19 17:27:12,445 - INFO - Reads parsed so far: 4000000
-2022-07-19 17:27:18,874 - INFO - Reads parsed so far: 4500000
-2022-07-19 17:27:23,771 - INFO - Reads parsed so far: 5000000
-2022-07-19 17:27:28,681 - INFO - Reads parsed so far: 5500000
-2022-07-19 17:27:35,660 - INFO - Reads parsed so far: 6000000
-2022-07-19 17:27:40,755 - INFO - Reads parsed so far: 6500000
-2022-07-19 17:27:45,653 - INFO - Reads parsed so far: 7000000
-2022-07-19 17:27:50,587 - INFO - Reads parsed so far: 7500000
-2022-07-19 17:27:55,539 - INFO - Reads parsed so far: 8000000
-2022-07-19 17:28:00,450 - INFO - Reads parsed so far: 8500000
-2022-07-19 17:28:05,377 - INFO - Reads parsed so far: 9000000
-2022-07-19 17:28:13,212 - INFO - Reads parsed so far: 9500000
-2022-07-19 17:28:18,182 - INFO - Reads parsed so far: 10000000
-2022-07-19 17:28:23,182 - INFO - Reads parsed so far: 10500000
-2022-07-19 17:28:28,063 - INFO - Reads parsed so far: 11000000
-2022-07-19 17:28:33,057 - INFO - Reads parsed so far: 11500000
-2022-07-19 17:28:38,037 - INFO - Reads parsed so far: 12000000
-2022-07-19 17:28:43,052 - INFO - Reads parsed so far: 12500000
-2022-07-19 17:28:48,056 - INFO - Reads parsed so far: 13000000
-2022-07-19 17:28:51,733 - INFO - Parsed 13370034 reads, found 3879702 unique barcodes.
-2022-07-19 17:28:51,736 - INFO - Summary stats on reads:
+2024-03-11 16:03:38,533 - INFO - Now parsing read pairs...
+2024-03-11 16:03:45,820 - INFO - Reads parsed so far: 500000
+2024-03-11 16:03:51,815 - INFO - Reads parsed so far: 1000000
+2024-03-11 16:03:58,272 - INFO - Reads parsed so far: 1500000
+2024-03-11 16:04:04,321 - INFO - Reads parsed so far: 2000000
+2024-03-11 16:04:09,596 - INFO - Reads parsed so far: 2500000
+2024-03-11 16:04:15,906 - INFO - Reads parsed so far: 3000000
+2024-03-11 16:04:21,401 - INFO - Reads parsed so far: 3500000
+2024-03-11 16:04:28,307 - INFO - Reads parsed so far: 4000000
+2024-03-11 16:04:33,885 - INFO - Reads parsed so far: 4500000
+2024-03-11 16:04:39,511 - INFO - Reads parsed so far: 5000000
+2024-03-11 16:04:46,972 - INFO - Reads parsed so far: 5500000
+2024-03-11 16:04:52,459 - INFO - Reads parsed so far: 6000000
+2024-03-11 16:04:58,481 - INFO - Reads parsed so far: 6500000
+2024-03-11 16:05:04,449 - INFO - Reads parsed so far: 7000000
+2024-03-11 16:05:10,492 - INFO - Reads parsed so far: 7500000
+2024-03-11 16:05:16,410 - INFO - Reads parsed so far: 8000000
+2024-03-11 16:05:27,520 - INFO - Reads parsed so far: 8500000
+2024-03-11 16:05:34,183 - INFO - Reads parsed so far: 9000000
+2024-03-11 16:05:40,882 - INFO - Reads parsed so far: 9500000
+2024-03-11 16:05:47,072 - INFO - Reads parsed so far: 10000000
+2024-03-11 16:05:52,952 - INFO - Reads parsed so far: 10500000
+2024-03-11 16:05:58,565 - INFO - Reads parsed so far: 11000000
+2024-03-11 16:06:04,874 - INFO - Reads parsed so far: 11500000
+2024-03-11 16:06:11,538 - INFO - Reads parsed so far: 12000000
+2024-03-11 16:06:18,232 - INFO - Reads parsed so far: 12500000
+2024-03-11 16:06:24,838 - INFO - Reads parsed so far: 13000000
+2024-03-11 16:06:29,541 - INFO - Parsed 13370034 reads, found 3879702 unique barcodes.
+2024-03-11 16:06:29,545 - INFO - Summary stats on reads:
     total  fail filter  low Q barcode
  13370034      1527515        1567087
-2022-07-19 17:28:51,736 - INFO - Writing these stats to results/tile_8/codoncounts/lib1-C6-36-multi_readstats.csv
+2024-03-11 16:06:29,545 - INFO - Writing these stats to results/tile_8/codoncounts/lib1-C6-36-multi_readstats.csv
 
-2022-07-19 17:28:52,544 - INFO - Number of reads per barcode:
+2024-03-11 16:06:30,667 - INFO - Number of reads per barcode:
                  number of barcodes
 number of reads                    
 1                           1397387
@@ -137,33 +137,33 @@ number of reads
 73                                1
 75                                1
 151                               1
-2022-07-19 17:28:52,544 - INFO - Writing these stats to results/tile_8/codoncounts/lib1-C6-36-multi_readsperbc.csv
+2024-03-11 16:06:30,667 - INFO - Writing these stats to results/tile_8/codoncounts/lib1-C6-36-multi_readsperbc.csv
 
-2022-07-19 17:28:52,548 - INFO - Examining the 3879702 barcodes to build and align subamplicons...
-2022-07-19 17:28:58,683 - INFO - Barcodes examined so far: 200000
-2022-07-19 17:29:04,732 - INFO - Barcodes examined so far: 400000
-2022-07-19 17:29:10,740 - INFO - Barcodes examined so far: 600000
-2022-07-19 17:29:16,662 - INFO - Barcodes examined so far: 800000
-2022-07-19 17:29:22,503 - INFO - Barcodes examined so far: 1000000
-2022-07-19 17:29:28,246 - INFO - Barcodes examined so far: 1200000
-2022-07-19 17:29:33,876 - INFO - Barcodes examined so far: 1400000
-2022-07-19 17:29:39,403 - INFO - Barcodes examined so far: 1600000
-2022-07-19 17:29:44,777 - INFO - Barcodes examined so far: 1800000
-2022-07-19 17:29:49,943 - INFO - Barcodes examined so far: 2000000
-2022-07-19 17:29:54,931 - INFO - Barcodes examined so far: 2200000
-2022-07-19 17:29:59,736 - INFO - Barcodes examined so far: 2400000
-2022-07-19 17:30:04,379 - INFO - Barcodes examined so far: 2600000
-2022-07-19 17:30:08,817 - INFO - Barcodes examined so far: 2800000
-2022-07-19 17:30:12,954 - INFO - Barcodes examined so far: 3000000
-2022-07-19 17:30:16,796 - INFO - Barcodes examined so far: 3200000
-2022-07-19 17:30:20,139 - INFO - Barcodes examined so far: 3400000
-2022-07-19 17:30:22,891 - INFO - Barcodes examined so far: 3600000
-2022-07-19 17:30:25,129 - INFO - Barcodes examined so far: 3800000
-2022-07-19 17:30:25,886 - INFO - Examined all barcodes. Summary stats:
+2024-03-11 16:06:30,671 - INFO - Examining the 3879702 barcodes to build and align subamplicons...
+2024-03-11 16:06:37,665 - INFO - Barcodes examined so far: 200000
+2024-03-11 16:06:44,418 - INFO - Barcodes examined so far: 400000
+2024-03-11 16:06:50,995 - INFO - Barcodes examined so far: 600000
+2024-03-11 16:06:57,363 - INFO - Barcodes examined so far: 800000
+2024-03-11 16:07:03,626 - INFO - Barcodes examined so far: 1000000
+2024-03-11 16:07:09,781 - INFO - Barcodes examined so far: 1200000
+2024-03-11 16:07:15,668 - INFO - Barcodes examined so far: 1400000
+2024-03-11 16:07:21,340 - INFO - Barcodes examined so far: 1600000
+2024-03-11 16:07:26,871 - INFO - Barcodes examined so far: 1800000
+2024-03-11 16:07:32,200 - INFO - Barcodes examined so far: 2000000
+2024-03-11 16:07:37,343 - INFO - Barcodes examined so far: 2200000
+2024-03-11 16:07:42,350 - INFO - Barcodes examined so far: 2400000
+2024-03-11 16:07:47,120 - INFO - Barcodes examined so far: 2600000
+2024-03-11 16:07:51,609 - INFO - Barcodes examined so far: 2800000
+2024-03-11 16:07:55,709 - INFO - Barcodes examined so far: 3000000
+2024-03-11 16:07:59,461 - INFO - Barcodes examined so far: 3200000
+2024-03-11 16:08:02,854 - INFO - Barcodes examined so far: 3400000
+2024-03-11 16:08:05,665 - INFO - Barcodes examined so far: 3600000
+2024-03-11 16:08:08,040 - INFO - Barcodes examined so far: 3800000
+2024-03-11 16:08:08,843 - INFO - Examined all barcodes. Summary stats:
    total  too few reads  not alignable  aligned
  3879702        1397387        2215779   266536
-2022-07-19 17:30:25,886 - INFO - Writing these stats to results/tile_8/codoncounts/lib1-C6-36-multi_bcstats.csv
+2024-03-11 16:08:08,843 - INFO - Writing these stats to results/tile_8/codoncounts/lib1-C6-36-multi_bcstats.csv
 
-2022-07-19 17:30:25,904 - INFO - Writing the counts of each codon identity at each site to results/tile_8/codoncounts/lib1-C6-36-multi_codoncounts.csv
+2024-03-11 16:08:08,855 - INFO - Writing the counts of each codon identity at each site to results/tile_8/codoncounts/lib1-C6-36-multi_codoncounts.csv
 
-2022-07-19 17:30:25,915 - INFO - Successful completion of dms2_bcsubamp
+2024-03-11 16:08:08,866 - INFO - Successful completion of dms2_bcsubamp

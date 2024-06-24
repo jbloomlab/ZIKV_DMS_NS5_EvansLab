@@ -4,10 +4,15 @@ _*
 *.out
 
 data/concat_fastqs/concat_fastq_out
+data/concat_c636/
 
 results/*
 !results/summary
 !results/dms-view
+
+results/notebooks/.*
+results/shallow_mut_scanning/.*
+results/all_tiles/.*
 
 !results/tile_*
 results/tile_*/*
@@ -31,3 +36,11 @@ results/tile_*/dms_view/*
 !results/tile_*/logoplots
 results/tile_*/logoplots/*
 !results/tile_*/logoplots/*.pdf
+
+!results/tile_*/prefs_with_stop
+results/tile_*/prefs_with_stop/*
+!results/tile_*/prefs_with_stop/*.csv
+
+!results/tile_*/muteffects_with_stop
+results/tile_*/muteffects_with_stop/*
+!results/tile_*/muteffects_with_stop/*.csv

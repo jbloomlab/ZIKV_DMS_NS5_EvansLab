@@ -1,29 +1,29 @@
-2022-07-19 17:25:10,227 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-03-11 16:24:26,000 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-07-19 17:25:10,227 - INFO - Progress is being logged to results/tile_1/diffsel/Huh7.5-vs-C636.log
-2022-07-19 17:25:10,262 - INFO - Version information:
-	Time and date: Tue Jul 19 17:25:10 2022
-	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
-	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+2024-03-11 16:24:26,000 - INFO - Progress is being logged to results/tile_1/diffsel/Huh7.5-vs-C636.log
+2024-03-11 16:24:26,038 - INFO - Version information:
+	Time and date: Mon Mar 11 16:24:25 2024
+	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
+	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
 	IPython version: 8.3.0
-	jupyter version: 1.0.0
+	jupyter version unknown
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
-	seaborn version: 0.10.1
+	scipy version: 1.10.1
+	seaborn version: 0.12.2
 	phydmslib version: 2.4.1
-	statsmodels version: 0.11.1
+	statsmodels version: 0.13.2
 	rpy2 cannot be imported
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-19 17:25:10,262 - INFO - Parsed the following arguments:
+2024-03-11 16:24:26,039 - INFO - Parsed the following arguments:
 	outdir = results/tile_1/diffsel
 	ncpus = 72
 	use_existing = yes
@@ -35,32 +35,32 @@
 	batchfile = results/tile_1/diffsel/batch.csv
 	summaryprefix = Huh7.5-vs-C636
 
-2022-07-19 17:25:10,262 - INFO - Parsing info from results/tile_1/diffsel/batch.csv
-2022-07-19 17:25:10,269 - INFO - Read the following sample information:
+2024-03-11 16:24:26,039 - INFO - Parsing info from results/tile_1/diffsel/batch.csv
+2024-03-11 16:24:26,045 - INFO - Read the following sample information:
 name,mock,sel,err
 lib1,results/tile_1/renumbered_codoncounts/lib1-C6-36-multi_codoncounts.csv,results/tile_1/renumbered_codoncounts/lib1-Huh-7.5-201112_codoncounts.csv,results/tile_1/renumbered_codoncounts/wt-plasmid-201112_codoncounts.csv
 lib2,results/tile_1/renumbered_codoncounts/lib2-C6-36-multi_codoncounts.csv,results/tile_1/renumbered_codoncounts/lib2-Huh-7.5-201112_codoncounts.csv,results/tile_1/renumbered_codoncounts/wt-plasmid-201112_codoncounts.csv
 lib3,results/tile_1/renumbered_codoncounts/lib3-C6-36-multi_codoncounts.csv,results/tile_1/renumbered_codoncounts/lib3-Huh-7.5-201112_codoncounts.csv,results/tile_1/renumbered_codoncounts/wt-plasmid-201112_codoncounts.csv
 
 
-2022-07-19 17:25:10,278 - INFO - Running dms2_diffsel on all samples...
-2022-07-19 17:25:15,426 - INFO - Completed runs of dms2_diffsel.
+2024-03-11 16:24:26,054 - INFO - Running dms2_diffsel on all samples...
+2024-03-11 16:24:30,564 - INFO - Completed runs of dms2_diffsel.
 
-2022-07-19 17:25:15,433 - INFO - Analyzing the diffsel values for the 3 samples.
-2022-07-19 17:25:15,433 - INFO - Plotting mutdiffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_mutdiffselcorr.pdf
-2022-07-19 17:25:16,759 - INFO - Plotting absolutesitediffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_absolutesitediffselcorr.pdf
-2022-07-19 17:25:17,877 - INFO - Plotting positivesitediffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_positivesitediffselcorr.pdf
-2022-07-19 17:25:19,001 - INFO - Plotting maxmutdiffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_maxmutdiffselcorr.pdf
-2022-07-19 17:25:20,240 - INFO - Writing mean mutdiffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanmutdiffsel.csv
-2022-07-19 17:25:20,275 - INFO - Writing mean sitediffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meansitediffsel.csv
-2022-07-19 17:25:20,301 - INFO - Writing median mutdiffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianmutdiffsel.csv
-2022-07-19 17:25:20,335 - INFO - Writing median sitediffsel to results/tile_1/diffsel/Huh7.5-vs-C636_mediansitediffsel.csv
-2022-07-19 17:25:20,359 - INFO - Plotting mean positive diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanpositivediffsel.pdf
-2022-07-19 17:25:20,730 - INFO - Plotting mean total diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meantotaldiffsel.pdf
-2022-07-19 17:25:21,130 - INFO - Plotting mean max diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanmaxdiffsel.pdf
-2022-07-19 17:25:21,497 - INFO - Plotting mean minmax diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanminmaxdiffsel.pdf
-2022-07-19 17:25:21,887 - INFO - Plotting median positive diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianpositivediffsel.pdf
-2022-07-19 17:25:22,337 - INFO - Plotting median total diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_mediantotaldiffsel.pdf
-2022-07-19 17:25:22,727 - INFO - Plotting median max diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianmaxdiffsel.pdf
-2022-07-19 17:25:23,091 - INFO - Plotting median minmax diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianminmaxdiffsel.pdf
-2022-07-19 17:25:23,479 - INFO - Successful completion of dms2_batch_diffsel
+2024-03-11 16:24:30,578 - INFO - Analyzing the diffsel values for the 3 samples.
+2024-03-11 16:24:30,578 - INFO - Plotting mutdiffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_mutdiffselcorr.pdf
+2024-03-11 16:24:32,212 - INFO - Plotting absolutesitediffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_absolutesitediffselcorr.pdf
+2024-03-11 16:24:33,596 - INFO - Plotting positivesitediffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_positivesitediffselcorr.pdf
+2024-03-11 16:24:35,082 - INFO - Plotting maxmutdiffsel correlations to results/tile_1/diffsel/Huh7.5-vs-C636_maxmutdiffselcorr.pdf
+2024-03-11 16:24:36,465 - INFO - Writing mean mutdiffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanmutdiffsel.csv
+2024-03-11 16:24:36,498 - INFO - Writing mean sitediffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meansitediffsel.csv
+2024-03-11 16:24:36,523 - INFO - Writing median mutdiffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianmutdiffsel.csv
+2024-03-11 16:24:36,585 - INFO - Writing median sitediffsel to results/tile_1/diffsel/Huh7.5-vs-C636_mediansitediffsel.csv
+2024-03-11 16:24:36,609 - INFO - Plotting mean positive diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanpositivediffsel.pdf
+2024-03-11 16:24:36,983 - INFO - Plotting mean total diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meantotaldiffsel.pdf
+2024-03-11 16:24:37,385 - INFO - Plotting mean max diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanmaxdiffsel.pdf
+2024-03-11 16:24:37,757 - INFO - Plotting mean minmax diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_meanminmaxdiffsel.pdf
+2024-03-11 16:24:38,149 - INFO - Plotting median positive diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianpositivediffsel.pdf
+2024-03-11 16:24:38,516 - INFO - Plotting median total diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_mediantotaldiffsel.pdf
+2024-03-11 16:24:38,914 - INFO - Plotting median max diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianmaxdiffsel.pdf
+2024-03-11 16:24:39,386 - INFO - Plotting median minmax diffsel to results/tile_1/diffsel/Huh7.5-vs-C636_medianminmaxdiffsel.pdf
+2024-03-11 16:24:39,780 - INFO - Successful completion of dms2_batch_diffsel

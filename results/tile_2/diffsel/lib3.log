@@ -1,29 +1,29 @@
-2022-07-19 17:45:01,189 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-03-11 16:31:20,709 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2022-07-19 17:45:01,189 - INFO - Progress is being logged to results/tile_2/diffsel/lib3.log
-2022-07-19 17:45:01,222 - INFO - Version information:
-	Time and date: Tue Jul 19 17:45:01 2022
-	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
-	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+2024-03-11 16:31:20,709 - INFO - Progress is being logged to results/tile_2/diffsel/lib3.log
+2024-03-11 16:31:20,747 - INFO - Version information:
+	Time and date: Mon Mar 11 16:31:20 2024
+	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
+	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
 	IPython version: 8.3.0
-	jupyter version: 1.0.0
+	jupyter version unknown
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
-	seaborn version: 0.10.1
+	scipy version: 1.10.1
+	seaborn version: 0.12.2
 	phydmslib version: 2.4.1
-	statsmodels version: 0.11.1
+	statsmodels version: 0.13.2
 	rpy2 cannot be imported
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-19 17:45:01,222 - INFO - Parsed the following arguments:
+2024-03-11 16:31:20,747 - INFO - Parsed the following arguments:
 	outdir = results/tile_2/diffsel
 	ncpus = 12
 	use_existing = yes
@@ -37,11 +37,11 @@
 	mock = results/tile_2/renumbered_codoncounts/lib3-C6-36-multi_codoncounts.csv
 	err = results/tile_2/renumbered_codoncounts/wt-plasmid-210528_codoncounts.csv
 
-2022-07-19 17:45:01,230 - INFO - Reading selected sample counts from results/tile_2/renumbered_codoncounts/lib3-Huh-7.5-210528_codoncounts.csv
-2022-07-19 17:45:01,239 - INFO - Reading mock-selected sample counts from results/tile_2/renumbered_codoncounts/lib3-C6-36-multi_codoncounts.csv
-2022-07-19 17:45:01,244 - INFO - Reading error-control sample counts from results/tile_2/renumbered_codoncounts/wt-plasmid-210528_codoncounts.csv
-2022-07-19 17:45:01,249 - INFO - Computing mutdiffsel...
-2022-07-19 17:45:02,210 - INFO - Mutations with largest mutdiffsel:
+2024-03-11 16:31:20,749 - INFO - Reading selected sample counts from results/tile_2/renumbered_codoncounts/lib3-Huh-7.5-210528_codoncounts.csv
+2024-03-11 16:31:20,755 - INFO - Reading mock-selected sample counts from results/tile_2/renumbered_codoncounts/lib3-C6-36-multi_codoncounts.csv
+2024-03-11 16:31:20,760 - INFO - Reading error-control sample counts from results/tile_2/renumbered_codoncounts/wt-plasmid-210528_codoncounts.csv
+2024-03-11 16:31:20,766 - INFO - Computing mutdiffsel...
+2024-03-11 16:31:21,758 - INFO - Mutations with largest mutdiffsel:
  site wildtype mutation  mutdiffsel
   145        C        R        3.59
   126        L        P        3.36
@@ -54,9 +54,9 @@
   112        E        T        2.54
   112        E        A        2.49
 
-2022-07-19 17:45:02,210 - INFO - Writing to results/tile_2/diffsel/lib3_mutdiffsel.csv
-2022-07-19 17:45:02,225 - INFO - Computing sitediffsel...
-2022-07-19 17:45:02,247 - INFO - Sites with largest absolute sitediffsel:
+2024-03-11 16:31:21,758 - INFO - Writing to results/tile_2/diffsel/lib3_mutdiffsel.csv
+2024-03-11 16:31:21,771 - INFO - Computing sitediffsel...
+2024-03-11 16:31:21,793 - INFO - Sites with largest absolute sitediffsel:
  site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
   112        24.71             24.21             -0.50         2.54        -0.50
   134        17.58             17.52             -0.06         2.21        -0.06
@@ -69,5 +69,5 @@
   115        12.36             10.14             -2.22         1.71        -0.96
   135        12.28              4.31             -7.97         1.74        -2.18
 
-2022-07-19 17:45:02,247 - INFO - Writing to results/tile_2/diffsel/lib3_sitediffsel.csv
-2022-07-19 17:45:02,255 - INFO - Successful completion of dms2_diffsel
+2024-03-11 16:31:21,793 - INFO - Writing to results/tile_2/diffsel/lib3_sitediffsel.csv
+2024-03-11 16:31:21,797 - INFO - Successful completion of dms2_diffsel

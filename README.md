@@ -1,6 +1,6 @@
 # Deep mutational scanning of ZIKV NS5 (RdRp) protein
 
-Experiments were performed by Blake Richardson and Matt Evans. Analysis was performed by Jesse Bloom, David Bacsik, and Caroline Kikawa
+Experiments were performed by Blake Richardson and Matt Evans. Analysis was performed by Jesse Bloom, Caroline Kikawa, David Bacsik and Allie Greaney.
 
 ## Overview
 

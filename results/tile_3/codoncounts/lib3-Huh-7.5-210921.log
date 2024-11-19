@@ -1,8 +1,8 @@
-2024-03-11 16:52:25,511 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-11-14 14:06:04,187 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2024-03-11 16:52:25,511 - INFO - Progress is being logged to results/tile_3/codoncounts/lib3-Huh-7.5-210921.log
-2024-03-11 16:52:25,549 - INFO - Version information:
-	Time and date: Mon Mar 11 16:52:25 2024
+2024-11-14 14:06:04,189 - INFO - Progress is being logged to results/tile_3/codoncounts/lib3-Huh-7.5-210921.log
+2024-11-14 14:06:04,224 - INFO - Version information:
+	Time and date: Thu Nov 14 14:06:04 2024
 	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
 	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2024-03-11 16:52:25,549 - INFO - Parsed the following arguments:
+2024-11-14 14:06:04,224 - INFO - Parsed the following arguments:
 	outdir = results/tile_3/codoncounts
 	ncpus = -1
 	use_existing = no
@@ -49,20 +49,20 @@
 	name = lib3-Huh-7.5-210921
 	R1 = ['/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_3-3_Sample_S5_R1_001.fastq.gz']
 
-2024-03-11 16:52:25,562 - INFO - Read refseq of 339 codons from data/tile_3_amplicon.fasta
-2024-03-11 16:52:25,583 - INFO - Reads are in these FASTQ pairs:
+2024-11-14 14:06:04,236 - INFO - Read refseq of 339 codons from data/tile_3_amplicon.fasta
+2024-11-14 14:06:04,238 - INFO - Reads are in these FASTQ pairs:
 	/shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_3-3_Sample_S5_R1_001.fastq.gz and /shared/ngs/illumina/bloom_lab/210921_D00300_1326_BHMTYKBCX3/Unaligned/Project_bloom_lab/Tile_3-3_Sample_S5_R2_001.fastq.gz
 
-2024-03-11 16:52:25,583 - INFO - Now parsing read pairs...
-2024-03-11 16:52:31,681 - INFO - Reads parsed so far: 500000
-2024-03-11 16:52:37,018 - INFO - Reads parsed so far: 1000000
-2024-03-11 16:52:39,412 - INFO - Parsed 1238834 reads, found 345680 unique barcodes.
-2024-03-11 16:52:39,416 - INFO - Summary stats on reads:
+2024-11-14 14:06:04,238 - INFO - Now parsing read pairs...
+2024-11-14 14:06:10,583 - INFO - Reads parsed so far: 500000
+2024-11-14 14:06:16,205 - INFO - Reads parsed so far: 1000000
+2024-11-14 14:06:18,734 - INFO - Parsed 1238834 reads, found 345680 unique barcodes.
+2024-11-14 14:06:18,738 - INFO - Summary stats on reads:
    total  fail filter  low Q barcode
  1238834        35895         145914
-2024-03-11 16:52:39,416 - INFO - Writing these stats to results/tile_3/codoncounts/lib3-Huh-7.5-210921_readstats.csv
+2024-11-14 14:06:18,738 - INFO - Writing these stats to results/tile_3/codoncounts/lib3-Huh-7.5-210921_readstats.csv
 
-2024-03-11 16:52:39,503 - INFO - Number of reads per barcode:
+2024-11-14 14:06:18,828 - INFO - Number of reads per barcode:
                  number of barcodes
 number of reads                    
 1                            124303
@@ -98,15 +98,15 @@ number of reads
 275                               1
 307                               1
 622                               1
-2024-03-11 16:52:39,503 - INFO - Writing these stats to results/tile_3/codoncounts/lib3-Huh-7.5-210921_readsperbc.csv
+2024-11-14 14:06:18,828 - INFO - Writing these stats to results/tile_3/codoncounts/lib3-Huh-7.5-210921_readsperbc.csv
 
-2024-03-11 16:52:39,506 - INFO - Examining the 345680 barcodes to build and align subamplicons...
-2024-03-11 16:52:50,919 - INFO - Barcodes examined so far: 200000
-2024-03-11 16:52:55,677 - INFO - Examined all barcodes. Summary stats:
+2024-11-14 14:06:18,831 - INFO - Examining the 345680 barcodes to build and align subamplicons...
+2024-11-14 14:06:30,561 - INFO - Barcodes examined so far: 200000
+2024-11-14 14:06:35,461 - INFO - Examined all barcodes. Summary stats:
   total  too few reads  not alignable  aligned
  345680         124303          28201   193176
-2024-03-11 16:52:55,677 - INFO - Writing these stats to results/tile_3/codoncounts/lib3-Huh-7.5-210921_bcstats.csv
+2024-11-14 14:06:35,462 - INFO - Writing these stats to results/tile_3/codoncounts/lib3-Huh-7.5-210921_bcstats.csv
 
-2024-03-11 16:52:55,691 - INFO - Writing the counts of each codon identity at each site to results/tile_3/codoncounts/lib3-Huh-7.5-210921_codoncounts.csv
+2024-11-14 14:06:35,473 - INFO - Writing the counts of each codon identity at each site to results/tile_3/codoncounts/lib3-Huh-7.5-210921_codoncounts.csv
 
-2024-03-11 16:52:55,700 - INFO - Successful completion of dms2_bcsubamp
+2024-11-14 14:06:35,483 - INFO - Successful completion of dms2_bcsubamp

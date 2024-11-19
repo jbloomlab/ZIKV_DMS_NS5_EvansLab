@@ -1,8 +1,8 @@
-2024-03-11 16:23:14,867 - INFO - Beginning execution of dms2_batch_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-11-14 13:54:01,089 - INFO - Beginning execution of dms2_batch_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2024-03-11 16:23:14,867 - INFO - Progress is being logged to results/tile_1/prefs/summary.log
-2024-03-11 16:23:14,903 - INFO - Version information:
-	Time and date: Mon Mar 11 16:23:14 2024
+2024-11-14 13:54:01,090 - INFO - Progress is being logged to results/tile_1/prefs/summary.log
+2024-11-14 13:54:01,129 - INFO - Version information:
+	Time and date: Thu Nov 14 13:54:01 2024
 	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
 	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,9 +23,9 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2024-03-11 16:23:14,903 - INFO - Parsed the following arguments:
+2024-11-14 13:54:01,129 - INFO - Parsed the following arguments:
 	outdir = results/tile_1/prefs
-	ncpus = 72
+	ncpus = 16
 	use_existing = no
 	method = ratio
 	indir = results/tile_1/renumbered_codoncounts
@@ -38,25 +38,19 @@
 	no_corr = False
 	no_avg = False
 
-2024-03-11 16:23:14,905 - INFO - Parsing info from results/tile_1/prefs/batch.csv
-2024-03-11 16:23:14,917 - INFO - Read the following sample information:
+2024-11-14 13:54:01,130 - INFO - Parsing info from results/tile_1/prefs/batch.csv
+2024-11-14 13:54:01,140 - INFO - Read the following sample information:
 name,selection,library,pre,post,date,errpre,errpost
 lib1-Huh-7.5-201112,Huh-7.5,lib1,lib1-plasmid-201112,lib1-Huh-7.5-201112,201112,wt-plasmid-201112,wt-Huh-7.5-201112
 lib2-Huh-7.5-201112,Huh-7.5,lib2,lib2-plasmid-201112,lib2-Huh-7.5-201112,201112,wt-plasmid-201112,wt-Huh-7.5-201112
 lib3-Huh-7.5-201112,Huh-7.5,lib3,lib3-plasmid-201112,lib3-Huh-7.5-201112,201112,wt-plasmid-201112,wt-Huh-7.5-201112
-lib1-Huh-7.5IFNPilot-210313,Huh-7.5IFNPilot,lib1,lib1-plasmid-201112,lib1-Huh-7.5IFNPilot-210313,210313,wt-plasmid-201112,wt-Huh-7.5IFNPilot-210313
-lib2-Huh-7.5IFNPilot-210313,Huh-7.5IFNPilot,lib2,lib2-plasmid-201112,lib2-Huh-7.5IFNPilot-210313,210313,wt-plasmid-201112,wt-Huh-7.5IFNPilot-210313
-lib3-Huh-7.5IFNPilot-210313,Huh-7.5IFNPilot,lib3,lib3-plasmid-201112,lib3-Huh-7.5IFNPilot-210313,210313,wt-plasmid-201112,wt-Huh-7.5IFNPilot-210313
-lib1-C6-36-multi,C6-36,lib1,lib1-plasmid-201112,lib1-C6-36-multi,multi,wt-plasmid-201112,wt-C6-36-multi
-lib2-C6-36-multi,C6-36,lib2,lib2-plasmid-201112,lib2-C6-36-multi,multi,wt-plasmid-201112,wt-C6-36-multi
-lib3-C6-36-multi,C6-36,lib3,lib3-plasmid-201112,lib3-C6-36-multi,multi,wt-plasmid-201112,wt-C6-36-multi
 
 
-2024-03-11 16:23:14,918 - INFO - Running dms2_prefs on all samples...
-2024-03-11 16:23:19,322 - INFO - Completed runs of dms2_prefs.
+2024-11-14 13:54:01,140 - INFO - Running dms2_prefs on all samples...
+2024-11-14 13:54:05,297 - INFO - Completed runs of dms2_prefs.
 
-2024-03-11 16:23:19,327 - INFO - Plotting correlations to results/tile_1/prefs/summary_prefscorr.pdf
+2024-11-14 13:54:05,303 - INFO - Plotting correlations to results/tile_1/prefs/summary_prefscorr.pdf
 
-2024-03-11 16:23:27,193 - INFO - Writing average preferences to results/tile_1/prefs/summary_avgprefs.csv
+2024-11-14 13:54:06,203 - INFO - Writing average preferences to results/tile_1/prefs/summary_avgprefs.csv
 
-2024-03-11 16:23:27,237 - INFO - Successful completion of dms2_batch_prefs
+2024-11-14 13:54:06,224 - INFO - Successful completion of dms2_batch_prefs

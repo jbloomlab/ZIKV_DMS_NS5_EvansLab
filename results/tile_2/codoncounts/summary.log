@@ -1,8 +1,8 @@
-2024-03-11 16:25:41,050 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-11-14 13:58:45,911 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2024-03-11 16:25:41,050 - INFO - Progress is being logged to results/tile_2/codoncounts/summary.log
-2024-03-11 16:25:41,089 - INFO - Version information:
-	Time and date: Mon Mar 11 16:25:41 2024
+2024-11-14 13:58:45,913 - INFO - Progress is being logged to results/tile_2/codoncounts/summary.log
+2024-11-14 13:58:45,950 - INFO - Version information:
+	Time and date: Thu Nov 14 13:58:45 2024
 	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
 	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,9 +23,9 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2024-03-11 16:25:41,089 - INFO - Parsed the following arguments:
+2024-11-14 13:58:45,950 - INFO - Parsed the following arguments:
 	outdir = results/tile_2/codoncounts
-	ncpus = 72
+	ncpus = 16
 	use_existing = no
 	refseq = data/tile_2_amplicon.fasta
 	alignspecs = ['1,342,30,30']
@@ -49,8 +49,8 @@
 	batchfile = results/tile_2/codoncounts/batch.csv
 	summaryprefix = summary
 
-2024-03-11 16:25:41,089 - INFO - Parsing sample info from results/tile_2/codoncounts/batch.csv
-2024-03-11 16:25:41,101 - INFO - Read the following sample information:
+2024-11-14 13:58:45,950 - INFO - Parsing sample info from results/tile_2/codoncounts/batch.csv
+2024-11-14 13:58:45,957 - INFO - Read the following sample information:
 name,R1
 lib3-plasmid-210528,/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/lib-3-plasmid_S3_L001_R1_001.fastq.gz
 lib1-Huh-7.5-210528,/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-1_S5_L001_R1_001.fastq.gz
@@ -60,22 +60,18 @@ wt-plasmid-210528,/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JN
 lib2-plasmid-210528,/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/lib-2-plasmid_S2_L001_R1_001.fastq.gz
 lib1-plasmid-210528,/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/lib-1-plasmid_S1_L001_R1_001.fastq.gz
 lib2-Huh-7.5-210528,/shared/ngs/illumina/bloom_lab/210528_M03100_0686_000000000-JNHMH/Data/Intensities/BaseCalls/tile-2-lib-2_S6_L001_R1_001.fastq.gz
-lib1-C6-36-multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib1_C636_R1.fastq.gz
-lib2-C6-36-multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib2_C636_R1.fastq.gz
-lib3-C6-36-multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/lib3_C636_R1.fastq.gz
-wt-C6-36-multi,/fh/fast/bloom_j/computational_notebooks/dbacsik/2022/ZIKV_DMS_NS5_EvansLab/data/concat_fastqs/concat_fastq_out/wt_C636_R1.fastq.gz
 
 
-2024-03-11 16:25:41,109 - INFO - Running dms2_bcsubamp on all samples using 36 CPUs...
-2024-03-11 16:29:57,981 - INFO - Completed runs of dms2_bcsubamp.
+2024-11-14 13:58:45,964 - INFO - Running dms2_bcsubamp on all samples using 16 CPUs...
+2024-11-14 13:59:25,800 - INFO - Completed runs of dms2_bcsubamp.
 
-2024-03-11 16:29:57,995 - INFO - Plotting read stats to results/tile_2/codoncounts/summary_readstats.pdf
-2024-03-11 16:29:58,479 - INFO - Plotting barcode stats to results/tile_2/codoncounts/summary_bcstats.pdf
-2024-03-11 16:29:58,739 - INFO - Plotting reads per barcode to results/tile_2/codoncounts/summary_readsperbc.pdf
-2024-03-11 16:29:59,879 - INFO - Plotting count depth to results/tile_2/codoncounts/summary_depth.pdf
-2024-03-11 16:30:00,939 - INFO - Plotting mutation frequencies to results/tile_2/codoncounts/summary_mutfreq.pdf
-2024-03-11 16:30:02,893 - INFO - Plotting average frequencies of codon mutation types to results/tile_2/codoncounts/summary_codonmuttypes.pdf, writing the data to results/tile_2/codoncounts/summary_codonmuttypes.csv
-2024-03-11 16:30:04,315 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to results/tile_2/codoncounts/summary_codonntchanges.pdf
-2024-03-11 16:30:05,611 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to results/tile_2/codoncounts/summary_singlentchanges.pdf
-2024-03-11 16:30:06,985 - INFO - Plotting fraction of mutations seen less than some number of times to results/tile_2/codoncounts/summary_cumulmutcounts.pdf
-2024-03-11 16:30:09,251 - INFO - Successful completion of dms2_batch_bcsubamp
+2024-11-14 13:59:25,810 - INFO - Plotting read stats to results/tile_2/codoncounts/summary_readstats.pdf
+2024-11-14 13:59:26,291 - INFO - Plotting barcode stats to results/tile_2/codoncounts/summary_bcstats.pdf
+2024-11-14 13:59:26,564 - INFO - Plotting reads per barcode to results/tile_2/codoncounts/summary_readsperbc.pdf
+2024-11-14 13:59:27,529 - INFO - Plotting count depth to results/tile_2/codoncounts/summary_depth.pdf
+2024-11-14 13:59:28,289 - INFO - Plotting mutation frequencies to results/tile_2/codoncounts/summary_mutfreq.pdf
+2024-11-14 13:59:29,599 - INFO - Plotting average frequencies of codon mutation types to results/tile_2/codoncounts/summary_codonmuttypes.pdf, writing the data to results/tile_2/codoncounts/summary_codonmuttypes.csv
+2024-11-14 13:59:30,526 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to results/tile_2/codoncounts/summary_codonntchanges.pdf
+2024-11-14 13:59:31,463 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to results/tile_2/codoncounts/summary_singlentchanges.pdf
+2024-11-14 13:59:32,452 - INFO - Plotting fraction of mutations seen less than some number of times to results/tile_2/codoncounts/summary_cumulmutcounts.pdf
+2024-11-14 13:59:34,115 - INFO - Successful completion of dms2_batch_bcsubamp

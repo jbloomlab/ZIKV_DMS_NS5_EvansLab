@@ -1,8 +1,8 @@
-2024-03-11 16:30:26,566 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
+2024-11-14 13:59:50,296 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_DMS_NS5_EvansLab
 
-2024-03-11 16:30:26,566 - INFO - Progress is being logged to results/tile_2/prefs/lib2-Huh-7.5-210528.log
-2024-03-11 16:30:26,602 - INFO - Version information:
-	Time and date: Mon Mar 11 16:30:26 2024
+2024-11-14 13:59:50,298 - INFO - Progress is being logged to results/tile_2/prefs/lib2-Huh-7.5-210528.log
+2024-11-14 13:59:50,336 - INFO - Version information:
+	Time and date: Thu Nov 14 13:59:50 2024
 	Platform: Linux-4.15.0-213-generic-x86_64-with-glibc2.10
 	Python version: 3.8.18 | packaged by conda-forge | (default, Dec 23 2023, 17:21:28)  [GCC 12.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,9 +23,9 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2024-03-11 16:30:26,602 - INFO - Parsed the following arguments:
+2024-11-14 13:59:50,336 - INFO - Parsed the following arguments:
 	outdir = results/tile_2/prefs
-	ncpus = 6
+	ncpus = 5
 	use_existing = no
 	method = ratio
 	indir = results/tile_2/renumbered_codoncounts
@@ -38,12 +38,12 @@
 	name = lib2-Huh-7.5-210528
 	err = ['wt-plasmid-210528', 'wt-Huh-7.5-210528']
 
-2024-03-11 16:30:26,605 - INFO - Reading pre-selection counts from results/tile_2/renumbered_codoncounts/lib2-plasmid-210528_codoncounts.csv
-2024-03-11 16:30:26,612 - INFO - Reading post-selection counts from results/tile_2/renumbered_codoncounts/lib2-Huh-7.5-210528_codoncounts.csv
-2024-03-11 16:30:26,618 - INFO - Reading pre-selection error-control counts from pre
-2024-03-11 16:30:26,623 - INFO - Reading post-selection error-control counts from post
-2024-03-11 16:30:26,636 - INFO - Read counts for 114 sites.
-2024-03-11 16:30:26,636 - INFO - Here are sites and wildtype identities:
+2024-11-14 13:59:50,337 - INFO - Reading pre-selection counts from results/tile_2/renumbered_codoncounts/lib2-plasmid-210528_codoncounts.csv
+2024-11-14 13:59:50,344 - INFO - Reading post-selection counts from results/tile_2/renumbered_codoncounts/lib2-Huh-7.5-210528_codoncounts.csv
+2024-11-14 13:59:50,351 - INFO - Reading pre-selection error-control counts from pre
+2024-11-14 13:59:50,356 - INFO - Reading post-selection error-control counts from post
+2024-11-14 13:59:50,369 - INFO - Read counts for 114 sites.
+2024-11-14 13:59:50,369 - INFO - Here are sites and wildtype identities:
 	111	GAA
 	112	GAA
 	113	CCC
@@ -159,6 +159,6 @@
 	223	TCT
 	224	GGG
 
-2024-03-11 16:30:26,636 - INFO - Computing preferences as normalized enrichment ratios...
-2024-03-11 16:30:26,974 - INFO - Writing preferences to results/tile_2/prefs/lib2-Huh-7.5-210528_prefs.csv
-2024-03-11 16:30:26,982 - INFO - Successful completion of dms2_prefs
+2024-11-14 13:59:50,369 - INFO - Computing preferences as normalized enrichment ratios...
+2024-11-14 13:59:50,700 - INFO - Writing preferences to results/tile_2/prefs/lib2-Huh-7.5-210528_prefs.csv
+2024-11-14 13:59:50,708 - INFO - Successful completion of dms2_prefs

@@ -6,9 +6,10 @@ Experiments were performed by Blake Richardson and Matt Evans. Analysis was perf
 
 The Evan's lab performed DMS on the ZIKV NS5 (RdRp) protein using a [tiled subamplicon approach](https://jbloomlab.github.io/dms_tools2/bcsubamp.html). A mutation's effect on ZIKV growth was assessed by comparing the passaged virus library to the original plasmid stock. 
 
+For interactive plots and a high-level summary of the deep mutational scan, see [https://jbloomlab.github.io/ZIKV_DMS_NS5_EvansLab/](https://jbloomlab.github.io/ZIKV_DMS_NS5_EvansLab/).
+
 See [results/summary/](results/summary/) for a markdown summary of the results for each tile over the genome (e.g., [results/summary/dms_tile_1_analysis.md](results/summary/dms_tile_1_analysis.md), etc).
 
-See [this file](results/all_tiles/alltiles_host_adaptation.csv) for the results from all tiles in a single table. The mutational scan was performed in two cell lines: Huh75 (human) and C636 (mosquito).
 
 ## Running the analysis
 
